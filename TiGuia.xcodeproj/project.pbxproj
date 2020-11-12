@@ -31,6 +31,7 @@
 		08A7105525543A17002CB323 /* Raleway-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08A7104325543A17002CB323 /* Raleway-Thin.ttf */; };
 		08A7105625543A17002CB323 /* Raleway-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08A7104425543A17002CB323 /* Raleway-Italic.ttf */; };
 		08A7105725543A17002CB323 /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08A7104525543A17002CB323 /* Raleway-Bold.ttf */; };
+		65D0491140E1507108E211F7 /* Pods_TiGuia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB1C8E3F18B32085B059A10 /* Pods_TiGuia.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,9 @@
 		08A7104325543A17002CB323 /* Raleway-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Thin.ttf"; sourceTree = "<group>"; };
 		08A7104425543A17002CB323 /* Raleway-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Italic.ttf"; sourceTree = "<group>"; };
 		08A7104525543A17002CB323 /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Bold.ttf"; sourceTree = "<group>"; };
+		34EEFAA7AAED50B9A86EC451 /* Pods-TiGuia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TiGuia.release.xcconfig"; path = "Target Support Files/Pods-TiGuia/Pods-TiGuia.release.xcconfig"; sourceTree = "<group>"; };
+		ADB1C8E3F18B32085B059A10 /* Pods_TiGuia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TiGuia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF9F6E8A65367280734B8D8B /* Pods-TiGuia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TiGuia.debug.xcconfig"; path = "Target Support Files/Pods-TiGuia/Pods-TiGuia.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65D0491140E1507108E211F7 /* Pods_TiGuia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,8 @@
 			children = (
 				0831EF982553497600D6EFFC /* TiGuia */,
 				0831EF972553497600D6EFFC /* Products */,
+				657953A7B58E407686F9EFDE /* Pods */,
+				50F284CDA64B0B50DB155990 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,6 +136,23 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		50F284CDA64B0B50DB155990 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ADB1C8E3F18B32085B059A10 /* Pods_TiGuia.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		657953A7B58E407686F9EFDE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FF9F6E8A65367280734B8D8B /* Pods-TiGuia.debug.xcconfig */,
+				34EEFAA7AAED50B9A86EC451 /* Pods-TiGuia.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -136,9 +160,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0831EFAA2553497700D6EFFC /* Build configuration list for PBXNativeTarget "TiGuia" */;
 			buildPhases = (
+				D95BBCAA3AE4DF4C036CE768 /* [CP] Check Pods Manifest.lock */,
 				0831EF922553497600D6EFFC /* Sources */,
 				0831EF932553497600D6EFFC /* Frameworks */,
 				0831EF942553497600D6EFFC /* Resources */,
+				08F26C53255DBB4700DA3378 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -211,6 +237,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		08F26C53255DBB4700DA3378 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n${PODS_ROOT}/SwiftLint/swiftlint\n";
+		};
+		D95BBCAA3AE4DF4C036CE768 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TiGuia-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0831EF922553497600D6EFFC /* Sources */ = {
@@ -363,6 +431,7 @@
 		};
 		0831EFAB2553497700D6EFFC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF9F6E8A65367280734B8D8B /* Pods-TiGuia.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -381,6 +450,7 @@
 		};
 		0831EFAC2553497700D6EFFC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34EEFAA7AAED50B9A86EC451 /* Pods-TiGuia.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
