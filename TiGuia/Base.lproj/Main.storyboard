@@ -102,10 +102,10 @@
             </objects>
             <point key="canvasLocation" x="-932" y="299"/>
         </scene>
-        <!--View Controller-->
+        <!--Trail-->
         <scene sceneID="0Nv-Xw-8V3">
             <objects>
-                <viewController id="zhp-Q3-pek" sceneMemberID="viewController">
+                <viewController id="zhp-Q3-pek" customClass="Trail" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="klA-cl-dOU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

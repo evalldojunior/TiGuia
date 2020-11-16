@@ -32,6 +32,7 @@
 		08A7105625543A17002CB323 /* Raleway-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08A7104425543A17002CB323 /* Raleway-Italic.ttf */; };
 		08A7105725543A17002CB323 /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08A7104525543A17002CB323 /* Raleway-Bold.ttf */; };
 		65D0491140E1507108E211F7 /* Pods_TiGuia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB1C8E3F18B32085B059A10 /* Pods_TiGuia.framework */; };
+		FEBB72E92563167D0000D11E /* TrailSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBB72E82563167D0000D11E /* TrailSwiftUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		08A7104525543A17002CB323 /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Bold.ttf"; sourceTree = "<group>"; };
 		34EEFAA7AAED50B9A86EC451 /* Pods-TiGuia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TiGuia.release.xcconfig"; path = "Target Support Files/Pods-TiGuia/Pods-TiGuia.release.xcconfig"; sourceTree = "<group>"; };
 		ADB1C8E3F18B32085B059A10 /* Pods_TiGuia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TiGuia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEBB72E82563167D0000D11E /* TrailSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailSwiftUIView.swift; sourceTree = "<group>"; };
 		FF9F6E8A65367280734B8D8B /* Pods-TiGuia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TiGuia.debug.xcconfig"; path = "Target Support Files/Pods-TiGuia/Pods-TiGuia.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,6 +109,7 @@
 				0831EFA42553497700D6EFFC /* LaunchScreen.storyboard */,
 				0831EFA72553497700D6EFFC /* Info.plist */,
 				08A7103325543A17002CB323 /* Fonts */,
+				FEBB72E82563167D0000D11E /* TrailSwiftUIView.swift */,
 			);
 			path = TiGuia;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				0831EF9E2553497600D6EFFC /* ViewController.swift in Sources */,
 				0831EF9A2553497600D6EFFC /* AppDelegate.swift in Sources */,
 				0831EF9C2553497600D6EFFC /* SceneDelegate.swift in Sources */,
+				FEBB72E92563167D0000D11E /* TrailSwiftUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
