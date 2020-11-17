@@ -17,19 +17,18 @@ struct CategoryView: View {
     
     var body: some View {
         
-        
         VStack(alignment: .leading){
             
             HStack {
+                //título
                 Text("Computação")
-                   // .fontWeight(.bold)
                     .foregroundColor(titleColor)
-                    //.font(.title)
                     .font(.custom("Raleway-Bold", size: 30))
                     .multilineTextAlignment(.leading)
                     .padding()
                 Spacer()
-
+                
+                //Botao de favoritos
                 Button(action: {}, label: {
                     Image(systemName: "star")
                         .resizable()
@@ -43,60 +42,64 @@ struct CategoryView: View {
                 .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
                 .offset(y: -10)
             }
-            ScrollView(){
+            ScrollView{
                 
-            
-            Text("Ciência da Computação é a ciência que estuda as técnicas, metodologias, instrumentos computacionais e aplicações tecnológicas, que automatizem os processos e desenvolvam soluções de processamento de dados de entrada e saída pautado no computador, de forma que se transforme em informação.")
-                .font(.custom("Raleway-Regular", size: 15))
-                .padding([.leading, .bottom, .trailing])
-                .foregroundColor(textColor)
+                Text("Ciência da Computação é a ciência que estuda as técnicas, metodologias, instrumentos computacionais e aplicações tecnológicas, que automatizem os processos e desenvolvam soluções de processamento de dados de entrada e saída pautado no computador, de forma que se transforme em informação.")
+                    .font(.custom("Raleway-Regular", size: 15))
+                    .padding([.leading, .bottom, .trailing])
+                    .foregroundColor(textColor)
+                
                 Text("Links úteis")
                     .multilineTextAlignment(.leading)
-                .padding(.horizontal)
-                .font(.custom("Raleway-Bold", size: 20))
-                .foregroundColor(titleColor)
-            ScrollView(.horizontal){
-                HStack{
-                    CardLink()
-                        .padding([.leading, .top])
-                    CardLink()
-                        .padding([.leading, .bottom, .top])
-                    CardLink()
-                        .padding([.leading, .bottom, .top])
-                    
-                }
-            }
-            
-            Text("Categorias")
-                .padding(.horizontal)
-                .font(.custom("Raleway-Bold", size: 20))
-                .foregroundColor(titleColor)
+                    .padding(.horizontal)
+                    .font(.custom("Raleway-Bold", size: 20))
+                    .foregroundColor(titleColor)
                 
-            CardCategory()
-                .padding()
-                .shadow(radius: 10, x: 0, y: 4)
-            CardCategory()
-                .padding()
-                .shadow(radius: 10, x: 0, y: 4)
+                //"colection" de links
+                ScrollView(.horizontal){
+                    
+                    HStack{
+                        
+                        CardLink()
+                            .padding([.leading, .top])
+                        CardLink()
+                            .padding([.leading, .bottom, .top])
+                        CardLink()
+                            .padding([.leading, .bottom, .top])
+                        
+                    }
+                }
+                
+                Text("Categorias")
+                    .padding(.horizontal)
+                    .font(.custom("Raleway-Bold", size: 20))
+                    .foregroundColor(titleColor)
+                
                 CardCategory()
                     .padding()
                     .shadow(radius: 10, x: 0, y: 4)
-           
-        Spacer()
-
-        }
+                CardCategory()
+                    .padding()
+                    .shadow(radius: 10, x: 0, y: 4)
+                CardCategory()
+                    .padding()
+                    .shadow(radius: 10, x: 0, y: 4)
+                
+                Spacer()
+                
+            }
             
         }
-       
+        
     }
     
-//    var helloColor: UIColor{
-//        if didTap {
-//            return .red
-//        }else{
-//            return .blue
-//        }
-//    }
+    //    var helloColor: UIColor{
+    //        if didTap {
+    //            return .red
+    //        }else{
+    //            return .blue
+    //        }
+    //    }
 }
 
 struct ContentView_Previews: PreviewProvider {

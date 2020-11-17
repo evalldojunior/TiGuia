@@ -35,8 +35,10 @@ struct CardCategory: View {
             }
             .padding()
             .clipped()
-            .cornerRadius(50)
             .background(lightColor)
+            .cornerRadius(10)
+
+
             
         }
        
