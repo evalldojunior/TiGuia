@@ -91,6 +91,23 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         
     }
     
+    // botao comecar
+    @IBAction func startButton(_ sender: Any) {
+        nextViewController()
+    }
+    
+    // botao pular
+    @IBAction func skipButton(_ sender: Any) {
+        nextViewController()
+    }
+    
+    // funcao de comecar/pular - em teoria é a mesma funcao
+    func nextViewController(){
+        let vc = storyboard?.instantiateViewController(identifier: "firstVC")
+        vc!.modalPresentationStyle = .fullScreen
+        present(vc!, animated: true)
+    }
+    
     @IBAction func pageChanged(_ sender: UIPageControl) {
         onboardingScrollView!.scrollRectToVisible(CGRect(x: scrollWidth * CGFloat ((pageControl?.currentPage)!), y: 0, width: scrollWidth, height: scrollHeight), animated: true)
     }
