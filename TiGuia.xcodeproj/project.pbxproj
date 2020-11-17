@@ -31,6 +31,9 @@
 		08A7105525543A17002CB323 /* Raleway-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08A7104325543A17002CB323 /* Raleway-Thin.ttf */; };
 		08A7105625543A17002CB323 /* Raleway-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08A7104425543A17002CB323 /* Raleway-Italic.ttf */; };
 		08A7105725543A17002CB323 /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08A7104525543A17002CB323 /* Raleway-Bold.ttf */; };
+		4780500325630A4F0004919D /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4780500225630A4F0004919D /* CategoryView.swift */; };
+		47F3F00025636F160007B7B1 /* CardLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F3EFFF25636F160007B7B1 /* CardLink.swift */; };
+		47F3F00325637AF80007B7B1 /* CardCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F3F00225637AF80007B7B1 /* CardCategory.swift */; };
 		65D0491140E1507108E211F7 /* Pods_TiGuia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB1C8E3F18B32085B059A10 /* Pods_TiGuia.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +65,9 @@
 		08A7104425543A17002CB323 /* Raleway-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Italic.ttf"; sourceTree = "<group>"; };
 		08A7104525543A17002CB323 /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Bold.ttf"; sourceTree = "<group>"; };
 		34EEFAA7AAED50B9A86EC451 /* Pods-TiGuia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TiGuia.release.xcconfig"; path = "Target Support Files/Pods-TiGuia/Pods-TiGuia.release.xcconfig"; sourceTree = "<group>"; };
+		4780500225630A4F0004919D /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
+		47F3EFFF25636F160007B7B1 /* CardLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardLink.swift; path = ../CardLink.swift; sourceTree = "<group>"; };
+		47F3F00225637AF80007B7B1 /* CardCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCategory.swift; sourceTree = "<group>"; };
 		ADB1C8E3F18B32085B059A10 /* Pods_TiGuia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TiGuia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF9F6E8A65367280734B8D8B /* Pods-TiGuia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TiGuia.debug.xcconfig"; path = "Target Support Files/Pods-TiGuia/Pods-TiGuia.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +113,9 @@
 				0831EFA42553497700D6EFFC /* LaunchScreen.storyboard */,
 				0831EFA72553497700D6EFFC /* Info.plist */,
 				08A7103325543A17002CB323 /* Fonts */,
+				4780500225630A4F0004919D /* CategoryView.swift */,
+				47F3EFFF25636F160007B7B1 /* CardLink.swift */,
+				47F3F00225637AF80007B7B1 /* CardCategory.swift */,
 			);
 			path = TiGuia;
 			sourceTree = "<group>";
@@ -287,7 +296,10 @@
 			files = (
 				0831EF9E2553497600D6EFFC /* ViewController.swift in Sources */,
 				0831EF9A2553497600D6EFFC /* AppDelegate.swift in Sources */,
+				47F3F00025636F160007B7B1 /* CardLink.swift in Sources */,
+				4780500325630A4F0004919D /* CategoryView.swift in Sources */,
 				0831EF9C2553497600D6EFFC /* SceneDelegate.swift in Sources */,
+				47F3F00325637AF80007B7B1 /* CardCategory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
