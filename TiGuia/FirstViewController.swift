@@ -7,60 +7,34 @@
 
 import Foundation
 import UIKit
+import SwiftUI
 
 class FirstViewController: UIViewController {
-    @IBOutlet var studentViewButton: UIView!
-    @IBOutlet weak var viewImage1: UIView!
     
-    @IBOutlet weak var mentorViewButton: UIView!
-    @IBOutlet weak var viewImage2: UIView!
+    var studentMentorUIHost: UIHostingController<StudentMentorUI>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // tornar os botoes arredondados e com sombras
-        buttons(button: studentViewButton)
-        buttons(button: mentorViewButton)
+        studentMentorUIHost = UIHostingController(rootView: StudentMentorUI())
+        studentMentorUIHost?.view.translatesAutoresizingMaskIntoConstraints = false
         
-        // tornar os quadrados brancos arredondados e com sombras
-        buttons(button: viewImage1)
-        buttons(button: viewImage2)
+        self.view.addSubview(studentMentorUIHost!.view)
         
-        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapStudent(sender:)))
-        studentViewButton.addGestureRecognizer(tapRecognizer)
+        let constraints = [
+            studentMentorUIHost!.view.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 0),
+            studentMentorUIHost!.view.centerXAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.centerXAnchor, constant: 0),
+            studentMentorUIHost!.view.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 0),
+            studentMentorUIHost!.view.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: 0),
+            studentMentorUIHost!.view.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: 0)
+        ]
+        NSLayoutConstraint.activate(constraints)
     }
     
-    @objc func tapStudent(sender: UITapGestureRecognizer) {
-        let vc = storyboard?.instantiateViewController(identifier: "secondVC")
-        vc!.modalPresentationStyle = .fullScreen
-        present(vc!, animated: true)
-    }
-    
-    // funcao para colocar as pontas redondas e sombras
-    func buttons(button: UIView) {
-        //codigo melhorado, porem nao rodando, a sombra fica na frente do botao
-        //        let shadowLayer = CAShapeLayer()
-        //
-        //        button.layer.cornerRadius = 10
-        //        shadowLayer.path = UIBezierPath(roundedRect: button.bounds,
-        //                                        cornerRadius: button.layer.cornerRadius).cgPath
-        //        shadowLayer.shadowPath = shadowLayer.path
-        //        shadowLayer.fillColor = view.backgroundColor?.cgColor
-        //        shadowLayer.shadowColor = UIColor.black.cgColor
-        //        shadowLayer.shadowOffset = CGSize(width: 0.0, height: 4.0)
-        //        shadowLayer.shadowOpacity = 0.25
-        //        shadowLayer.shadowRadius = 17
-        //        button.layer.insertSublayer(shadowLayer, at: 0)
-        
-        button.layer.cornerRadius = 10
-        button.layer.masksToBounds = false
-        button.layer.shadowColor = UIColor.black.cgColor
-        button.layer.shadowOpacity = 0.25
-        button.layer.shadowOffset = CGSize(width: 0.0, height: 4.0)
-        button.layer.shadowRadius = 17
-        button.layer.shadowPath = UIBezierPath(rect: button.bounds).cgPath
-        button.layer.shouldRasterize = true
-        button.layer.rasterizationScale = UIScreen.main.scale
-    }
+//    @objc func tapStudent(sender: UITapGestureRecognizer) {
+//        let vc = storyboard?.instantiateViewController(identifier: "secondVC")
+//        vc!.modalPresentationStyle = .fullScreen
+//        present(vc!, animated: true)
+//    }
     
 }

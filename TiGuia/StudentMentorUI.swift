@@ -6,12 +6,13 @@
 //
 
 import Foundation
-
+import UIKit
 import SwiftUI
 
 struct StudentMentorUI: View {
     
     // @State var didTap = false
+    @State private var presented = false
     
     var image = ["person", "person.2"]
     var title = ["Aluno", "Mentor"]
@@ -37,7 +38,9 @@ struct StudentMentorUI: View {
             }
             LazyVStack {
                 ForEach((0..<title.count)){ index in
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                    Button(action: {
+                     
+                    }, label: {
                         HStack {
                             Image(systemName: "\(image[index])")
                                 .resizable()
