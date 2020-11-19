@@ -12,7 +12,7 @@ import SwiftUI
 struct StudentMentorUI: View {
     
     // @State var didTap = false
-    @State private var presented = false
+    @State var presented = false
     
     var image = ["person", "person.2"]
     var title = ["Aluno", "Mentor"]
@@ -26,7 +26,7 @@ struct StudentMentorUI: View {
     var body: some View {
         VStack(alignment: .leading) {
             Spacer()
-               .frame(height: 75.0)
+                .frame(height: 75.0)
             HStack {
                 Text("Como você se identifica?")
                     .font(.custom("Raleway-Bold", size: 30))
@@ -39,7 +39,7 @@ struct StudentMentorUI: View {
             LazyVStack {
                 ForEach((0..<title.count)){ index in
                     Button(action: {
-                     
+                        self.presented.toggle()
                     }, label: {
                         HStack {
                             Image(systemName: "\(image[index])")
@@ -59,7 +59,7 @@ struct StudentMentorUI: View {
                                     .foregroundColor(lightColor)
                                 
                                 Text(descrip[index])
-                                    .font(.custom("Raleway-Medium", size: 14))
+                                    .font(.custom("Raleway", size: 14))
                                     .padding([.leading, .bottom, .trailing], 5.0)
                                     .foregroundColor(lightColor)
                                 
@@ -72,17 +72,31 @@ struct StudentMentorUI: View {
                         .cornerRadius(10)
                     }).padding(.bottom, 20.0)
                     .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                    .fullScreenCover(isPresented: $presented, content: {
+                        NextUI()
+                    })
+//                    .sheet(isPresented: $presented) {
+//                        NextUI()
+//                    }
                     
                 }
             }
             .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
             Spacer()
         }
-        
-        
     }
 }
 
+// codigo para mostrar a view controller junto com o .fullScreenCover mostrado acima no botao
+struct NextUI: UIViewControllerRepresentable {
+    
+    func makeUIViewController(context: Context) -> UIViewController {
+        return MacroAreaViewController()
+    }
+    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
+        
+    }
+}
 
 struct StudentMentorUI_Previews: PreviewProvider {
     static var previews: some View {

@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 import UIKit
 
-class SecondViewController: UIViewController {
+class MacroAreaViewController: UIViewController {
     
     var macroAreaUIHost: UIHostingController<MacroAreaUI>?
     

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zhp-Q3-pek">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ByR-8y-eXP">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
@@ -93,10 +93,10 @@
             </objects>
             <point key="canvasLocation" x="2100" y="-37"/>
         </scene>
-        <!--First View Controller-->
+        <!--Student Mentor View Controller-->
         <scene sceneID="Kyf-em-PV2">
             <objects>
-                <viewController storyboardIdentifier="firstVC" id="ByR-8y-eXP" customClass="FirstViewController" customModule="TiGuia" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="firstVC" id="ByR-8y-eXP" customClass="StudentMentorViewController" customModule="TiGuia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mm7-D7-IRn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -109,11 +109,11 @@
             </objects>
             <point key="canvasLocation" x="-933.33333333333337" y="298.66071428571428"/>
         </scene>
-        <!--Second View Controller-->
+        <!--Macro Area View Controller-->
         <scene sceneID="0Nv-Xw-8V3">
             <objects>
-                <viewController storyboardIdentifier="secondVC" id="zhp-Q3-pek" customClass="SecondViewController" customModule="TiGuia" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="klA-cl-dOU" customClass="SecondViewController">
+                <viewController storyboardIdentifier="secondVC" id="zhp-Q3-pek" customClass="MacroAreaViewController" customModule="TiGuia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="klA-cl-dOU" customClass="MacroAreaViewController">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="oYq-Dg-dtm"/>

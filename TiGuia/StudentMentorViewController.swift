@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import SwiftUI
 
-class FirstViewController: UIViewController {
+class StudentMentorViewController: UIViewController {
     
     var studentMentorUIHost: UIHostingController<StudentMentorUI>?
     
