@@ -32,3 +32,9 @@ class FavoriteViewController: UIViewController {
     }
     
 }
+
+struct FavoriteViewController_Previews: PreviewProvider {
+    static var previews: some View {
+        Text("Hello, World!")
+    }
+}

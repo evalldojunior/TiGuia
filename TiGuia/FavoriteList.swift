@@ -19,20 +19,22 @@ struct ImageOverlay: View {
     var body: some View {
         ZStack(alignment: .bottomLeading) {
             Rectangle().fill(gradient)
-            .frame(width: 176, height: 170)
-            .cornerRadius(10)
-            .offset(x: 14, y: -14)
+                .frame(width: 176, height: 170)
+                .cornerRadius(10)
+                .offset(x: 14, y: -14)
             
             VStack(alignment: .leading) {
                 Text(title)
-                .offset(x: 25, y: -25)
-                .foregroundColor(.white)
+                    .offset(x: 25, y: -25)
+                    .foregroundColor(.white)
             }
         }
     }
 }
 
 struct Favorite: View {
+    
+    @State var presented = false
     
     var imageFavorite = ["seguranca","cienciadedados","firewall","robotica"]
     
@@ -47,8 +49,8 @@ struct Favorite: View {
         
         VStack(alignment: .leading) {
             Rectangle().fill(Color.blue)
-            .frame(height: 256, alignment: .center)
-            .edgesIgnoringSafeArea(.top)
+                .frame(height: 256, alignment: .center)
+                .edgesIgnoringSafeArea(.top)
             
             Text("Favoritos")
                 .padding()
@@ -59,7 +61,7 @@ struct Favorite: View {
                 LazyVGrid(columns: collums) {
                     ForEach(0..<imageFavorite.count, id: \.self) { count in
                         Button(action: {
-                            
+                            self.presented.toggle()
                         }, label: {
                             Image(imageFavorite[count])
                                 .resizable()
@@ -69,12 +71,26 @@ struct Favorite: View {
                                 .shadow(color: .init(.sRGB, red: 0, green: 0, blue: 0, opacity: 0.4), radius: 10, x: 0.0, y: 4.0)
                                 .overlay(ImageOverlay(title: titleFavorite[count]), alignment: .bottomLeading)
                         })
+                        .fullScreenCover(isPresented: $presented, content: {
+                            NextUI()
+                        })
                     }
                 }
             }
             .offset(y: -15)
         }
         .offset(y: -50)
+    }
+}
+ 
+// codigo para mostrar a view controller junto com o .fullScreenCover mostrado acima no botao
+struct NextUI: UIViewControllerRepresentable {
+    
+    func makeUIViewController(context: Context) -> UIViewController {
+        return FavoriteViewController()
+    }
+    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
+        
     }
 }
 
