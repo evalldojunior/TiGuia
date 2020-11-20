@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		082158DC256702F800E54196 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082158DB256702F800E54196 /* PageViewController.swift */; };
+		082158E02567034E00E54196 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082158DF2567034E00E54196 /* PageView.swift */; };
+		082158E425670FDF00E54196 /* OnboardingUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082158E325670FDF00E54196 /* OnboardingUI.swift */; };
 		0831EF9A2553497600D6EFFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0831EF992553497600D6EFFC /* AppDelegate.swift */; };
 		0831EF9C2553497600D6EFFC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0831EF9B2553497600D6EFFC /* SceneDelegate.swift */; };
 		0831EF9E2553497600D6EFFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0831EF9D2553497600D6EFFC /* ViewController.swift */; };
@@ -31,6 +34,10 @@
 		08A7105525543A17002CB323 /* Raleway-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08A7104325543A17002CB323 /* Raleway-Thin.ttf */; };
 		08A7105625543A17002CB323 /* Raleway-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08A7104425543A17002CB323 /* Raleway-Italic.ttf */; };
 		08A7105725543A17002CB323 /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08A7104525543A17002CB323 /* Raleway-Bold.ttf */; };
+		08DD49002564898E00BEF67C /* MacroAreaUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DD48FF2564898E00BEF67C /* MacroAreaUI.swift */; };
+		08FB145A256306DE0045919B /* StudentMentorUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FB1459256306DE0045919B /* StudentMentorUI.swift */; };
+		08FB145D25630E720045919B /* StudentMentorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FB145C25630E720045919B /* StudentMentorViewController.swift */; };
+		08FB1460256327F60045919B /* MacroAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FB145F256327F60045919B /* MacroAreaViewController.swift */; };
 		47A2FC822565BB9E00A5013E /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A2FC812565BB9E00A5013E /* Category.swift */; };
 		47A2FC852565BBBC00A5013E /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A2FC842565BBBC00A5013E /* Student.swift */; };
 		47A2FC882565BBCE00A5013E /* Mentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A2FC872565BBCE00A5013E /* Mentor.swift */; };
@@ -41,6 +48,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		082158DB256702F800E54196 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		082158DF2567034E00E54196 /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
+		082158E325670FDF00E54196 /* OnboardingUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingUI.swift; sourceTree = "<group>"; };
 		0831EF962553497600D6EFFC /* TiGuia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TiGuia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0831EF992553497600D6EFFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0831EF9B2553497600D6EFFC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +77,10 @@
 		08A7104325543A17002CB323 /* Raleway-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Thin.ttf"; sourceTree = "<group>"; };
 		08A7104425543A17002CB323 /* Raleway-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Italic.ttf"; sourceTree = "<group>"; };
 		08A7104525543A17002CB323 /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Bold.ttf"; sourceTree = "<group>"; };
+		08DD48FF2564898E00BEF67C /* MacroAreaUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroAreaUI.swift; sourceTree = "<group>"; };
+		08FB1459256306DE0045919B /* StudentMentorUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentMentorUI.swift; sourceTree = "<group>"; };
+		08FB145C25630E720045919B /* StudentMentorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentMentorViewController.swift; sourceTree = "<group>"; };
+		08FB145F256327F60045919B /* MacroAreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroAreaViewController.swift; sourceTree = "<group>"; };
 		34EEFAA7AAED50B9A86EC451 /* Pods-TiGuia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TiGuia.release.xcconfig"; path = "Target Support Files/Pods-TiGuia/Pods-TiGuia.release.xcconfig"; sourceTree = "<group>"; };
 		47A2FC812565BB9E00A5013E /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		47A2FC842565BBBC00A5013E /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
@@ -118,8 +132,15 @@
 				0831EF9B2553497600D6EFFC /* SceneDelegate.swift */,
 				0831EF9D2553497600D6EFFC /* ViewController.swift */,
 				0831EF9F2553497600D6EFFC /* Main.storyboard */,
+				08FB145C25630E720045919B /* StudentMentorViewController.swift */,
+				08FB145F256327F60045919B /* MacroAreaViewController.swift */,
 				0831EFA22553497700D6EFFC /* Assets.xcassets */,
 				0831EFA42553497700D6EFFC /* LaunchScreen.storyboard */,
+				08FB1459256306DE0045919B /* StudentMentorUI.swift */,
+				082158E325670FDF00E54196 /* OnboardingUI.swift */,
+				082158DB256702F800E54196 /* PageViewController.swift */,
+				082158DF2567034E00E54196 /* PageView.swift */,
+				08DD48FF2564898E00BEF67C /* MacroAreaUI.swift */,
 				0831EFA72553497700D6EFFC /* Info.plist */,
 				08A7103325543A17002CB323 /* Fonts */,
 			);
@@ -327,11 +348,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47A2FC882565BBCE00A5013E /* Mentor.swift in Sources */,
+				08FB1460256327F60045919B /* MacroAreaViewController.swift in Sources */,
+				08FB145D25630E720045919B /* StudentMentorViewController.swift in Sources */,
 				0831EF9E2553497600D6EFFC /* ViewController.swift in Sources */,
 				0831EF9A2553497600D6EFFC /* AppDelegate.swift in Sources */,
-				47A2FC8E2565BC0A00A5013E /* Link.swift in Sources */,
+				08DD49002564898E00BEF67C /* MacroAreaUI.swift in Sources */,
 				0831EF9C2553497600D6EFFC /* SceneDelegate.swift in Sources */,
+				082158DC256702F800E54196 /* PageViewController.swift in Sources */,
+				082158E02567034E00E54196 /* PageView.swift in Sources */,
+				082158E425670FDF00E54196 /* OnboardingUI.swift in Sources */,
+				08FB145A256306DE0045919B /* StudentMentorUI.swift in Sources */,
+				47A2FC882565BBCE00A5013E /* Mentor.swift in Sources */,
+				47A2FC8E2565BC0A00A5013E /* Link.swift in Sources */,
 				47A2FC852565BBBC00A5013E /* Student.swift in Sources */,
 				47A2FC912565BC2900A5013E /* Favorite.swift in Sources */,
 				47A2FC8B2565BBF800A5013E /* Subcategory.swift in Sources */,
