@@ -10,6 +10,7 @@ import SwiftUI
 //titulo, conteúdo, links, cards subcategorias, btn favorito
 struct CategoryView: View {
     @State private var favorito: Bool = false
+    @State private var presented: Bool = false
     let titleColor = Color(red: 0.12, green: 0.62, blue: 0.74, opacity: 1.0)
     let btnColor = Color(red: 0.11, green: 0.46, blue: 0.54, opacity: 1.0)
     let lightColor = Color(red: 0.98, green: 0.98, blue: 0.98, opacity: 1.0)
@@ -29,10 +30,13 @@ struct CategoryView: View {
                 Spacer()
                 
                 //Botao de favoritos
-                Button(action: {}, label: {
-                    Image(systemName: "star")
+                Button(action: {
+                    self.favorito.toggle()
+                }, label: {
+                    Image(systemName: self.favorito == true ? "star.fill" : "star")
                         .resizable()
-                        .padding(8)
+                        .scaledToFit()
+                        .padding(10)
                         .background(btnColor)
                         .foregroundColor(lightColor)
                         .frame(width: 48, height: 48, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
@@ -43,48 +47,87 @@ struct CategoryView: View {
                 .offset(y: -10)
             }
             ScrollView{
-                
-                Text("Ciência da Computação é a ciência que estuda as técnicas, metodologias, instrumentos computacionais e aplicações tecnológicas, que automatizem os processos e desenvolvam soluções de processamento de dados de entrada e saída pautado no computador, de forma que se transforme em informação.")
-                    .font(.custom("Raleway-Regular", size: 15))
-                    .padding([.leading, .bottom, .trailing])
-                    .foregroundColor(textColor)
-                
-                Text("Links úteis")
-                    .multilineTextAlignment(.leading)
-                    .padding(.horizontal)
-                    .font(.custom("Raleway-Bold", size: 20))
-                    .foregroundColor(titleColor)
-                
-                //"colection" de links
-                ScrollView(.horizontal){
+                VStack{
+                    Text("Ciência da Computação é a ciência que estuda as técnicas, metodologias, instrumentos computacionais e aplicações tecnológicas, que automatizem os processos e desenvolvam soluções de processamento de dados de entrada e saída pautado no computador, de forma que se transforme em informação.")
+                        .font(.custom("Raleway-Regular", size: 15))
+                        .padding([.leading, .bottom, .trailing])
+                        .foregroundColor(textColor)
                     
                     HStack{
+                        Text("Links úteis")
+                            .multilineTextAlignment(.leading)
+                            .padding(.horizontal)
+                            .font(.custom("Raleway-Bold", size: 20))
+                            .foregroundColor(titleColor)
+                        Spacer()
+                    }
+                    
+                    //"colection" de links
+                    ScrollView(.horizontal){
                         
-                        CardLink()
-                            .padding([.leading, .top])
-                        CardLink()
-                            .padding([.leading, .bottom, .top])
-                        CardLink()
-                            .padding([.leading, .bottom, .top])
+                        HStack{
+                            
+                            CardLink()
+                                .padding(.trailing, 8.0)
+                                .shadow(radius: 10, x: 0, y: 4)
+                            CardLink()
+                                .padding(.trailing, 8.0)
+                                .shadow(radius: 10, x: 0, y: 4)
+                            CardLink()
+                                .padding(.trailing, 8.0)
+                                .shadow(radius: 10, x: 0, y: 4)
+                            
+                        }.padding(.horizontal)
                         
                     }
+                    
+                    HStack{
+                        Text("Categorias")
+                            .padding([.leading, .bottom, .trailing])
+                            .font(.custom("Raleway-Bold", size: 20))
+                            .foregroundColor(titleColor)
+                        Spacer()
+                    }
+                    
+                    VStack{
+                        CardCategory()
+                            .padding(.bottom, 10.0)
+                            .shadow(radius: 10, x: 0, y: 4)
+                        CardCategory()
+                            .padding(.bottom, 10.0)
+                            .shadow(radius: 10, x: 0, y: 4)
+                        CardCategory()
+                            .padding(.bottom, 10.0)
+                            .shadow(radius: 10, x: 0, y: 4)
+                        
+                    }.padding([.leading, .bottom, .trailing])
+                    
+                    
+                    Button(action: {
+                        self.presented.toggle()
+                    }, label: {
+                        Spacer()
+                        Image(systemName: "ellipses.bubble")
+                            .resizable()
+                            .scaledToFit()
+                            .foregroundColor(lightColor)
+                            .frame(width: 20, height: 20, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                        Text("Pedir ajuda")
+                            .font(.custom("Raleway-Bold", size: 18))
+                            .foregroundColor(lightColor)
+                        Spacer()
+                        
+                    }).padding()
+                    .clipped()
+                    .background(btnColor)
+                    .cornerRadius(10)
+                    .padding()
+                    .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                    .fullScreenCover(isPresented: $presented, content: {
+                        //HelpUI()
+                    })
+                    
                 }
-                
-                Text("Categorias")
-                    .padding(.horizontal)
-                    .font(.custom("Raleway-Bold", size: 20))
-                    .foregroundColor(titleColor)
-                
-                CardCategory()
-                    .padding()
-                    .shadow(radius: 10, x: 0, y: 4)
-                CardCategory()
-                    .padding()
-                    .shadow(radius: 10, x: 0, y: 4)
-                CardCategory()
-                    .padding()
-                    .shadow(radius: 10, x: 0, y: 4)
-                
                 Spacer()
                 
             }
@@ -92,6 +135,17 @@ struct CategoryView: View {
         }
         
     }
+    
+    //codigo pra apresentar a view controller de pedir ajuda
+    //    struct HelpUI: UIViewControllerRepresentable {
+    //
+    //        func makeUIViewController(context: Context) -> UIViewController {
+    //            return //view de pedir ajuda
+    //        }
+    //        func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
+    //
+    //        }
+    //    }
     
     //    var helloColor: UIColor{
     //        if didTap {
