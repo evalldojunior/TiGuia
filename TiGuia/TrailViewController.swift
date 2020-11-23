@@ -13,6 +13,8 @@ class TrailViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         //esses dois primeiros sempre vao existir
+        //toda linha tem 110 de comprimento (diferença de x ou y)
+        
         createTickLine(point: CGPoint(x: 50, y: 760), point2: CGPoint(x: 50, y: 650))
         createRetangle()
         //a partir daqui vai depender de onde a pessoa aperta
@@ -27,8 +29,9 @@ class TrailViewController: UIViewController {
         button2.setImage(UIImage(named: "unselectedButton"), for: .normal)
         self.view.addSubview(button2)
         //teste
-        createWeakLine(point: CGPoint(x: 50, y: 40), point2: CGPoint(x: 50, y: 90))
-        endCircle(X: 50, Y: 400)
+        principalBranch(point: CGPoint(x: 50, y: 470), point2: CGPoint(x: 50, y: 360), X: 45, Y: 358)
+        secundaryBranch(point: CGPoint(x: 70, y: 490), point2: CGPoint(x: 180, y: 490), point3: CGPoint(x: 180, y: 490), point4: CGPoint(x: 180, y: 380), X: 175, Y: 378)
+        secundaryBranch(point: CGPoint(x: 180, y: 490), point2: CGPoint(x: 290, y: 490), point3: CGPoint(x: 290, y: 490), point4: CGPoint(x: 290, y: 380), X: 285, Y: 378)
     }
     
     @objc func buttonAction(sender: UIButton!) {
@@ -78,11 +81,20 @@ class TrailViewController: UIViewController {
         view.layer.addSublayer(shapeLayer)
     }
     func endCircle(X: Int, Y: Int) {
-        let path = UIBezierPath(ovalIn: CGRect(x: X, y: Y, width: 8, height: 8))
+        let path = UIBezierPath(ovalIn: CGRect(x: X, y: Y, width: 10, height: 10))
         
         let shapeLayer = CAShapeLayer()
         shapeLayer.path = path.cgPath
         shapeLayer.fillColor = UIColor(named: "titleColor")?.cgColor
         view.layer.addSublayer(shapeLayer)
+    }
+    func principalBranch(point:CGPoint, point2: CGPoint, X: Int, Y: Int) {
+        createTickLine(point: point, point2: point2)
+        endCircle(X: X, Y: Y)
+    }
+    func secundaryBranch(point:CGPoint, point2: CGPoint, point3: CGPoint, point4: CGPoint, X: Int, Y: Int){
+        createTickLine(point: point, point2: point2)
+        createTickLine(point: point3, point2: point4)
+        endCircle(X: X, Y: Y)
     }
 }
