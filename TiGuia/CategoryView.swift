@@ -11,15 +11,17 @@ import SwiftUI
 struct CategoryView: View {
     @State private var favorito: Bool = false
     @State private var presented: Bool = false
-    let titleColor = Color(red: 0.12, green: 0.62, blue: 0.74, opacity: 1.0)
-    let btnColor = Color(red: 0.11, green: 0.46, blue: 0.54, opacity: 1.0)
-    let lightColor = Color(red: 0.98, green: 0.98, blue: 0.98, opacity: 1.0)
-    let textColor = Color(red: 0.12, green: 0.13, blue: 0.15, opacity: 1.0)
+    let titleColor = Color("titleColor")
+    let btnColor = Color("btnColor")
+    let lightColor = Color("lightColor")
+    let textColor = Color("darkColor")
     
     var body: some View {
         
         VStack(alignment: .leading){
-            
+            //
+            //MARK: -Header - titulo + botao de favoritos
+            //
             HStack {
                 //título
                 Text("Computação")
@@ -46,6 +48,10 @@ struct CategoryView: View {
                 .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
                 .offset(y: -10)
             }
+            //
+            //MARK: -inicio do conteúdo
+            //
+            
             ScrollView{
                 VStack{
                     Text("Ciência da Computação é a ciência que estuda as técnicas, metodologias, instrumentos computacionais e aplicações tecnológicas, que automatizem os processos e desenvolvam soluções de processamento de dados de entrada e saída pautado no computador, de forma que se transforme em informação.")
@@ -61,26 +67,16 @@ struct CategoryView: View {
                             .foregroundColor(titleColor)
                         Spacer()
                     }
-                    
-                    //"colection" de links
+                    //
+                    //MARK: -"colection" de links
+                    //
                     ScrollView(.horizontal){
-                        
-                        HStack{
-                            
-                            CardLink()
-                                .padding(.trailing, 8.0)
-                                .shadow(radius: 10, x: 0, y: 4)
-                            CardLink()
-                                .padding(.trailing, 8.0)
-                                .shadow(radius: 10, x: 0, y: 4)
-                            CardLink()
-                                .padding(.trailing, 8.0)
-                                .shadow(radius: 10, x: 0, y: 4)
-                            
-                        }.padding(.horizontal)
-                        
+                        CardLink()
+                            .padding(.trailing, 8.0)
                     }
-                    
+                    //
+                    //MARK: -subcategorias
+                    //
                     HStack{
                         Text("Categorias")
                             .padding([.leading, .bottom, .trailing])
@@ -102,7 +98,9 @@ struct CategoryView: View {
                         
                     }.padding([.leading, .bottom, .trailing])
                     
-                    
+                    //
+                    //MARK: -botao de pedir ajuda
+                    //
                     Button(action: {
                         self.presented.toggle()
                     }, label: {

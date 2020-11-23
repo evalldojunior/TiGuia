@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct CardCategory: View {
-    let lightColor = Color(red: 0.98, green: 0.98, blue: 0.98, opacity: 1.0)
-    let textColor = Color(red: 0.12, green: 0.13, blue: 0.15, opacity: 1.0)
+    let lightColor = Color("lightColor")
+    let textColor = Color("darkColor")
     var body: some View {
         VStack{
             HStack{
