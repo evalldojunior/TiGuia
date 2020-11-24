@@ -18,6 +18,7 @@ struct CategoryView: View {
     
     var body: some View {
         
+        
         VStack(alignment: .leading){
             //
             //MARK: -Header - titulo + botao de favoritos
@@ -86,16 +87,9 @@ struct CategoryView: View {
                     }
                     
                     VStack{
-                        CardCategory()
+                        CardsCategory()
                             .padding(.bottom, 10.0)
                             .shadow(radius: 10, x: 0, y: 4)
-                        CardCategory()
-                            .padding(.bottom, 10.0)
-                            .shadow(radius: 10, x: 0, y: 4)
-                        CardCategory()
-                            .padding(.bottom, 10.0)
-                            .shadow(radius: 10, x: 0, y: 4)
-                        
                     }.padding([.leading, .bottom, .trailing])
                     
                     //
@@ -126,6 +120,7 @@ struct CategoryView: View {
                     })
                     
                 }
+                .padding(.trailing)
                 Spacer()
                 
             }

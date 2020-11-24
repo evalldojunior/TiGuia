@@ -33,8 +33,7 @@ struct ImageOverlay: View {
 
 
 struct CardLink: View {
-    var cor1 = Color(red: 0.22, green: 0.22, blue: 0.22, opacity: 1)
-    var cor2 = Color(red: 0.22, green: 0.22, blue: 0.22, opacity: 0)
+ 
     let lightColor = Color("lightColor")
     
     var imageFavorite = ["qual-curso-escolher","qual-curso-escolher","qual-curso-escolher","qual-curso-escolher"]
