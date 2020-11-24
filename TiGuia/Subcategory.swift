@@ -13,6 +13,7 @@ class Subcategory {
     var content:String
     var image:Image?
     var links:[Link]
+    var subcategories:[Subcategory]
     var favorite:Bool
     var visited:Bool
     

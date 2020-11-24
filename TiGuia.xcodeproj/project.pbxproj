@@ -37,6 +37,7 @@
 		47A2FC8B2565BBF800A5013E /* Subcategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A2FC8A2565BBF800A5013E /* Subcategory.swift */; };
 		47A2FC8E2565BC0A00A5013E /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A2FC8D2565BC0A00A5013E /* Link.swift */; };
 		47A2FC912565BC2900A5013E /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A2FC902565BC2900A5013E /* Favorite.swift */; };
+		47A2FCA5256D9BFA00A5013E /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A2FCA4256D9BF900A5013E /* Data.swift */; };
 		65D0491140E1507108E211F7 /* Pods_TiGuia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB1C8E3F18B32085B059A10 /* Pods_TiGuia.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,7 @@
 		47A2FC8A2565BBF800A5013E /* Subcategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subcategory.swift; sourceTree = "<group>"; };
 		47A2FC8D2565BC0A00A5013E /* Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
 		47A2FC902565BC2900A5013E /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
+		47A2FCA4256D9BF900A5013E /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		ADB1C8E3F18B32085B059A10 /* Pods_TiGuia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TiGuia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF9F6E8A65367280734B8D8B /* Pods-TiGuia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TiGuia.debug.xcconfig"; path = "Target Support Files/Pods-TiGuia/Pods-TiGuia.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -160,6 +162,7 @@
 				47A2FC8A2565BBF800A5013E /* Subcategory.swift */,
 				47A2FC8D2565BC0A00A5013E /* Link.swift */,
 				47A2FC902565BC2900A5013E /* Favorite.swift */,
+				47A2FCA4256D9BF900A5013E /* Data.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				47A2FC882565BBCE00A5013E /* Mentor.swift in Sources */,
+				47A2FCA5256D9BFA00A5013E /* Data.swift in Sources */,
 				0831EF9E2553497600D6EFFC /* ViewController.swift in Sources */,
 				0831EF9A2553497600D6EFFC /* AppDelegate.swift in Sources */,
 				47A2FC8E2565BC0A00A5013E /* Link.swift in Sources */,
