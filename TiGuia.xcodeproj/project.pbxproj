@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		082158DC256702F800E54196 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082158DB256702F800E54196 /* PageViewController.swift */; };
-		082158E02567034E00E54196 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082158DF2567034E00E54196 /* PageView.swift */; };
+		082158DC256702F800E54196 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082158DB256702F800E54196 /* ContainerView.swift */; };
 		082158E425670FDF00E54196 /* OnboardingUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082158E325670FDF00E54196 /* OnboardingUI.swift */; };
 		0831EF9A2553497600D6EFFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0831EF992553497600D6EFFC /* AppDelegate.swift */; };
 		0831EF9C2553497600D6EFFC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0831EF9B2553497600D6EFFC /* SceneDelegate.swift */; };
@@ -48,8 +47,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		082158DB256702F800E54196 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
-		082158DF2567034E00E54196 /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
+		082158DB256702F800E54196 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
 		082158E325670FDF00E54196 /* OnboardingUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingUI.swift; sourceTree = "<group>"; };
 		0831EF962553497600D6EFFC /* TiGuia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TiGuia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0831EF992553497600D6EFFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -138,8 +136,7 @@
 				0831EFA42553497700D6EFFC /* LaunchScreen.storyboard */,
 				08FB1459256306DE0045919B /* StudentMentorUI.swift */,
 				082158E325670FDF00E54196 /* OnboardingUI.swift */,
-				082158DB256702F800E54196 /* PageViewController.swift */,
-				082158DF2567034E00E54196 /* PageView.swift */,
+				082158DB256702F800E54196 /* ContainerView.swift */,
 				08DD48FF2564898E00BEF67C /* MacroAreaUI.swift */,
 				0831EFA72553497700D6EFFC /* Info.plist */,
 				08A7103325543A17002CB323 /* Fonts */,
@@ -354,8 +351,7 @@
 				0831EF9A2553497600D6EFFC /* AppDelegate.swift in Sources */,
 				08DD49002564898E00BEF67C /* MacroAreaUI.swift in Sources */,
 				0831EF9C2553497600D6EFFC /* SceneDelegate.swift in Sources */,
-				082158DC256702F800E54196 /* PageViewController.swift in Sources */,
-				082158E02567034E00E54196 /* PageView.swift in Sources */,
+				082158DC256702F800E54196 /* ContainerView.swift in Sources */,
 				082158E425670FDF00E54196 /* OnboardingUI.swift in Sources */,
 				08FB145A256306DE0045919B /* StudentMentorUI.swift in Sources */,
 				47A2FC882565BBCE00A5013E /* Mentor.swift in Sources */,
@@ -512,6 +508,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SJND557DN4;
 				INFOPLIST_FILE = TiGuia/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -531,6 +528,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SJND557DN4;
 				INFOPLIST_FILE = TiGuia/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

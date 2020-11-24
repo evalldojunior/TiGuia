@@ -23,42 +23,57 @@ struct OnboardingUI: View {
     let orangeColor = Color(red: 251/255, green: 153/255, blue: 28/255, opacity: 1.0)
     let blackColor = Color(red: 32/255, green: 34/255, blue: 38/255, opacity: 1.0)
     
+    @State var currentPage: ContainerView = ContainerView(["0", "1", "2"])
+    
     var body: some View {
         VStack(alignment: .center) {
-            Spacer()
-                .frame(height: 65.0)
+            
             HStack{
                 Spacer()
                 Button(action: {
                     self.presented.toggle()
                 }, label: {
-                    Text("Pular")
-                        .font(.custom("Raleway", size: 16))
-                        .foregroundColor(backgroundColor)
-                }).padding()
-            }
-            Spacer()
-            Button(action: {
-                self.presented.toggle()
-            }, label: {
-                Spacer()
-                Text("Começar")
-                    .font(.custom("Raleway-Bold", size: 18))
-                    .foregroundColor(lightColor)
-                Spacer()
-                
-            }).padding()
-            .clipped()
-            .background(backgroundColor)
-            .cornerRadius(10)
-            .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
-            .fullScreenCover(isPresented: $presented, content: {
-                NextSMUI()
-            })
-            Spacer()
-                .frame(height: 34.0)
+                   // if currentPage.currentPage == 2 {
+                        Text("Pular")
+                            .font(.custom("Raleway", size: 16))
+                            .foregroundColor(backgroundColor)
+                        
+                    //}
+                }).padding([.top, .leading, .trailing])
+                .opacity(currentPage.currentPage == 2 ? 0 : 1)
+                .fullScreenCover(isPresented: $presented, content: {
+                    NextSMUI()
+                })
+            }.padding([.top, .leading, .trailing])
             
-        }.padding()
+            currentPage
+            Text("\(currentPage.currentPage)")
+            //ContainerView(["0", "1", "2"])
+            //Spacer()
+            VStack{
+                Button(action: {
+                    self.presented.toggle()
+                }, label: {
+                    Spacer()
+                    Text("Começar")
+                        .font(.custom("Raleway-Bold", size: 18))
+                        .foregroundColor(lightColor)
+                    Spacer()
+                    
+                }).padding()
+                .clipped()
+                .background(backgroundColor)
+                .cornerRadius(10)
+                .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                .fullScreenCover(isPresented: $presented, content: {
+                    NextSMUI()
+                })
+            }.padding()
+            Spacer(minLength: 10)
+            //Spacer()
+               // .frame(height: 34.0)
+            
+        }//.padding()
         
         
     }
