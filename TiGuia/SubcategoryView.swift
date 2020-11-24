@@ -1,14 +1,15 @@
 //
-//  CategoryView.swift
+//  SubcategoryView.swift
 //  TiGuia
 //
-//  Created by Dara Vasconcelos on 16/11/20.
+//  Created by Dara Vasconcelos on 24/11/20.
 //
 
-//import Foundation
+import Foundation
+
 import SwiftUI
 //titulo, conteúdo, links, cards subcategorias, btn favorito
-struct CategoryView: View {
+struct SubcategoryView: View {
     @State private var favorito: Bool = false
     @State private var presented: Bool = false
     let titleColor = Color("titleColor")
@@ -31,6 +32,23 @@ struct CategoryView: View {
                     .multilineTextAlignment(.leading)
                     .padding()
                 Spacer()
+                
+                //Botao de favoritos
+                Button(action: {
+                    self.favorito.toggle()
+                }, label: {
+                    Image(systemName: self.favorito == true ? "star.fill" : "star")
+                        .resizable()
+                        .scaledToFit()
+                        .padding(10)
+                        .background(btnColor)
+                        .foregroundColor(lightColor)
+                        .frame(width: 48, height: 48, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                        .cornerRadius(10)
+                })
+                .padding()
+                .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                .offset(y: -10)
             }
             //
             //MARK: -inicio do conteúdo
@@ -132,8 +150,8 @@ struct CategoryView: View {
     //    }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct Subcategory_Previews: PreviewProvider {
     static var previews: some View {
-        CategoryView()
+        SubcategoryView()
     }
 }
