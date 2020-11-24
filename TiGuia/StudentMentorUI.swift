@@ -9,6 +9,18 @@ import Foundation
 import UIKit
 import SwiftUI
 
+// Apresentar proxima tela: Macro Area
+struct NextUI: UIViewControllerRepresentable {
+    
+    func makeUIViewController(context: Context) -> UIViewController {
+        return MacroAreaViewController()
+    }
+    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
+        
+    }
+}
+
+// MARK: - Tela de estudante e mentor
 struct StudentMentorUI: View {
     
     // @State var didTap = false
@@ -17,11 +29,6 @@ struct StudentMentorUI: View {
     var image = ["person", "person.2"]
     var title = ["Aluno", "Mentor"]
     var descrip = ["Se você quer explorar a área da tecnologia e ainda tirar suas dúvidas com um mentor.", "Se você quer ajudar pessoas que têm interesse na sua área."]
-    
-    let backgroundColor = Color(red: 28/255, green: 118/255, blue: 144/255, opacity: 1.0)
-    let lightColor = Color(red: 252/255, green: 252/255, blue: 252/255, opacity: 1.0)
-    let orangeColor = Color(red: 251/255, green: 153/255, blue: 28/255, opacity: 1.0)
-    let blackColor = Color(red: 32/255, green: 34/255, blue: 38/255, opacity: 1.0)
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -33,11 +40,12 @@ struct StudentMentorUI: View {
                     .multilineTextAlignment(.leading)
                     .padding()
                     .frame(width: 300.0, alignment: .leading)
-                    .foregroundColor(blackColor)
+                    .foregroundColor(.darkColor)
                 Spacer()
             }
+            // botoes de escolha entre aluno ou mentor
             LazyVStack {
-                ForEach((0..<title.count)){ index in
+                ForEach((0..<title.count)) { index in
                     Button(action: {
                         self.presented.toggle()
                     }, label: {
@@ -48,37 +56,33 @@ struct StudentMentorUI: View {
                                 .scaledToFit()
                                 .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                                 .clipShape(Rectangle(), style: /*@START_MENU_TOKEN@*/FillStyle()/*@END_MENU_TOKEN@*/)
-                                .background(lightColor)
+                                .background(Color.lightColor)
                                 .cornerRadius(10)
-                                .foregroundColor(orangeColor)
+                                .foregroundColor(.orangeColor)
                                 .shadow(radius: 8)
                             VStack(alignment: .leading) {
                                 Text(title[index])
                                     .font(.custom("Raleway-Bold", size: 24))
                                     .padding([.leading, .bottom, .trailing], 5.0)
-                                    .foregroundColor(lightColor)
+                                    .foregroundColor(.lightColor)
                                 
                                 Text(descrip[index])
                                     .font(.custom("Raleway", size: 14))
                                     .padding([.leading, .bottom, .trailing], 5.0)
-                                    .foregroundColor(lightColor)
+                                    .foregroundColor(.lightColor)
                                 
                             }
                             Spacer()
                         }
                         .padding()
                         .clipped()
-                        .background(backgroundColor)
+                        .background(Color.btnColor)
                         .cornerRadius(10)
                     }).padding(.bottom, 20.0)
                     .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
                     .fullScreenCover(isPresented: $presented, content: {
                         NextUI()
                     })
-//                    .sheet(isPresented: $presented) {
-//                        NextUI()
-//                    }
-                    
                 }
             }
             .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
@@ -87,17 +91,7 @@ struct StudentMentorUI: View {
     }
 }
 
-// codigo para mostrar a view controller junto com o .fullScreenCover mostrado acima no botao
-struct NextUI: UIViewControllerRepresentable {
-    
-    func makeUIViewController(context: Context) -> UIViewController {
-        return MacroAreaViewController()
-    }
-    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
-        
-    }
-}
-
+// preview da pagina
 struct StudentMentorUI_Previews: PreviewProvider {
     static var previews: some View {
         StudentMentorUI()

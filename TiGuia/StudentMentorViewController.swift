@@ -11,12 +11,12 @@ import SwiftUI
 
 class StudentMentorViewController: UIViewController {
     
-    var studentMentorUIHost: UIHostingController<OnboardingUI>?
+    var studentMentorUIHost: UIHostingController<StudentMentorUI>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        studentMentorUIHost = UIHostingController(rootView: OnboardingUI())
+        studentMentorUIHost = UIHostingController(rootView: StudentMentorUI())
         studentMentorUIHost?.view.translatesAutoresizingMaskIntoConstraints = false
         
         self.view.addSubview(studentMentorUIHost!.view)

@@ -7,6 +7,8 @@
 
 import UIKit
 
+// COMENTARIO IMPORTANTE: esse arquivo nao ta sendo mais usado, porem eu tenho pena de apagar dai ele ainda ta aqui kkkk
+
 class ViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var onboardingScrollView: UIScrollView!
