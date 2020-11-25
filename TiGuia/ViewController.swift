@@ -7,6 +7,8 @@
 
 import UIKit
 
+// COMENTARIO IMPORTANTE: esse arquivo nao ta sendo mais usado, porem eu tenho pena de apagar dai ele ainda ta aqui kkkk
+
 class ViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var onboardingScrollView: UIScrollView!
@@ -89,6 +91,23 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         pageControl.numberOfPages = titlesOnboarding.count
         pageControl.currentPage = 0
         
+    }
+    
+    // botao comecar
+    @IBAction func startButton(_ sender: Any) {
+        nextViewController()
+    }
+    
+    // botao pular
+    @IBAction func skipButton(_ sender: Any) {
+        nextViewController()
+    }
+    
+    // funcao de comecar/pular - em teoria é a mesma funcao
+    func nextViewController(){
+        let vc = storyboard?.instantiateViewController(identifier: "firstVC")
+        vc!.modalPresentationStyle = .fullScreen
+        present(vc!, animated: true)
     }
     
     @IBAction func pageChanged(_ sender: UIPageControl) {
