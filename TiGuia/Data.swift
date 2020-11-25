@@ -8,58 +8,72 @@
 import Foundation
 import SwiftUI
 
-
-var categories:[Category] = []
-var category:Category = Category()
-var subcategories:[Subcategory] = []
-var subcategory:Subcategory = Subcategory()
-var link:Link = Link()
-
-func adicionaCategoria(){
-    category.title = "Computação"
-    category.content = "Ciência da Computação é a ciência que estuda as técnicas, metodologias, instrumentos computacionais e aplicações tecnológicas, que automatizem os processos e desenvolvam soluções de processamento de dados de entrada e saída pautado no computador, de forma que se transforme em informação."
-    //link 1
-   link.titulo = "8 Coisas Para Você Saber Antes de Fazer Ciência da Computação"
-    link.url = "https://medium.com/@thiago.barbosa/8-coisas-para-voce-saber-antes-de-fazer-ciencia-da-computacao-37fdffbc6156"
-    link.image = Image("8 Coisas Para Você Saber Antes de Fazer Ciência da Computação")
-    category.links.append(link)
-    //2
-    link.titulo = "Ganhando experiência em uma nova área"
-     link.url = "https://medium.com/@edersantana/ganhando-experiência-em-uma-nova-área-de-trabalho-sem-pedir-permissão-pra-ninguém-a57fdfaae8ae"
-     link.image = Image("ganhando experiencia em uma nova area")
-     category.links.append(link)
-    //3
-    link.titulo = "10 cursos para quem gosta de tecnologia"
-     link.url = "https://vaidebolsa.com.br/cursos-para-quem-gosta-de-tecnologia/"
-     link.image = Image("10 cursos para quem gosta de tecnologia")
-     category.links.append(link)
-    //4
-    link.titulo = "Áreas de atuação em computação"
-     link.url = "https://blog.enem.com.br/areas-de-atuacao-em-computacao/"
-     link.image = Image("areas de atuacao em computacao")
-     category.links.append(link)
+class Data{
+    var categories:[Category] = []
+    var category:Category = Category()
+  //  var subcategories:[Subcategory] = []
+    var subcategory:Subcategory = Subcategory()
+    var link:Link = Link()
+    
+    init() {
+        self.category.title = "Computação"
+        self.category.content = "Ciência da Computação é a ciência que estuda as técnicas, metodologias, instrumentos computacionais e aplicações tecnológicas, que automatizem os processos e desenvolvam soluções de processamento de dados de entrada e saída pautado no computador, de forma que se transforme em informação."
+        //link 1
+        self.link.titulo = "8 Coisas Para Você Saber Antes de Fazer Ciência da Computação"
+        self.link.url = "https://medium.com/@thiago.barbosa/8-coisas-para-voce-saber-antes-de-fazer-ciencia-da-computacao-37fdffbc6156"
+        self.link.image = "8 Coisas Para Você Saber Antes de Fazer Ciência da Computação"
+        self.category.links.append(link)
+        //2
+        self.link.titulo = "Ganhando experiência em uma nova área"
+        self.link.url = "https://medium.com/@edersantana/ganhando-experiência-em-uma-nova-área-de-trabalho-sem-pedir-permissão-pra-ninguém-a57fdfaae8ae"
+        self.link.image = "ganhando experiencia em uma nova area"
+        self.category.links.append(link)
+        //3
+        self.link.titulo = "10 cursos para quem gosta de tecnologia"
+        self.link.url = "https://vaidebolsa.com.br/cursos-para-quem-gosta-de-tecnologia/"
+        self.link.image = "10 cursos para quem gosta de tecnologia"
+        self.category.links.append(link)
+        //4
+        self.link.titulo = "Áreas de atuação em computação"
+        self.link.url = "https://blog.enem.com.br/areas-de-atuacao-em-computacao/"
+        self.link.image = "areas de atuacao em computacao"
+        self.category.links.append(link)
+        
+        
+        //subcategorias
+        //1
+        self.subcategory.title = "Segurança da Informação"
+        self.subcategory.content = "É a área responsável por montar uma  barreira de segurança para que dados não estejam ao alcance de golpistas e ataques digitais."
+        self.subcategory.image = "seguranca da informacao"
+        self.category.subcategories.append(subcategory)
+        //2
+        self.subcategory.title = "Engenharia de Software"
+        self.subcategory.content = "É a área voltada à especificação, desenvolvimento, manutenção e criação de software, com a aplicação de práticas de gerência de projetos."
+        self.subcategory.image = "engenharia de software"
+        self.category.subcategories.append(subcategory)
+        //3
+        self.subcategory.title = "Ciência de Dados"
+        self.subcategory.content = "Estudo e a análise de dados econômicos, financeiros e sociais, que visa a extração de conhecimento e detecção de padrões."
+        self.subcategory.image = "ciencia de dados"
+        self.category.subcategories.append(subcategory)
+        //4
+        self.subcategory.title = "Robótica"
+        self.subcategory.content = "É a área que trata de sistemas compostos por partes mecânicas automáticas e controladas por circuitos integrados.."
+        self.subcategory.image = "robotica"
+        self.category.subcategories.append(subcategory)
+        //5 teste
+        self.subcategory.title = "teste"
+        self.subcategory.content = "É a área que trata de sistemas compostos por partes mecânicas automáticas e controladas por circuitos integrados.."
+        self.subcategory.image = "robotica"
+        self.category.subcategories.append(subcategory)
+        
+    }
     
     
-    //subcategorias
-    //1
-    subcategory.title = "Segurança da Informação"
-    subcategory.content = "É a área responsável por montar uma  barreira de segurança para que dados não estejam ao alcance de golpistas e ataques digitais."
-    subcategory.image = Image("seguranca da informacao")
-    category.subcategory.append(subcategory)
-    //2
-    subcategory.title = "Engenharia de Software"
-    subcategory.content = "É a área voltada à especificação, desenvolvimento, manutenção e criação de software, com a aplicação de práticas de gerência de projetos."
-    subcategory.image = Image("engenharia de software")
-    category.subcategory.append(subcategory)
-    //3
-    subcategory.title = "Ciência de Dados"
-    subcategory.content = "Estudo e a análise de dados econômicos, financeiros e sociais, que visa a extração de conhecimento e detecção de padrões."
-    subcategory.image = Image("ciencia de dados")
-    category.subcategory.append(subcategory)
-    //4
-    subcategory.title = "Robótica"
-    subcategory.content = "É a área que trata de sistemas compostos por partes mecânicas automáticas e controladas por circuitos integrados.."
-    subcategory.image = Image("robotica")
-    category.subcategory.append(subcategory)
-
+    func returnCategory()->Category{
+        return self.category
+    }
 }
+
+
+

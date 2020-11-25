@@ -11,7 +11,7 @@ import SwiftUI
 class Subcategory {
     var title:String
     var content:String
-    var image:Image?
+    var image:String?
     var links:[Link]
     var subcategories:[Subcategory]
     var favorite:Bool
@@ -23,6 +23,7 @@ class Subcategory {
         self.links = []
         self.favorite = false
         self.visited = false
+        self.subcategories = []
     }
     
     init(title:String,content:String,links:[Link]) {
@@ -31,6 +32,7 @@ class Subcategory {
         self.links = links
         self.favorite = false
         self.visited = false
+        self.subcategories = []
     }
     
     func visite(){

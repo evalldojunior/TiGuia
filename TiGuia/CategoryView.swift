@@ -11,6 +11,9 @@ import SwiftUI
 struct CategoryView: View {
     @State private var favorito: Bool = false
     @State private var presented: Bool = false
+    
+    let category = Data().returnCategory()
+
     let titleColor = Color("titleColor")
     let btnColor = Color("btnColor")
     let lightColor = Color("lightColor")
@@ -55,7 +58,7 @@ struct CategoryView: View {
                     //MARK: -"colection" de links
                     //
                     ScrollView(.horizontal){
-                        CardLink()
+                        CardLink(category: category)
                             .padding(.trailing, 8.0)
                     }
                     //
@@ -70,7 +73,7 @@ struct CategoryView: View {
                     }
                     
                     VStack{
-                        CardsCategory()
+                        CardsCategory(category: category)
                             .padding(.bottom, 10.0)
                             .shadow(radius: 10, x: 0, y: 4)
                     }.padding([.leading, .bottom, .trailing])

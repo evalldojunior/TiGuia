@@ -59,14 +59,14 @@ import SwiftUI
 struct CardsCategory: View{
     let lightColor = Color("lightColor")
     let textColor = Color("darkColor")
-
+    let category:Category
     
-    var imageFavorite = ["qual-curso-escolher","qual-curso-escolher","qual-curso-escolher","qual-curso-escolher"]
-    
-    var titleFavorite = ["Segurança da Informação", "Ciência de dados", "Gerenciamento de Firewall", "Robótica"]
-    
-    var conteudo = ["É a área responsável por montar uma  barreira de segurança para que dados não estejam ao alcance de golpistas e ataques digitais.", "jhbduhsdbuhsbduvhsbfgydfhgdhfg", "Gerenciamento \ndjdgsaudfgusydhufdhsudyfe Firewall", "Robjhisjdhfiushfuhbfjhgbdhjfbgfjgótica"]
-    
+//    var imageFavorite = ["qual-curso-escolher","qual-curso-escolher","qual-curso-escolher","qual-curso-escolher"]
+//
+//    var titleFavorite = ["Segurança da Informação", "Ciência de dados", "Gerenciamento de Firewall", "Robótica"]
+//
+//    var conteudo = ["É a área responsável por montar uma  barreira de segurança para que dados não estejam ao alcance de golpistas e ataques digitais.", "jhbduhsdbuhsbduvhsbfgydfhgdhfg", "Gerenciamento \ndjdgsaudfgusydhufdhsudyfe Firewall", "Robjhisjdhfiushfuhbfjhgbdhjfbgfjgótica"]
+//
     var columns = [
         // define number of caullum here
         GridItem(.flexible())
@@ -78,24 +78,24 @@ struct CardsCategory: View{
               //  ScrollView(.vertical) {
                    
                     LazyVGrid(columns: columns) {
-                        ForEach(0..<imageFavorite.count, id: \.self) { count in
+                        ForEach(0..<category.subcategories.count, id: \.self) { count in
                             
                             VStack{
                                 HStack{
-                                    Image(imageFavorite[count])
+                                    Image(category.subcategories[count].image!)
                                         .resizable()
                                         .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                                         .scaledToFill()
                                         .clipShape(Rectangle(), style: /*@START_MENU_TOKEN@*/FillStyle()/*@END_MENU_TOKEN@*/)
                                         .cornerRadius(10)
                                     VStack(alignment: .leading){
-                                        Text(titleFavorite[count])
+                                        Text(category.subcategories[count].title)
                                             .font(.custom("Raleway-SemiBold", size: 16))
                                             .padding([.leading, .bottom, .trailing], 5.0)
                                             .foregroundColor(textColor)
                                             
                                             
-                                        Text(conteudo[count])
+                                        Text(category.subcategories[count].content)
                                             .font(.custom("Raleway-Regular", size: 14))
                                             .padding(.horizontal, 5.0)
                                             .foregroundColor(textColor)
@@ -119,8 +119,8 @@ struct CardsCategory: View{
     }
 }
 
-struct CardCategory_Previews: PreviewProvider {
-    static var previews: some View {
-        CardsCategory()
-    }
-}
+//struct CardCategory_Previews: PreviewProvider {
+//    static var previews: some View {
+//        //CardsCategory()
+//    }
+//}

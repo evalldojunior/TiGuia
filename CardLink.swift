@@ -35,6 +35,7 @@ struct ImageOverlay: View {
 struct CardLink: View {
  
     let lightColor = Color("lightColor")
+    var category:Category
     
     var imageFavorite = ["qual-curso-escolher","qual-curso-escolher","qual-curso-escolher","qual-curso-escolher"]
     
@@ -50,17 +51,17 @@ struct CardLink: View {
             VStack (alignment: .leading){
                 ScrollView(.horizontal) {
                     LazyHGrid(rows: row) {
-                        ForEach(0..<imageFavorite.count, id: \.self) { count in
+                        ForEach(0..<category.links.count, id: \.self) { count in
                             Button(action: {
                               //  self.presented.toggle()
                             }, label: {
-                                Image(imageFavorite[count])
+                                Image(category.links[count].image!)
                                     .resizable()
                                     .frame(width: 164, height: 121)
                                     .cornerRadius(10)
                                     .padding(14)
                                     .shadow(color: .init(.sRGB, red: 0, green: 0, blue: 0, opacity: 0.4), radius: 10, x: 0.0, y: 4.0)
-                                    .overlay(ImageOverlay(title: titleFavorite[count]), alignment: .bottomLeading)
+                                    .overlay(ImageOverlay(title: category.links[count].titulo), alignment: .bottomLeading)
                             })
                           
                         }
@@ -72,8 +73,8 @@ struct CardLink: View {
     }
 }
 
-struct CardLink_Previews: PreviewProvider {
-    static var previews: some View {
-        CardLink()
-    }
-}
+//struct CardLink_Previews: PreviewProvider {
+//    static var previews: some View {
+//        //CardLink()
+//    }
+//}

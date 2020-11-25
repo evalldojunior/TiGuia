@@ -14,19 +14,19 @@ class Category {
     var content:String
     var image:Image?
     var links:[Link]
-    var subcategory:[Subcategory]
+    var subcategories:[Subcategory]
     
     init() {
         self.title = ""
         self.content = ""
         self.links = []
-        self.subcategory = []
+        self.subcategories = []
     }
     
     init(title:String,content:String,links:[Link],subcategory:[Subcategory]) {
         self.title = title
         self.content = content
         self.links = links
-        self.subcategory = subcategory
+        self.subcategories = subcategory
     }
 }
