@@ -18,11 +18,27 @@ var link:Link = Link()
 func adicionaCategoria(){
     category.title = "Computação"
     category.content = "Ciência da Computação é a ciência que estuda as técnicas, metodologias, instrumentos computacionais e aplicações tecnológicas, que automatizem os processos e desenvolvam soluções de processamento de dados de entrada e saída pautado no computador, de forma que se transforme em informação."
-    //link
+    //link 1
    link.titulo = "8 Coisas Para Você Saber Antes de Fazer Ciência da Computação"
     link.url = "https://medium.com/@thiago.barbosa/8-coisas-para-voce-saber-antes-de-fazer-ciencia-da-computacao-37fdffbc6156"
     link.image = Image("8 Coisas Para Você Saber Antes de Fazer Ciência da Computação")
     category.links.append(link)
+    //2
+    link.titulo = "Ganhando experiência em uma nova área"
+     link.url = "https://medium.com/@edersantana/ganhando-experiência-em-uma-nova-área-de-trabalho-sem-pedir-permissão-pra-ninguém-a57fdfaae8ae"
+     link.image = Image("ganhando experiencia em uma nova area")
+     category.links.append(link)
+    //3
+    link.titulo = "10 cursos para quem gosta de tecnologia"
+     link.url = "https://vaidebolsa.com.br/cursos-para-quem-gosta-de-tecnologia/"
+     link.image = Image("10 cursos para quem gosta de tecnologia")
+     category.links.append(link)
+    //4
+    link.titulo = "Áreas de atuação em computação"
+     link.url = "https://blog.enem.com.br/areas-de-atuacao-em-computacao/"
+     link.image = Image("areas de atuacao em computacao")
+     category.links.append(link)
+    
     
     //subcategorias
     //1
