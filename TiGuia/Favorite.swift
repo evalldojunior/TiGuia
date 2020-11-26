@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class Favorite {
+class Favorites {
     
     var subcategories: [Subcategory]
     var subcategory: Subcategory

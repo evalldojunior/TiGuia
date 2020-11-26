@@ -36,6 +36,8 @@ struct Favorite: View {
     
     @State var presented = false
     
+    let subcategory = Favorites().returnSubcategories()
+        
     var imageFavorite = ["seguranca","cienciadedados","firewall","robotica"]
     
     var titleFavorite = ["Segurança \nda Informação", "Ciência de dados", "Gerenciamento \nde Firewall", "Robótica"]
@@ -72,7 +74,7 @@ struct Favorite: View {
                                 .overlay(ImageOverlay(title: titleFavorite[count]), alignment: .bottomLeading)
                         })
                         .fullScreenCover(isPresented: $presented, content: {
-                            NextUI()
+                            OtherUI()
                         })
                     }
                 }
@@ -84,7 +86,7 @@ struct Favorite: View {
 }
  
 // codigo para mostrar a view controller junto com o .fullScreenCover mostrado acima no botao
-struct NextUI: UIViewControllerRepresentable {
+struct OtherUI: UIViewControllerRepresentable {
     
     func makeUIViewController(context: Context) -> UIViewController {
         return FavoriteViewController()
