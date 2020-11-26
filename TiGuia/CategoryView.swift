@@ -41,10 +41,11 @@ struct CategoryView: View {
             
             ScrollView{
                 VStack{
-                    Text("Ciência da Computação é a ciência que estuda as técnicas, metodologias, instrumentos computacionais e aplicações tecnológicas, que automatizem os processos e desenvolvam soluções de processamento de dados de entrada e saída pautado no computador, de forma que se transforme em informação.")
+                    Text(category.content)
                         .font(.custom("Raleway-Regular", size: 15))
                         .padding([.leading, .bottom, .trailing])
                         .foregroundColor(textColor)
+                        .frame(width: 372, height: 148, alignment: .leading)
                     
                     HStack{
                         Text("Links úteis")
@@ -57,10 +58,8 @@ struct CategoryView: View {
                     //
                     //MARK: -"colection" de links
                     //
-                    ScrollView(.horizontal){
                         CardLink(category: category)
-                            .padding(.trailing, 8.0)
-                    }
+                            //.padding(.trailing)
                     //
                     //MARK: -subcategorias
                     //

@@ -12,7 +12,7 @@ struct ImageOverlay: View {
     var title: String
     
     var gradient: LinearGradient {
-        LinearGradient(gradient: Gradient(colors: [Color.black.opacity(0.8), Color.black.opacity(0)]), startPoint: .bottom, endPoint: .center)
+        LinearGradient(gradient: Gradient(colors: [Color.black.opacity(1.0), Color.black.opacity(0.2)]), startPoint: .bottom, endPoint: .center)
     }
     
     var body: some View {
@@ -20,12 +20,14 @@ struct ImageOverlay: View {
             Rectangle().fill(gradient)
                 .frame(width: 164, height: 121)
                 .cornerRadius(10)
-                .offset(x: 14, y: -14)
+                .offset(x: 8, y: -8)
             
             VStack(alignment: .leading) {
                 Text(title)
                     .offset(x: 25, y: -25)
                     .foregroundColor(.white)
+                    .font(.custom("Raleway-SemiBold", size: 14))
+                    .frame(width: 140, height: 45, alignment: .bottomLeading)
             }
         }
     }
@@ -59,7 +61,7 @@ struct CardLink: View {
                                     .resizable()
                                     .frame(width: 164, height: 121)
                                     .cornerRadius(10)
-                                    .padding(14)
+                                    .padding(8)
                                     .shadow(color: .init(.sRGB, red: 0, green: 0, blue: 0, opacity: 0.4), radius: 10, x: 0.0, y: 4.0)
                                     .overlay(ImageOverlay(title: category.links[count].titulo), alignment: .bottomLeading)
                             })

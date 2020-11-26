@@ -45,28 +45,37 @@ class Data{
         self.subcategory.title = "Segurança da Informação"
         self.subcategory.content = "É a área responsável por montar uma  barreira de segurança para que dados não estejam ao alcance de golpistas e ataques digitais."
         self.subcategory.image = "seguranca da informacao"
-        self.category.subcategories.append(subcategory)
+        category.subcategories.append(subcategory)
+        print(category.subcategories[0].title)
         //2
+        subcategory = Subcategory()
         self.subcategory.title = "Engenharia de Software"
         self.subcategory.content = "É a área voltada à especificação, desenvolvimento, manutenção e criação de software, com a aplicação de práticas de gerência de projetos."
         self.subcategory.image = "engenharia de software"
-        self.category.subcategories.append(subcategory)
+        category.subcategories.append(subcategory)
+        print(category.subcategories[0].title)
+        print(category.subcategories[1].title)
+
+
         //3
+        subcategory = Subcategory()
         self.subcategory.title = "Ciência de Dados"
         self.subcategory.content = "Estudo e a análise de dados econômicos, financeiros e sociais, que visa a extração de conhecimento e detecção de padrões."
         self.subcategory.image = "ciencia de dados"
         self.category.subcategories.append(subcategory)
         //4
+        subcategory = Subcategory()
         self.subcategory.title = "Robótica"
         self.subcategory.content = "É a área que trata de sistemas compostos por partes mecânicas automáticas e controladas por circuitos integrados.."
         self.subcategory.image = "robotica"
         self.category.subcategories.append(subcategory)
+        
         //5 teste
-        self.subcategory.title = "teste"
+        subcategory = Subcategory()
+        self.subcategory.title = "hgfhsgudfgsud"
         self.subcategory.content = "É a área que trata de sistemas compostos por partes mecânicas automáticas e controladas por circuitos integrados.."
         self.subcategory.image = "robotica"
         self.category.subcategories.append(subcategory)
-        
     }
     
     

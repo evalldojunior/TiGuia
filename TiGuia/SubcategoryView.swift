@@ -14,6 +14,8 @@ struct SubcategoryView: View {
     @State private var presented: Bool = false
     
     var category = Data().returnCategory()
+    var favorite = Favorites()
+    var index:Int
     
     let titleColor = Color("titleColor")
     let btnColor = Color("btnColor")
@@ -29,7 +31,7 @@ struct SubcategoryView: View {
             //
             HStack {
                 //título
-                Text("Computação")
+                Text(category.subcategories[index].title)
                     .foregroundColor(titleColor)
                     .font(.custom("Raleway-Bold", size: 30))
                     .multilineTextAlignment(.leading)
@@ -39,6 +41,13 @@ struct SubcategoryView: View {
                 //Botao de favoritos
                 Button(action: {
                     self.favorito.toggle()
+                    if(self.favorito){
+                        favorite.addSubcategory(subcategory: category.subcategories[index])
+                    }else{
+                        favorite.removeSubcategory(subcategory: category.subcategories[index])
+                    }
+                    category.subcategories[index].favorite = favorito
+                    
                 }, label: {
                     Image(systemName: self.favorito == true ? "star.fill" : "star")
                         .resizable()
@@ -59,10 +68,12 @@ struct SubcategoryView: View {
             
             ScrollView{
                 VStack{
-                    Text("Ciência da Computação é a ciência que estuda as técnicas, metodologias, instrumentos computacionais e aplicações tecnológicas, que automatizem os processos e desenvolvam soluções de processamento de dados de entrada e saída pautado no computador, de forma que se transforme em informação.")
+                    Text(category.subcategories[index].content)
                         .font(.custom("Raleway-Regular", size: 15))
                         .padding([.leading, .bottom, .trailing])
                         .foregroundColor(textColor)
+                        .frame(width: 372, height: 148, alignment: .topLeading)
+
                     
                     HStack{
                         Text("Links úteis")
@@ -153,8 +164,8 @@ struct SubcategoryView: View {
     //    }
 }
 
-struct Subcategory_Previews: PreviewProvider {
-    static var previews: some View {
-        SubcategoryView()
-    }
-}
+//struct Subcategory_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SubcategoryView()
+//    }
+//}

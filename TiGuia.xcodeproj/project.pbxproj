@@ -31,6 +31,7 @@
 		08A7105525543A17002CB323 /* Raleway-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08A7104325543A17002CB323 /* Raleway-Thin.ttf */; };
 		08A7105625543A17002CB323 /* Raleway-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08A7104425543A17002CB323 /* Raleway-Italic.ttf */; };
 		08A7105725543A17002CB323 /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08A7104525543A17002CB323 /* Raleway-Bold.ttf */; };
+		4741B04925702A90008B0873 /* CardCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4741B04825702A90008B0873 /* CardCategoryViewController.swift */; };
 		4780500325630A4F0004919D /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4780500225630A4F0004919D /* CategoryView.swift */; };
 		47A2FC822565BB9E00A5013E /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A2FC812565BB9E00A5013E /* Category.swift */; };
 		47A2FC852565BBBC00A5013E /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A2FC842565BBBC00A5013E /* Student.swift */; };
@@ -38,8 +39,8 @@
 		47A2FC8B2565BBF800A5013E /* Subcategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A2FC8A2565BBF800A5013E /* Subcategory.swift */; };
 		47A2FC8E2565BC0A00A5013E /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A2FC8D2565BC0A00A5013E /* Link.swift */; };
 		47A2FC912565BC2900A5013E /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A2FC902565BC2900A5013E /* Favorite.swift */; };
-		47A2FCA5256D9BFA00A5013E /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A2FCA4256D9BF900A5013E /* Data.swift */; };
 		47A2FCA1256D9A8000A5013E /* SubcategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A2FCA0256D9A8000A5013E /* SubcategoryView.swift */; };
+		47A2FCA5256D9BFA00A5013E /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A2FCA4256D9BF900A5013E /* Data.swift */; };
 		47F3F00025636F160007B7B1 /* CardLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F3EFFF25636F160007B7B1 /* CardLink.swift */; };
 		47F3F00325637AF80007B7B1 /* CardCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F3F00225637AF80007B7B1 /* CardCategory.swift */; };
 		65D0491140E1507108E211F7 /* Pods_TiGuia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB1C8E3F18B32085B059A10 /* Pods_TiGuia.framework */; };
@@ -73,6 +74,7 @@
 		08A7104425543A17002CB323 /* Raleway-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Italic.ttf"; sourceTree = "<group>"; };
 		08A7104525543A17002CB323 /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Bold.ttf"; sourceTree = "<group>"; };
 		34EEFAA7AAED50B9A86EC451 /* Pods-TiGuia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TiGuia.release.xcconfig"; path = "Target Support Files/Pods-TiGuia/Pods-TiGuia.release.xcconfig"; sourceTree = "<group>"; };
+		4741B04825702A90008B0873 /* CardCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCategoryViewController.swift; sourceTree = "<group>"; };
 		4780500225630A4F0004919D /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		47A2FC812565BB9E00A5013E /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		47A2FC842565BBBC00A5013E /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
@@ -80,9 +82,8 @@
 		47A2FC8A2565BBF800A5013E /* Subcategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subcategory.swift; sourceTree = "<group>"; };
 		47A2FC8D2565BC0A00A5013E /* Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
 		47A2FC902565BC2900A5013E /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
-
-		47A2FCA4256D9BF900A5013E /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		47A2FCA0256D9A8000A5013E /* SubcategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubcategoryView.swift; sourceTree = "<group>"; };
+		47A2FCA4256D9BF900A5013E /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		47F3EFFF25636F160007B7B1 /* CardLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardLink.swift; path = ../CardLink.swift; sourceTree = "<group>"; };
 		47F3F00225637AF80007B7B1 /* CardCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCategory.swift; sourceTree = "<group>"; };
 		ADB1C8E3F18B32085B059A10 /* Pods_TiGuia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TiGuia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -190,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				0831EF9D2553497600D6EFFC /* ViewController.swift */,
+				4741B04825702A90008B0873 /* CardCategoryViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -352,6 +354,7 @@
 				0831EF9C2553497600D6EFFC /* SceneDelegate.swift in Sources */,
 				47F3F00325637AF80007B7B1 /* CardCategory.swift in Sources */,
 				47A2FC8E2565BC0A00A5013E /* Link.swift in Sources */,
+				4741B04925702A90008B0873 /* CardCategoryViewController.swift in Sources */,
 				47A2FC852565BBBC00A5013E /* Student.swift in Sources */,
 				47A2FC912565BC2900A5013E /* Favorite.swift in Sources */,
 				47A2FCA1256D9A8000A5013E /* SubcategoryView.swift in Sources */,
