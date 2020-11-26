@@ -29,7 +29,7 @@ class Favorites {
     
     func removeSubcategory(subcategory: Subcategory) {
         for index in 0...(self.subcategories.count-1) {
-            if(self.subcategories[index].title == subcategory.title){
+            if(self.subcategories[index].title == subcategory.title) {
                 self.subcategories.remove(at: index)
                 print("removeu")
                 break

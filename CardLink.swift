@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ImageOverlay: View {
+struct ImageOverlayCardLink: View {
     
     var title: String
     
@@ -33,15 +33,10 @@ struct ImageOverlay: View {
     }
 }
 
-
 struct CardLink: View {
  
     let lightColor = Color("lightColor")
     var category:Category
-    
-    var imageFavorite = ["qual-curso-escolher","qual-curso-escolher","qual-curso-escolher","qual-curso-escolher"]
-    
-    var titleFavorite = ["Segurança \nda Informação", "Ciência de dados", "Gerenciamento \nde Firewall", "Robótica"]
     
     var row = [
         // define number of caullum here
@@ -50,7 +45,7 @@ struct CardLink: View {
     
     var body: some View {
       //  ZStack{
-            VStack (alignment: .leading){
+            VStack(alignment: .leading) {
                 ScrollView(.horizontal) {
                     LazyHGrid(rows: row) {
                         ForEach(0..<category.links.count, id: \.self) { count in
@@ -63,7 +58,7 @@ struct CardLink: View {
                                     .cornerRadius(10)
                                     .padding(8)
                                     .shadow(color: .init(.sRGB, red: 0, green: 0, blue: 0, opacity: 0.4), radius: 10, x: 0.0, y: 4.0)
-                                    .overlay(ImageOverlay(title: category.links[count].titulo), alignment: .bottomLeading)
+                                    .overlay(ImageOverlayCardLink(title: category.links[count].titulo), alignment: .bottomLeading)
                             })
                           
                         }
