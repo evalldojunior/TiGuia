@@ -9,12 +9,12 @@ import Foundation
 
 import SwiftUI
 //titulo, conteúdo, links, cards subcategorias, btn favorito
-struct SubcategoryView: View {
+public struct SubcategoryView: View {
     @State private var favorito: Bool = false
     @State private var presented: Bool = false
     
     var category = Data().returnCategory()
-    var favorite = Favorites()
+    static var favorite = Favorites()
     var index:Int
     
     let titleColor = Color("titleColor")
@@ -22,10 +22,10 @@ struct SubcategoryView: View {
     let lightColor = Color("lightColor")
     let textColor = Color("darkColor")
     
-    var body: some View {
+    public var body: some View {
         
         
-        VStack(alignment: .leading){
+        VStack(alignment: .leading) {
             //
             //MARK: -Header - titulo + botao de favoritos
             //
@@ -41,10 +41,10 @@ struct SubcategoryView: View {
                 //Botao de favoritos
                 Button(action: {
                     self.favorito.toggle()
-                    if(self.favorito){
-                        favorite.addSubcategory(subcategory: category.subcategories[index])
-                    }else{
-                        favorite.removeSubcategory(subcategory: category.subcategories[index])
+                    if (self.favorito) {
+                        SubcategoryView.favorite.addSubcategory(subcategory: category.subcategories[index])
+                    } else {
+                        SubcategoryView.favorite.removeSubcategory(subcategory: category.subcategories[index])
                     }
                     category.subcategories[index].favorite = favorito
                     
@@ -55,27 +55,26 @@ struct SubcategoryView: View {
                         .padding(10)
                         .background(btnColor)
                         .foregroundColor(lightColor)
-                        .frame(width: 48, height: 48, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                        .frame(width: 48, height: 48, alignment: .center)
                         .cornerRadius(10)
                 })
                 .padding()
-                .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                .shadow(radius: 10)
                 .offset(y: -10)
             }
             //
             //MARK: -inicio do conteúdo
             //
             
-            ScrollView{
-                VStack{
+            ScrollView {
+                VStack {
                     Text(category.subcategories[index].content)
                         .font(.custom("Raleway-Regular", size: 15))
                         .padding([.leading, .bottom, .trailing])
                         .foregroundColor(textColor)
                         .frame(width: 372, height: 148, alignment: .topLeading)
 
-                    
-                    HStack{
+                    HStack {
                         Text("Links úteis")
                             .multilineTextAlignment(.leading)
                             .padding(.horizontal)
@@ -86,14 +85,14 @@ struct SubcategoryView: View {
                     //
                     //MARK: -"colection" de links
                     //
-                    ScrollView(.horizontal){
+                    ScrollView(.horizontal) {
                         CardLink(category:category)
                             .padding(.trailing, 8.0)
                     }
                     //
                     //MARK: -subcategorias
                     //
-                    HStack{
+                    HStack {
                         Text("Categorias")
                             .padding([.leading, .bottom, .trailing])
                             .font(.custom("Raleway-Bold", size: 20))
@@ -101,7 +100,7 @@ struct SubcategoryView: View {
                         Spacer()
                     }
                     
-                    VStack{
+                    VStack {
                         CardsCategory(category: category)
                             .padding(.bottom, 10.0)
                             .shadow(radius: 10, x: 0, y: 4)
@@ -118,7 +117,7 @@ struct SubcategoryView: View {
                             .resizable()
                             .scaledToFit()
                             .foregroundColor(lightColor)
-                            .frame(width: 20, height: 20, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                            .frame(width: 20, height: 20, alignment: .center)
                         Text("Pedir ajuda")
                             .font(.custom("Raleway-Bold", size: 18))
                             .foregroundColor(lightColor)
@@ -129,7 +128,7 @@ struct SubcategoryView: View {
                     .background(btnColor)
                     .cornerRadius(10)
                     .padding()
-                    .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                    .shadow(radius: 10)
                     .fullScreenCover(isPresented: $presented, content: {
                         //HelpUI()
                     })

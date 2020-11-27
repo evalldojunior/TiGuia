@@ -21,8 +21,7 @@ struct CategoryView: View {
     
     var body: some View {
         
-        
-        VStack(alignment: .leading){
+        VStack(alignment: .leading) {
             //
             //MARK: -Header - titulo + botao de favoritos
             //
@@ -39,15 +38,15 @@ struct CategoryView: View {
             //MARK: -inicio do conteúdo
             //
             
-            ScrollView{
-                VStack{
+            ScrollView {
+                VStack {
                     Text(category.content)
                         .font(.custom("Raleway-Regular", size: 15))
                         .padding([.leading, .bottom, .trailing])
                         .foregroundColor(textColor)
                         .frame(width: 372, height: 148, alignment: .leading)
                     
-                    HStack{
+                    HStack {
                         Text("Links úteis")
                             .multilineTextAlignment(.leading)
                             .padding(.horizontal)
@@ -63,7 +62,7 @@ struct CategoryView: View {
                     //
                     //MARK: -subcategorias
                     //
-                    HStack{
+                    HStack {
                         Text("Categorias")
                             .padding([.leading, .bottom, .trailing])
                             .font(.custom("Raleway-Bold", size: 20))
@@ -71,7 +70,7 @@ struct CategoryView: View {
                         Spacer()
                     }
                     
-                    VStack{
+                    VStack {
                         CardsCategory(category: category)
                             .padding(.bottom, 10.0)
                             .shadow(radius: 10, x: 0, y: 4)
@@ -99,7 +98,7 @@ struct CategoryView: View {
                     .background(btnColor)
                     .cornerRadius(10)
                     .padding()
-                    .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                    .shadow(radius: 10)
                     .fullScreenCover(isPresented: $presented, content: {
                         //HelpUI()
                     })

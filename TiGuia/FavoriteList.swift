@@ -36,11 +36,11 @@ struct Favorite: View {
     
     @State var presented = false
     
-    let subcategory = Favorites().returnSubcategories()
-        
-    var imageFavorite = ["seguranca","cienciadedados","firewall","robotica"]
+    @ObservedObject var subcategory = SubcategoryView.favorite
     
-    var titleFavorite = ["Segurança \nda Informação", "Ciência de dados", "Gerenciamento \nde Firewall", "Robótica"]
+    //    var imageFavorite = ["seguranca","cienciadedados","firewall","robotica"]
+    
+    //    var titleFavorite = ["Segurança \nda Informação", "Ciência de dados", "Gerenciamento \nde Firewall", "Robótica"]
     
     var collums = [
         // define number of caullum here
@@ -61,17 +61,17 @@ struct Favorite: View {
             
             ScrollView(.vertical) {
                 LazyVGrid(columns: collums) {
-                    ForEach(0..<imageFavorite.count, id: \.self) { count in
+                    ForEach(0..<subcategory.subcategories.count, id: \.self) { count in
                         Button(action: {
                             self.presented.toggle()
                         }, label: {
-                            Image(imageFavorite[count])
+                            Image(subcategory.subcategories[count].image ?? "seguranca" )
                                 .resizable()
                                 .frame(width: 176, height: 170)
                                 .cornerRadius(10)
                                 .padding(14)
                                 .shadow(color: .init(.sRGB, red: 0, green: 0, blue: 0, opacity: 0.4), radius: 10, x: 0.0, y: 4.0)
-                                .overlay(ImageOverlay(title: titleFavorite[count]), alignment: .bottomLeading)
+                                .overlay(ImageOverlay(title: subcategory.subcategories[count].title), alignment: .bottomLeading)
                         })
                         .fullScreenCover(isPresented: $presented, content: {
                             OtherUI()
@@ -84,7 +84,7 @@ struct Favorite: View {
         .offset(y: -50)
     }
 }
- 
+
 // codigo para mostrar a view controller junto com o .fullScreenCover mostrado acima no botao
 struct OtherUI: UIViewControllerRepresentable {
     
