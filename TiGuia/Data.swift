@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 class Data{
-    var categories:[Category] = []
+    static var categories:[Category] = []
     var category:Category = Category()
   //  var subcategories:[Subcategory] = []
     var subcategory:Subcategory = Subcategory()
@@ -18,6 +18,7 @@ class Data{
     init() {
         self.category.title = "Computação"
         self.category.content = "Ciência da Computação é a ciência que estuda as técnicas, metodologias, instrumentos computacionais e aplicações tecnológicas, que automatizem os processos e desenvolvam soluções de processamento de dados de entrada e saída pautado no computador, de forma que se transforme em informação."
+        Data.categories.append(self.category)
         //link 1
         self.link.titulo = "8 Coisas Para Você Saber Antes de Fazer Ciência da Computação"
         self.link.url = "https://medium.com/@thiago.barbosa/8-coisas-para-voce-saber-antes-de-fazer-ciencia-da-computacao-37fdffbc6156"

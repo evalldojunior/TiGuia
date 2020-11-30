@@ -76,7 +76,7 @@ struct OnboardingUI: View {
             }.padding()
             .opacity(currentPage == 2 ? 1 : 0)
             Spacer(minLength: 10)
-        }
+        }//.background(Color.backgroundColor)
     }
 }
 
@@ -107,7 +107,7 @@ struct DataOnboardingPage: View {
                 .foregroundColor(.darkColor)
                 .multilineTextAlignment(.center)
                 .padding([.top, .leading, .trailing])
-        }
+        }//.background(Color.backgroundColor)
     }
 }
 

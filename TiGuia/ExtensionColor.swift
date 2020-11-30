@@ -15,4 +15,5 @@ extension Color {
     static let lightColor = Color(UIColor(named:"lightColor")!)
     static let orangeColor = Color(UIColor(named:"orangeColor")!)
     static let titleColor = Color(UIColor(named:"titleColor")!)
+    static let backgroundColor = Color(UIColor(named:"backgroundColor")!)
 }
