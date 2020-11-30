@@ -50,6 +50,11 @@
 		47F3F00025636F160007B7B1 /* CardLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F3EFFF25636F160007B7B1 /* CardLink.swift */; };
 		47F3F00325637AF80007B7B1 /* CardCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F3F00225637AF80007B7B1 /* CardCategory.swift */; };
 		65D0491140E1507108E211F7 /* Pods_TiGuia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB1C8E3F18B32085B059A10 /* Pods_TiGuia.framework */; };
+		8B2FA23125759D3D00EACCA0 /* AreaMentorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2FA23025759D3D00EACCA0 /* AreaMentorViewController.swift */; };
+		8B2FA2352575A43D00EACCA0 /* areaMentorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2FA2342575A43D00EACCA0 /* areaMentorView.swift */; };
+		8B2FA2382575A91A00EACCA0 /* ConteudosMentorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2FA2372575A91A00EACCA0 /* ConteudosMentorView.swift */; };
+		8B2FA23B2575A94F00EACCA0 /* ConteudosMentorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2FA23A2575A94F00EACCA0 /* ConteudosMentorViewController.swift */; };
+		8B2FA23F2575A99C00EACCA0 /* Conteudos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2FA23E2575A99C00EACCA0 /* Conteudos.swift */; };
 		8B3DAF4C25645094002FEE6E /* FavoriteList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3DAF4B25645094002FEE6E /* FavoriteList.swift */; };
 		8BF09B862562FB8300D881D9 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF09B852562FB8300D881D9 /* FavoriteViewController.swift */; };
 /* End PBXBuildFile section */
@@ -100,6 +105,11 @@
 		47A2FCA4256D9BF900A5013E /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		47F3EFFF25636F160007B7B1 /* CardLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardLink.swift; path = ../CardLink.swift; sourceTree = "<group>"; };
 		47F3F00225637AF80007B7B1 /* CardCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCategory.swift; sourceTree = "<group>"; };
+		8B2FA23025759D3D00EACCA0 /* AreaMentorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaMentorViewController.swift; sourceTree = "<group>"; };
+		8B2FA2342575A43D00EACCA0 /* areaMentorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = areaMentorView.swift; sourceTree = "<group>"; };
+		8B2FA2372575A91A00EACCA0 /* ConteudosMentorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConteudosMentorView.swift; sourceTree = "<group>"; };
+		8B2FA23A2575A94F00EACCA0 /* ConteudosMentorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConteudosMentorViewController.swift; sourceTree = "<group>"; };
+		8B2FA23E2575A99C00EACCA0 /* Conteudos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conteudos.swift; sourceTree = "<group>"; };
 		8B3DAF4B25645094002FEE6E /* FavoriteList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteList.swift; sourceTree = "<group>"; };
 		8BF09B852562FB8300D881D9 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		ADB1C8E3F18B32085B059A10 /* Pods_TiGuia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TiGuia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -197,6 +207,7 @@
 				47A2FC8D2565BC0A00A5013E /* Link.swift */,
 				47A2FC902565BC2900A5013E /* Favorite.swift */,
 				47A2FCA4256D9BF900A5013E /* Data.swift */,
+				8B2FA23E2575A99C00EACCA0 /* Conteudos.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -208,6 +219,8 @@
 				47F3EFFF25636F160007B7B1 /* CardLink.swift */,
 				4780500225630A4F0004919D /* CategoryView.swift */,
 				47A2FCA0256D9A8000A5013E /* SubcategoryView.swift */,
+				8B2FA2342575A43D00EACCA0 /* areaMentorView.swift */,
+				8B2FA2372575A91A00EACCA0 /* ConteudosMentorView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -216,6 +229,8 @@
 			isa = PBXGroup;
 			children = (
 				4741B04825702A90008B0873 /* CardCategoryViewController.swift */,
+				8B2FA23025759D3D00EACCA0 /* AreaMentorViewController.swift */,
+				8B2FA23A2575A94F00EACCA0 /* ConteudosMentorViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -372,12 +387,15 @@
 				47A2FC882565BBCE00A5013E /* Mentor.swift in Sources */,
 				47A2FCA5256D9BFA00A5013E /* Data.swift in Sources */,
 				47F3F00025636F160007B7B1 /* CardLink.swift in Sources */,
+				8B2FA23B2575A94F00EACCA0 /* ConteudosMentorViewController.swift in Sources */,
 				4780500325630A4F0004919D /* CategoryView.swift in Sources */,
 				47F3F00325637AF80007B7B1 /* CardCategory.swift in Sources */,
 				47A2FC8E2565BC0A00A5013E /* Link.swift in Sources */,
 				4741B04925702A90008B0873 /* CardCategoryViewController.swift in Sources */,
 				8B3DAF4C25645094002FEE6E /* FavoriteList.swift in Sources */,
 				0831EF9A2553497600D6EFFC /* AppDelegate.swift in Sources */,
+				8B2FA23125759D3D00EACCA0 /* AreaMentorViewController.swift in Sources */,
+				8B2FA2352575A43D00EACCA0 /* areaMentorView.swift in Sources */,
 				8BF09B862562FB8300D881D9 /* FavoriteViewController.swift in Sources */,
 				08FB1460256327F60045919B /* MacroAreaViewController.swift in Sources */,
 				08FB145D25630E720045919B /* StudentMentorViewController.swift in Sources */,
@@ -387,7 +405,9 @@
 				08FB145A256306DE0045919B /* StudentMentorUI.swift in Sources */,
 				47A2FC852565BBBC00A5013E /* Student.swift in Sources */,
 				0890AF64256DCB9E00525E41 /* OnboardingViewController.swift in Sources */,
+				8B2FA23F2575A99C00EACCA0 /* Conteudos.swift in Sources */,
 				47A2FC912565BC2900A5013E /* Favorite.swift in Sources */,
+				8B2FA2382575A91A00EACCA0 /* ConteudosMentorView.swift in Sources */,
 				47A2FCA1256D9A8000A5013E /* SubcategoryView.swift in Sources */,
 				47A2FC8B2565BBF800A5013E /* Subcategory.swift in Sources */,
 				47A2FC822565BB9E00A5013E /* Category.swift in Sources */,
