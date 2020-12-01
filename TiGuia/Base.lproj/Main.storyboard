@@ -23,7 +23,7 @@
                     <view key="view" contentMode="scaleToFill" id="Ey9-dQ-Jv7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="VRz-vb-3GT"/>
+                        <viewLayoutGuide key="safeArea" id="2ew-is-8iv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
@@ -78,7 +78,7 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="jz5-nK-mka"/>
                             </scrollView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="Drw-I1-adL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
@@ -99,7 +99,7 @@
                     <view key="view" contentMode="scaleToFill" id="7lB-V3-hJZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="EmZ-PK-Frg"/>
+                        <viewLayoutGuide key="safeArea" id="F0V-d7-1vb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Trilha" image="point.topleft.down.curvedto.point.bottomright.up" catalog="system" id="vRw-dl-p9e"/>
@@ -115,7 +115,7 @@
                     <view key="view" contentMode="scaleToFill" id="mm7-D7-IRn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="CHy-ts-krm"/>
+                        <viewLayoutGuide key="safeArea" id="EOu-gT-t1x"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="6fb-tj-3Hc"/>
@@ -131,7 +131,7 @@
                     <view key="view" contentMode="scaleToFill" id="klA-cl-dOU" customClass="MacroAreaViewController">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="oYq-Dg-dtm"/>
+                        <viewLayoutGuide key="safeArea" id="1KR-ts-6Td"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
@@ -146,7 +146,7 @@
                     <view key="view" contentMode="scaleToFill" id="Dfu-9f-2QX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="efD-QZ-Nk4"/>
+                        <viewLayoutGuide key="safeArea" id="rJC-rl-ox0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Configuração" image="gearshape" catalog="system" id="Pjw-bM-fSi"/>
@@ -162,7 +162,7 @@
                     <view key="view" contentMode="scaleToFill" id="mWN-yv-Lsn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="HN0-Mu-rO6"/>
+                        <viewLayoutGuide key="safeArea" id="8tR-2Q-enH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Mentoria" image="person.2" catalog="system" id="6oG-9d-9KO"/>
@@ -178,7 +178,7 @@
                     <view key="view" contentMode="scaleToFill" id="SVO-IF-mlG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="KVN-IT-Fc0"/>
+                        <viewLayoutGuide key="safeArea" id="D9v-vc-fKi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
@@ -193,7 +193,7 @@
                     <view key="view" contentMode="scaleToFill" id="llH-YG-PuM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="igQ-g7-uTu"/>
+                        <viewLayoutGuide key="safeArea" id="m4h-eB-Hoc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Favoritos" image="star" catalog="system" id="dwB-Qw-FmM"/>

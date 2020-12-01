@@ -56,9 +56,8 @@ import SwiftUI
 //    }
 //}
 
-struct CardsCategory: View{
-    let lightColor = Color("lightColor")
-    let textColor = Color("darkColor")
+struct CardsCategory: View {
+    
     let category:Category
     @State var presented = false
     
@@ -74,60 +73,49 @@ struct CardsCategory: View{
     ]
     
     var body: some View {
-        //  ZStack{
-        VStack (alignment: .leading){
-            //  ScrollView(.vertical) {
-            
-            LazyVGrid(columns: columns) {
+        
+        VStack {
+            LazyVStack {
                 ForEach(0..<category.subcategories.count, id: \.self) { count in
                     Button(action: {
                         self.presented.toggle()
                         
                     }, label: {
-                        VStack{
-                            HStack{
-                                Image(category.subcategories[count].image!)
-                                    .resizable()
-                                    .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                                    .scaledToFill()
-                                    .clipShape(Rectangle(), style: /*@START_MENU_TOKEN@*/FillStyle()/*@END_MENU_TOKEN@*/)
-                                    .cornerRadius(10)
-                                VStack(alignment: .leading){
-                                    Text(category.subcategories[count].title)
-                                        .font(.custom("Raleway-SemiBold", size: 16))
-                                        .padding([.leading, .bottom, .trailing], 5.0)
-                                        .foregroundColor(textColor)
-                                    
-                                    
-                                    Text(category.subcategories[count].content)
-                                        .font(.custom("Raleway-Regular", size: 14))
-                                        .padding(.horizontal, 5.0)
-                                        .foregroundColor(textColor)
-                                    //Spacer()
-                                }
-                                .frame(width: 250, height: 100, alignment: .topLeading)
+                        HStack{
+                            Image(category.subcategories[count].image!)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                .clipShape(Rectangle(), style: /*@START_MENU_TOKEN@*/FillStyle()/*@END_MENU_TOKEN@*/)
+                                .cornerRadius(10)
+                                .shadow(radius: 8)
+                            VStack(alignment: .leading){
+                                Text(category.subcategories[count].title)
+                                    .font(.custom("Raleway-SemiBold", size: 16))
+                                    .padding([.leading, .bottom, .trailing], 5.0)
+                                    .foregroundColor(.darkColor)
                                 
+                                
+                                Text(category.subcategories[count].content)
+                                    .font(.custom("Raleway-Regular", size: 14))
+                                    .lineLimit(4)
+                                    .padding([.leading, .bottom, .trailing], 5.0)
+                                    .foregroundColor(.darkColor)
                             }
-                            .padding( )
-                            .clipped()
-                            .background(lightColor)
-                            .cornerRadius(10)
-                            .frame(minWidth: 372, idealWidth: 372, maxWidth: 372, minHeight: 121, idealHeight: 121, maxHeight: 121, alignment: .leading)
-                        }
-                    }).fullScreenCover(isPresented: $presented, content: {
+                            Spacer()
+                        }.padding()
+                        .clipped()
+                        .background(Color.bgcardColor)
+                        .cornerRadius(10)
+                        
+                        
+                    }).padding(.bottom, 10)
+                    .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                    .fullScreenCover(isPresented: $presented, content: {
                         SubcategoryView(index: count)
                     })
-                }.padding()
-                // }
-            }
-            
-            //  }
+                }
+            }.padding(.all)
         }
     }
 }
-
-//struct CardCategory_Previews: PreviewProvider {
-//    static var previews: some View {
-//        //CardsCategory()
-//    }
-//}
