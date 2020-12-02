@@ -1,16 +1,48 @@
 //
-//  CardCategory.swift
-//  TiGuia
+//  CardLink.swift
 //
-//  Created by Dara Vasconcelos on 17/11/20.
+//
+//  Created by Dara Vasconcelos on 16/11/20.
 //
 
 import SwiftUI
 
-struct CardsCategory: View {
+struct SubCardLink: View {
     
-    var category:Category
-    //@State private var presented = false
+    var category:Subcategory
+    
+    var body: some View {
+        
+        HStack{
+            ScrollView(.horizontal) {
+                LazyHStack {
+                    ForEach(0..<category.links.count, id: \.self) { count in
+                        Button(action: {
+                            //  self.presented.toggle()
+                        }, label: {
+                            Image(category.links[count].image!)
+                                .resizable()
+                                .frame(width: 164, height: 121)
+                                .cornerRadius(10)
+                                //.shadow(color: .init(.sRGB, red: 0, green: 0, blue: 0, opacity: 0.4), radius: 10, x: 0.0, y: 4.0)
+                                .overlay(ImageOverlayCardLink(title: category.links[count].titulo), alignment: .bottomLeading)
+                        })
+                        
+                    }.padding(.trailing, 5.0)
+                    .shadow(color: .init(.sRGB, red: 0, green: 0, blue: 0, opacity: 0.4), radius: 8, x: 0.0, y: 4.0)
+                }
+                .padding(.all)
+            }
+        }
+    }
+}
+
+
+
+struct SubCardsCategory: View {
+    
+    var category:Subcategory
+    //@State var presented = false
     @State private var selection: Int? = nil
     
     var body: some View {
@@ -18,9 +50,7 @@ struct CardsCategory: View {
         VStack {
             LazyVStack {
                 ForEach(0..<category.subcategories.count, id: \.self) { count in
-                    
                     NavigationLink(destination: SubcategoryView(category: category.subcategories[count]), tag: count, selection: $selection) {
-                        
                         Button(action: {
                             //self.presented.toggle()
                             self.selection = count
@@ -57,12 +87,8 @@ struct CardsCategory: View {
                         .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
                         
                     }
-                    // NavigationLink(destination: SubcategoryView(category: category.subcategories[count]), isActive: $presented) { EmptyView() }
-                    // NavigationLink(destination: SubcategoryView(category: category.subcategories[count]), tag: count, selection: $selection) { EmptyView() }
-                    
                 }
             }.padding(.all)
-            
         }
     }
 }

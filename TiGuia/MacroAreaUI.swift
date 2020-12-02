@@ -87,7 +87,9 @@ struct MacroAreaUI: View {
 struct NextTrailUI: UIViewControllerRepresentable {
     var teste: Int
     func makeUIViewController(context: Context) -> UIViewController {
-        return CardCategoryViewController()
+        let vc = CardCategoryViewController()
+        vc.categoryInt = self.teste
+        return vc
     }
     func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
         

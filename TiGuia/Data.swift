@@ -18,7 +18,7 @@ class Data{
     init() {
         self.category.title = "Computação"
         self.category.content = "Ciência da Computação é a ciência que estuda as técnicas, metodologias, instrumentos computacionais e aplicações tecnológicas, que automatizem os processos e desenvolvam soluções de processamento de dados de entrada e saída pautado no computador, de forma que se transforme em informação."
-        Data.categories.append(self.category)
+       // Data.categories.append(self.category)
         //link 1
         self.link.titulo = "8 Coisas Para Você Saber Antes de Fazer Ciência da Computação"
         self.link.url = "https://medium.com/@thiago.barbosa/8-coisas-para-voce-saber-antes-de-fazer-ciencia-da-computacao-37fdffbc6156"
@@ -48,6 +48,30 @@ class Data{
         self.subcategory.image = "seguranca da informacao"
         category.subcategories.append(subcategory)
         print(category.subcategories[0].title)
+        
+        
+        //apagar a partir daqui
+        self.link.titulo = "8 Coisas Para Você Saber Antes de Fazer Ciência da Computação"
+        self.link.url = "https://medium.com/@thiago.barbosa/8-coisas-para-voce-saber-antes-de-fazer-ciencia-da-computacao-37fdffbc6156"
+        self.link.image = "8 Coisas Para Você Saber Antes de Fazer Ciência da Computação"
+        self.category.subcategories[0].links.append(link)
+        //2
+        self.link.titulo = "Ganhando experiência em uma nova área"
+        self.link.url = "https://medium.com/@edersantana/ganhando-experiência-em-uma-nova-área-de-trabalho-sem-pedir-permissão-pra-ninguém-a57fdfaae8ae"
+        self.link.image = "ganhando experiencia em uma nova area"
+        self.category.subcategories[0].links.append(link)
+        //3
+        self.link.titulo = "10 cursos para quem gosta de tecnologia"
+        self.link.url = "https://vaidebolsa.com.br/cursos-para-quem-gosta-de-tecnologia/"
+        self.link.image = "10 cursos para quem gosta de tecnologia"
+        self.category.subcategories[0].links.append(link)
+        //4
+        self.link.titulo = "Áreas de atuação em computação"
+        self.link.url = "https://blog.enem.com.br/areas-de-atuacao-em-computacao/"
+        self.link.image = "areas de atuacao em computacao"
+        self.category.subcategories[0].links.append(link)
+        
+        
         //2
         subcategory = Subcategory()
         self.subcategory.title = "Engenharia de Software"
@@ -57,6 +81,17 @@ class Data{
         print(category.subcategories[0].title)
         print(category.subcategories[1].title)
 
+        
+        //apagar a partir daqui
+        self.link.titulo = "8 Coisas Para Você Saber Antes de Fazer Ciência da Computação"
+        self.link.url = "https://medium.com/@thiago.barbosa/8-coisas-para-voce-saber-antes-de-fazer-ciencia-da-computacao-37fdffbc6156"
+        self.link.image = "8 Coisas Para Você Saber Antes de Fazer Ciência da Computação"
+        self.category.subcategories[1].links.append(link)
+        //2
+        self.link.titulo = "Ganhando experiência em uma nova área"
+        self.link.url = "https://medium.com/@edersantana/ganhando-experiência-em-uma-nova-área-de-trabalho-sem-pedir-permissão-pra-ninguém-a57fdfaae8ae"
+        self.link.image = "ganhando experiencia em uma nova area"
+        self.category.subcategories[1].links.append(link)
 
         //3
         subcategory = Subcategory()
@@ -64,6 +99,20 @@ class Data{
         self.subcategory.content = "Estudo e a análise de dados econômicos, financeiros e sociais, que visa a extração de conhecimento e detecção de padrões."
         self.subcategory.image = "ciencia de dados"
         self.category.subcategories.append(subcategory)
+        
+        
+        // apagar as proximas linhas
+        self.link.titulo = "10 cursos para quem gosta de tecnologia"
+        self.link.url = "https://vaidebolsa.com.br/cursos-para-quem-gosta-de-tecnologia/"
+        self.link.image = "10 cursos para quem gosta de tecnologia"
+        self.category.subcategories[2].links.append(link)
+        //4
+        self.link.titulo = "Áreas de atuação em computação"
+        self.link.url = "https://blog.enem.com.br/areas-de-atuacao-em-computacao/"
+        self.link.image = "areas de atuacao em computacao"
+        self.category.subcategories[2].links.append(link)
+        
+        
         //4
         subcategory = Subcategory()
         self.subcategory.title = "Robótica"
@@ -77,6 +126,8 @@ class Data{
         self.subcategory.content = "É a área que trata de sistemas compostos por partes mecânicas automáticas e controladas por circuitos integrados.."
         self.subcategory.image = "robotica"
         self.category.subcategories.append(subcategory)
+        
+        Data.categories.append(self.category)
     }
     
     
