@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		082158DC256702F800E54196 /* OnboardingUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082158DB256702F800E54196 /* OnboardingUI.swift */; };
 		0831EF9A2553497600D6EFFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0831EF992553497600D6EFFC /* AppDelegate.swift */; };
 		0831EF9C2553497600D6EFFC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0831EF9B2553497600D6EFFC /* SceneDelegate.swift */; };
 		0831EF9E2553497600D6EFFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0831EF9D2553497600D6EFFC /* ViewController.swift */; };
 		0831EFA12553497600D6EFFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0831EF9F2553497600D6EFFC /* Main.storyboard */; };
 		0831EFA32553497700D6EFFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0831EFA22553497700D6EFFC /* Assets.xcassets */; };
 		0831EFA62553497700D6EFFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0831EFA42553497700D6EFFC /* LaunchScreen.storyboard */; };
+		088320B8256DC2B5004D0C9C /* ExtensionColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088320B7256DC2B5004D0C9C /* ExtensionColor.swift */; };
+		0890AF64256DCB9E00525E41 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0890AF63256DCB9E00525E41 /* OnboardingViewController.swift */; };
 		08A7104625543A17002CB323 /* Raleway-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08A7103425543A17002CB323 /* Raleway-BoldItalic.ttf */; };
 		08A7104725543A17002CB323 /* Raleway-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08A7103525543A17002CB323 /* Raleway-MediumItalic.ttf */; };
 		08A7104825543A17002CB323 /* Raleway-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08A7103625543A17002CB323 /* Raleway-ThinItalic.ttf */; };
@@ -31,7 +34,18 @@
 		08A7105525543A17002CB323 /* Raleway-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08A7104325543A17002CB323 /* Raleway-Thin.ttf */; };
 		08A7105625543A17002CB323 /* Raleway-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08A7104425543A17002CB323 /* Raleway-Italic.ttf */; };
 		08A7105725543A17002CB323 /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08A7104525543A17002CB323 /* Raleway-Bold.ttf */; };
+		08DD49002564898E00BEF67C /* MacroAreaUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DD48FF2564898E00BEF67C /* MacroAreaUI.swift */; };
+		08FB145A256306DE0045919B /* StudentMentorUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FB1459256306DE0045919B /* StudentMentorUI.swift */; };
+		08FB145D25630E720045919B /* StudentMentorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FB145C25630E720045919B /* StudentMentorViewController.swift */; };
+		08FB1460256327F60045919B /* MacroAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FB145F256327F60045919B /* MacroAreaViewController.swift */; };
+		47A2FC822565BB9E00A5013E /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A2FC812565BB9E00A5013E /* Category.swift */; };
+		47A2FC852565BBBC00A5013E /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A2FC842565BBBC00A5013E /* Student.swift */; };
+		47A2FC882565BBCE00A5013E /* Mentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A2FC872565BBCE00A5013E /* Mentor.swift */; };
+		47A2FC8B2565BBF800A5013E /* Subcategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A2FC8A2565BBF800A5013E /* Subcategory.swift */; };
+		47A2FC8E2565BC0A00A5013E /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A2FC8D2565BC0A00A5013E /* Link.swift */; };
+		47A2FC912565BC2900A5013E /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A2FC902565BC2900A5013E /* Favorite.swift */; };
 		65D0491140E1507108E211F7 /* Pods_TiGuia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB1C8E3F18B32085B059A10 /* Pods_TiGuia.framework */; };
+mentorias
 		6640BBAF256C640500B1333C /* ChatUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6640BBAE256C640500B1333C /* ChatUIApp.swift */; };
 		6640BBB3256C642600B1333C /* ChatUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6640BBB2256C642600B1333C /* ChatUI.swift */; };
 		6640BBB6256C644C00B1333C /* KeyboardResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6640BBB5256C644C00B1333C /* KeyboardResponder.swift */; };
@@ -42,9 +56,13 @@
 		66A42803257575BA006C9AC1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 66A42802257575BA006C9AC1 /* GoogleService-Info.plist */; };
 		66FF6FDE25645FFA005ACC0A /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66FF6FDD25645FFA005ACC0A /* CloudKit.framework */; };
 		66FF6FE225646082005ACC0A /* CloudKitMagicCRUD in Frameworks */ = {isa = PBXBuildFile; productRef = 66FF6FE125646082005ACC0A /* CloudKitMagicCRUD */; };
+
+		8B69B122256F527300350705 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B69B121256F527300350705 /* StoreKit.framework */; };
+ TelaAtualizada
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		082158DB256702F800E54196 /* OnboardingUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingUI.swift; sourceTree = "<group>"; };
 		0831EF962553497600D6EFFC /* TiGuia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TiGuia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0831EF992553497600D6EFFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0831EF9B2553497600D6EFFC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +71,8 @@
 		0831EFA22553497700D6EFFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0831EFA52553497700D6EFFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0831EFA72553497700D6EFFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		088320B7256DC2B5004D0C9C /* ExtensionColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionColor.swift; sourceTree = "<group>"; };
+		0890AF63256DCB9E00525E41 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		08A7103425543A17002CB323 /* Raleway-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-BoldItalic.ttf"; sourceTree = "<group>"; };
 		08A7103525543A17002CB323 /* Raleway-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-MediumItalic.ttf"; sourceTree = "<group>"; };
 		08A7103625543A17002CB323 /* Raleway-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ThinItalic.ttf"; sourceTree = "<group>"; };
@@ -71,7 +91,12 @@
 		08A7104325543A17002CB323 /* Raleway-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Thin.ttf"; sourceTree = "<group>"; };
 		08A7104425543A17002CB323 /* Raleway-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Italic.ttf"; sourceTree = "<group>"; };
 		08A7104525543A17002CB323 /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Bold.ttf"; sourceTree = "<group>"; };
+		08DD48FF2564898E00BEF67C /* MacroAreaUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroAreaUI.swift; sourceTree = "<group>"; };
+		08FB1459256306DE0045919B /* StudentMentorUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentMentorUI.swift; sourceTree = "<group>"; };
+		08FB145C25630E720045919B /* StudentMentorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentMentorViewController.swift; sourceTree = "<group>"; };
+		08FB145F256327F60045919B /* MacroAreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroAreaViewController.swift; sourceTree = "<group>"; };
 		34EEFAA7AAED50B9A86EC451 /* Pods-TiGuia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TiGuia.release.xcconfig"; path = "Target Support Files/Pods-TiGuia/Pods-TiGuia.release.xcconfig"; sourceTree = "<group>"; };
+mentorias
 		6640BBAE256C640500B1333C /* ChatUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatUIApp.swift; sourceTree = "<group>"; };
 		6640BBB2256C642600B1333C /* ChatUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatUI.swift; sourceTree = "<group>"; };
 		6640BBB5256C644C00B1333C /* KeyboardResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardResponder.swift; sourceTree = "<group>"; };
@@ -82,6 +107,15 @@
 		66A42802257575BA006C9AC1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		66FF6FDB25645FD2005ACC0A /* TiGuia.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TiGuia.entitlements; sourceTree = "<group>"; };
 		66FF6FDD25645FFA005ACC0A /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+
+		47A2FC812565BB9E00A5013E /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		47A2FC842565BBBC00A5013E /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		47A2FC872565BBCE00A5013E /* Mentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mentor.swift; sourceTree = "<group>"; };
+		47A2FC8A2565BBF800A5013E /* Subcategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subcategory.swift; sourceTree = "<group>"; };
+		47A2FC8D2565BC0A00A5013E /* Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
+		47A2FC902565BC2900A5013E /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
+		8B69B121256F527300350705 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+ TelaAtualizada
 		ADB1C8E3F18B32085B059A10 /* Pods_TiGuia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TiGuia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF9F6E8A65367280734B8D8B /* Pods-TiGuia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TiGuia.debug.xcconfig"; path = "Target Support Files/Pods-TiGuia/Pods-TiGuia.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,8 +126,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				65D0491140E1507108E211F7 /* Pods_TiGuia.framework in Frameworks */,
+mentorias
 				66FF6FE225646082005ACC0A /* CloudKitMagicCRUD in Frameworks */,
 				66FF6FDE25645FFA005ACC0A /* CloudKit.framework in Frameworks */,
+
+				8B69B122256F527300350705 /* StoreKit.framework in Frameworks */,
+ TelaAtualizada
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,16 +160,31 @@
 		0831EF982553497600D6EFFC /* TiGuia */ = {
 			isa = PBXGroup;
 			children = (
+ mentorias
 				66A42802257575BA006C9AC1 /* GoogleService-Info.plist */,
 				66FF6FDB25645FD2005ACC0A /* TiGuia.entitlements */,
 				0831EF992553497600D6EFFC /* AppDelegate.swift */,
 				0831EF9B2553497600D6EFFC /* SceneDelegate.swift */,
 				0831EF9D2553497600D6EFFC /* ViewController.swift */,
 				6652AAD92576C30000970030 /* ContentView.swift */,
-				6656DF192577CB80002DD7EC /* ChatViewController.swift */,
+
+				47A2FC7E2565BB5300A5013E /* Model */,
+				47A2FC7F2565BB5E00A5013E /* View */,
+				47A2FC802565BB6700A5013E /* Controller */,
+				0831EF992553497600D6EFFC /* AppDelegate.swift */,
+				0831EF9B2553497600D6EFFC /* SceneDelegate.swift */,
+				0831EF9D2553497600D6EFFC /* ViewController.swift */,
+				0890AF63256DCB9E00525E41 /* OnboardingViewController.swift */,
+				08FB145C25630E720045919B /* StudentMentorViewController.swift */,
+				08FB145F256327F60045919B /* MacroAreaViewController.swift */,
+ TelaAtualizada
 				0831EF9F2553497600D6EFFC /* Main.storyboard */,
 				0831EFA22553497700D6EFFC /* Assets.xcassets */,
 				0831EFA42553497700D6EFFC /* LaunchScreen.storyboard */,
+				08FB1459256306DE0045919B /* StudentMentorUI.swift */,
+				082158DB256702F800E54196 /* OnboardingUI.swift */,
+				08DD48FF2564898E00BEF67C /* MacroAreaUI.swift */,
+				088320B7256DC2B5004D0C9C /* ExtensionColor.swift */,
 				0831EFA72553497700D6EFFC /* Info.plist */,
 				08A7103325543A17002CB323 /* Fonts */,
 			);
@@ -163,10 +216,40 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		47A2FC7E2565BB5300A5013E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				47A2FC812565BB9E00A5013E /* Category.swift */,
+				47A2FC842565BBBC00A5013E /* Student.swift */,
+				47A2FC872565BBCE00A5013E /* Mentor.swift */,
+				47A2FC8A2565BBF800A5013E /* Subcategory.swift */,
+				47A2FC8D2565BC0A00A5013E /* Link.swift */,
+				47A2FC902565BC2900A5013E /* Favorite.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		47A2FC7F2565BB5E00A5013E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		47A2FC802565BB6700A5013E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		50F284CDA64B0B50DB155990 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+ mentorias
 				66FF6FDD25645FFA005ACC0A /* CloudKit.framework */,
+				8B69B121256F527300350705 /* StoreKit.framework */,
+TelaAtualizada
 				ADB1C8E3F18B32085B059A10 /* Pods_TiGuia.framework */,
 			);
 			name = Frameworks;
@@ -350,6 +433,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08FB1460256327F60045919B /* MacroAreaViewController.swift in Sources */,
+				08FB145D25630E720045919B /* StudentMentorViewController.swift in Sources */,
 				0831EF9E2553497600D6EFFC /* ViewController.swift in Sources */,
 				6640BBB6256C644C00B1333C /* KeyboardResponder.swift in Sources */,
 				6640BBAF256C640500B1333C /* ChatUIApp.swift in Sources */,
@@ -357,9 +442,23 @@
 				6640BBBF256C655700B1333C /* PhotoPicker.swift in Sources */,
 				6652AADA2576C30000970030 /* ContentView.swift in Sources */,
 				0831EF9A2553497600D6EFFC /* AppDelegate.swift in Sources */,
+				08DD49002564898E00BEF67C /* MacroAreaUI.swift in Sources */,
 				0831EF9C2553497600D6EFFC /* SceneDelegate.swift in Sources */,
+ mentorias
 				6656DF1A2577CB80002DD7EC /* ChatViewController.swift in Sources */,
 				6640BBB3256C642600B1333C /* ChatUI.swift in Sources */,
+
+				082158DC256702F800E54196 /* OnboardingUI.swift in Sources */,
+				08FB145A256306DE0045919B /* StudentMentorUI.swift in Sources */,
+				47A2FC882565BBCE00A5013E /* Mentor.swift in Sources */,
+				47A2FC8E2565BC0A00A5013E /* Link.swift in Sources */,
+				47A2FC852565BBBC00A5013E /* Student.swift in Sources */,
+				0890AF64256DCB9E00525E41 /* OnboardingViewController.swift in Sources */,
+				47A2FC912565BC2900A5013E /* Favorite.swift in Sources */,
+				47A2FC8B2565BBF800A5013E /* Subcategory.swift in Sources */,
+				47A2FC822565BB9E00A5013E /* Category.swift in Sources */,
+				088320B8256DC2B5004D0C9C /* ExtensionColor.swift in Sources */,
+ TelaAtualizada
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,13 +608,17 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = TiGuia/TiGuia.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+ mentorias
 				DEVELOPMENT_TEAM = TSNQUNMSD5;
+
+				DEVELOPMENT_TEAM = R9YW8SQC7S;
+TelaAtualizada
 				INFOPLIST_FILE = TiGuia/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.ufpe.cin.academy.TiGuia;
+				PRODUCT_BUNDLE_IDENTIFIER = TiGuia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -530,12 +633,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = TiGuia/TiGuia.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R9YW8SQC7S;
 				INFOPLIST_FILE = TiGuia/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.ufpe.cin.academy.TiGuia;
+				PRODUCT_BUNDLE_IDENTIFIER = TiGuia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
