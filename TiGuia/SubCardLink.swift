@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SubCardLink: View {
     
+    @Environment(\.openURL) private var openURL
     var category:Subcategory
     
     var body: some View {
@@ -18,7 +19,8 @@ struct SubCardLink: View {
                 LazyHStack {
                     ForEach(0..<category.links.count, id: \.self) { count in
                         Button(action: {
-                            //  self.presented.toggle()
+                            let stringUrl = (category.links[count].url).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+                            openURL(URL(string: stringUrl!)!)
                         }, label: {
                             Image(category.links[count].image!)
                                 .resizable()
