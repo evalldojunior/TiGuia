@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class Subcategory {
+public class Subcategory: ObservableObject {
     var title:String
     var content:String
     var image:String?
@@ -16,7 +16,7 @@ class Subcategory {
     var subcategories:[Subcategory]
     var favorite:Bool
     var visited:Bool
-    var checkMentor:Bool
+    @Published var checkMentor:Bool
     
     init() {
         self.title = ""

@@ -77,10 +77,22 @@ class Data{
         self.subcategory.content = "É a área que trata de sistemas compostos por partes mecânicas automáticas e controladas por circuitos integrados.."
         self.subcategory.image = "robotica"
         self.category.subcategories.append(subcategory)
+        
+        // sub da sub
+        subcategory = Subcategory()
+        self.subcategory.title = "Ciência de Dados"
+        self.subcategory.content = "Estudo e a análise de dados econômicos, financeiros e sociais, que visa a extração de conhecimento e detecção de padrões."
+        self.subcategory.image = "ciencia de dados"
+        self.category.subcategories[0].subcategories.append(subcategory)
+        
+        subcategory = Subcategory()
+        self.subcategory.title = "Ciência de Dados"
+        self.subcategory.content = "Estudo e a análise de dados econômicos, financeiros e sociais, que visa a extração de conhecimento e detecção de padrões."
+        self.subcategory.image = "ciencia de dados"
+        self.category.subcategories[1].subcategories.append(subcategory)
     }
     
-    
-    func returnCategory()->Category{
+    func returnCategory() -> Category {
         return self.category
     }
 }

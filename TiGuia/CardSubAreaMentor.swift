@@ -1,20 +1,20 @@
 //
-//  SubareaMentor.swift
+//  CardSubAreaMentor.swift
 //  TiGuia
 //
-//  Created by Meyrillan Silva on 01/12/20.
+//  Created by Meyrillan Silva on 02/12/20.
 //
 
 import Foundation
 import SwiftUI
 
-struct CardsAreaMentor: View {
+struct CardsSubAreaMentor: View {
     
     @State private var checkSelected: Bool = false
     
     let lightColor = Color("lightColor")
     let textColor = Color("darkColor")
-    let category: Category
+    let category: Subcategory
     
     var count: Int
     
