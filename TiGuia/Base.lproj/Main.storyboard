@@ -136,7 +136,7 @@
         <!--Mentoria-->
         <scene sceneID="e3l-ch-QsO">
             <objects>
-                <viewController id="U1z-lB-m4r" sceneMemberID="viewController">
+                <viewController id="U1z-lB-m4r" customClass="ViewController" customModule="TiGuia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mWN-yv-Lsn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
