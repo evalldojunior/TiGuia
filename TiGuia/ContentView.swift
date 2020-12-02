@@ -74,7 +74,6 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-
 struct MsgPage: View {
     
     var name = ""
@@ -84,7 +83,7 @@ struct MsgPage: View {
     var body: some View{
         
         VStack(alignment: .leading) {
-                Text("Mentoria com " + "Dara")
+                Text("Mentoria com Dara")
                     .font(.custom("Raleway-Bold", size: 25))
                     .foregroundColor(lightBlueColor)
                     .padding(.horizontal)
@@ -125,10 +124,11 @@ struct MsgPage: View {
                                 else {
                                     MsgRow(msg: i.msg, myMsg: false, user: i.name)
                                 }
-                                    }
-                              
-                            }
+                            
+                        }
 //                        .navigationBarTitle("Mentorias",displayMode: .inline).font(.custom("Raleway-Bold", size: 20))
+                        .navigationBarBackButtonHidden(false)
+                        
                     HStack{
                         
                         TextField("Mensagem", text: $typedmsg).textFieldStyle(RoundedBorderTextFieldStyle())
@@ -152,7 +152,7 @@ struct MsgPage: View {
             }
         }
     }
-//}
+}
     
     class Observer: ObservableObject {
         
@@ -233,7 +233,7 @@ struct MsgPage: View {
                         
                         Text(msg).padding(8).background(greyColor).cornerRadius(6).foregroundColor(.black)
                             .font(.custom("Raleway-ExtraLight", size: 17))
-//                        Text(user)
+                        Text(user)
                     }
                     Spacer()
                 }
