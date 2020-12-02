@@ -29,6 +29,7 @@ struct ContentView: View {
                 
                 lightColor
                 
+                
                 VStack{
                     Image(systemName: "person.circle.fill").resizable().frame(width: 60, height: 60).padding(.top)
                         .foregroundColor(darkGreyColor)
@@ -58,7 +59,8 @@ struct ContentView: View {
                 }
                 .background(lightColor)
                 .cornerRadius(20)
-                .padding()
+                .padding(.all
+    )
                 
             }.edgesIgnoringSafeArea(.all)
         }
@@ -113,7 +115,6 @@ struct MsgPage: View {
                         
                     }
                     VStack{
-                        List(msg.msgs){ i in
                             
                             List(msg.msgs){i in
                                 
@@ -123,7 +124,6 @@ struct MsgPage: View {
                                 else {
                                     MsgRow(msg: i.msg, myMsg: false, user: i.name)
                                 }
-                            }
                             
                         }
 //                        .navigationBarTitle("Mentorias",displayMode: .inline).font(.custom("Raleway-Bold", size: 20))
@@ -218,8 +218,6 @@ struct MsgPage: View {
         var user = ""
         
         var body: some View {
-            
-            let lightGreyColor = Color(red: 247/255, green: 249/255, blue: 250/255, opacity: 1.0)
             
             HStack{
                 
