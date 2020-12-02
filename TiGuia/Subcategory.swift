@@ -16,6 +16,7 @@ class Subcategory {
     var subcategories:[Subcategory]
     var favorite:Bool
     var visited:Bool
+    var checkMentor:Bool
     
     init() {
         self.title = ""
@@ -23,23 +24,29 @@ class Subcategory {
         self.links = []
         self.favorite = false
         self.visited = false
+        self.checkMentor = false
         self.subcategories = []
     }
     
-    init(title:String,content:String,links:[Link]) {
+    init(title:String, content:String, links:[Link]) {
         self.title = title
         self.content = content
         self.links = links
         self.favorite = false
         self.visited = false
+        self.checkMentor = false
         self.subcategories = []
     }
     
-    func visite(){
+    func visite() {
         self.visited = true
     }
     
-    func makeFavorite(){
+    func makeFavorite() {
         self.favorite = true
+    }
+    
+    func mentorSelectedSubcategory() {
+        self.checkMentor = true
     }
 }

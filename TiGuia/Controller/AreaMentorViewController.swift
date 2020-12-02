@@ -1,22 +1,22 @@
 //
-//  AreaMentor.swift
+//  SubareaMentorViewController.swift
 //  TiGuia
 //
-//  Created by Meyrillan Silva on 30/11/20.
+//  Created by Meyrillan Silva on 01/12/20.
 //
 
 import Foundation
 import SwiftUI
-import UIKit
 
 class AreaMentorViewController: UIViewController {
     
-    var areaMentorUIHost: UIHostingController<AreaMentorUI>?
+    var areaMentorUIHost: UIHostingController<AreaMentorView>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        areaMentorUIHost = UIHostingController(rootView: AreaMentorUI())
+        // Do any additional setup after loading the view.
+        areaMentorUIHost = UIHostingController(rootView: AreaMentorView())
         areaMentorUIHost?.view.translatesAutoresizingMaskIntoConstraints = false
         
         self.view.addSubview(areaMentorUIHost!.view)
@@ -30,4 +30,5 @@ class AreaMentorViewController: UIViewController {
         ]
         NSLayoutConstraint.activate(constraints)
     }
+    
 }

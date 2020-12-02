@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cLw-iO-8Nw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y9L-Uv-IVl">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
@@ -254,10 +254,10 @@
             </objects>
             <point key="canvasLocation" x="-4" y="3609"/>
         </scene>
-        <!--Area Mentor View Controller-->
+        <!--Macro Area Mentor View Controller-->
         <scene sceneID="9TA-fu-gAc">
             <objects>
-                <viewController id="CIu-dP-h7F" customClass="AreaMentorViewController" customModule="TiGuia" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="CIu-dP-h7F" customClass="MacroAreaMentorViewController" customModule="TiGuia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="upb-1k-sLi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -269,10 +269,10 @@
             </objects>
             <point key="canvasLocation" x="1080" y="3609"/>
         </scene>
-        <!--View Controller-->
+        <!--Area Mentor View Controller-->
         <scene sceneID="1V6-sS-1bn">
             <objects>
-                <viewController id="Y9L-Uv-IVl" sceneMemberID="viewController">
+                <viewController id="Y9L-Uv-IVl" customClass="AreaMentorViewController" customModule="TiGuia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oJg-Vj-Eye">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
