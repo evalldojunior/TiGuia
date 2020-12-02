@@ -26,20 +26,17 @@ class TrailViewController: UIViewController {
     var button = UIButton()
     var button2 = UIButton()
     var button3 = UIButton()
-    
+    var button4 = UIButton()
+    var button5 = UIButton()
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(scrollView)
         scrollView.addSubview(containerView)
-
+        
         //sempre vai ter - computaçao
         createTickLine(point: CGPoint(x: 50, y: 1210), point2: CGPoint(x: 50, y: 1080))
         createRetangle()
-        button = UIButton(frame: CGRect(x: 33, y: 1060, width: 35, height: 35))
-        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        button.setImage(UIImage(named: "unselectedButton"), for: .normal)
-        containerView.addSubview(button)
-        label(text: "Computação", x: 65, y: 1095)
+        computation()
         inicialTrail()
     }
     func inicialTrail() {
@@ -88,8 +85,8 @@ class TrailViewController: UIViewController {
         weakSecundarybranch(point: CGPoint(x: 1170, y: 845), point2: CGPoint(x: 1280, y: 845), point3: CGPoint(x: 1280, y: 735))
         createTickLine(point: CGPoint(x: 510, y: 1080), point2: CGPoint(x: 950, y: 1080))
         createTickLine(point: CGPoint(x: 950, y: 1080), point2: CGPoint(x: 950, y: 970))
-        let button4 = UIButton(frame: CGRect(x: 932, y: 935, width: 35, height: 35))
-        button4.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        button4 = UIButton(frame: CGRect(x: 932, y: 935, width: 35, height: 35))
+        button4.addTarget(self, action: #selector(button4Action), for: .touchUpInside)
         button4.setImage(UIImage(named: "unselectedButton"), for: .normal)
         containerView.addSubview(button4)
         principalBranchSub(point: CGPoint(x: 950, y: 935), point2: CGPoint(x: 950, y: 825), X: 945, Y: 825)
@@ -105,8 +102,8 @@ class TrailViewController: UIViewController {
         weakSecundarybranch(point: CGPoint(x: 1630, y: 845), point2: CGPoint(x: 1740, y: 845), point3: CGPoint(x: 1740, y: 735))
         createTickLine(point: CGPoint(x: 950, y: 1080), point2: CGPoint(x: 1390, y: 1080))
         createTickLine(point: CGPoint(x: 1390, y: 1080), point2: CGPoint(x: 1390, y: 970))
-        let button5 = UIButton(frame: CGRect(x: 1372, y: 935, width: 35, height: 35))
-        button5.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        button5 = UIButton(frame: CGRect(x: 1372, y: 935, width: 35, height: 35))
+        button5.addTarget(self, action: #selector(button5Action), for: .touchUpInside)
         button5.setImage(UIImage(named: "unselectedButton"), for: .normal)
         containerView.addSubview(button5)
         principalBranchSub(point: CGPoint(x: 1390, y: 935), point2: CGPoint(x: 1390, y: 825), X: 1385, Y: 825)
@@ -129,11 +126,7 @@ class TrailViewController: UIViewController {
         containerView.layer.sublayers?.removeAll()
         createTickLine(point: CGPoint(x: 50, y: 1210), point2: CGPoint(x: 50, y: 1080))
         createRetangle()
-        //computaçao
-        button = UIButton(frame: CGRect(x: 33, y: 1060, width: 35, height: 35))
-        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        button.setImage(UIImage(named: "unselectedButton"), for: .normal)
-        containerView.addSubview(button)
+        computation()
         //categoria 1
         createTickLine(point: CGPoint(x: 50, y: 1060), point2: CGPoint(x: 50, y: 945))
         button2 = UIButton(frame: CGRect(x: 32, y: 910, width: 35, height: 35))
@@ -141,14 +134,14 @@ class TrailViewController: UIViewController {
         button2.setImage(UIImage(named: "selectedButton"), for: .normal)
         containerView.addSubview(button2)
         label(text: "name", x: 65, y: 945)
-
+        
         createTickLine(point: CGPoint(x: 50, y: 908), point2: CGPoint(x: 50, y: 800))
         let button6 = UIButton(frame: CGRect(x: 32, y: 770, width: 35, height: 35))
         button6.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         button6.setImage(UIImage(named: "unselectedButton"), for: .normal)
         containerView.addSubview(button6)
-       //subcategoria 1
-       tickSecundaryBranch2(point: CGPoint(x: 70, y: 930), point2: CGPoint(x: 180, y: 930), point3: CGPoint(x: 180, y: 820))
+        //subcategoria 1
+        tickSecundaryBranch2(point: CGPoint(x: 70, y: 930), point2: CGPoint(x: 180, y: 930), point3: CGPoint(x: 180, y: 820))
         let button7 = UIButton(frame: CGRect(x: 162, y: 790, width: 35, height: 35))
         button7.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         button7.setImage(UIImage(named: "unselectedButton"), for: .normal)
@@ -179,11 +172,7 @@ class TrailViewController: UIViewController {
         containerView.layer.sublayers?.removeAll()
         createTickLine(point: CGPoint(x: 50, y: 1210), point2: CGPoint(x: 50, y: 1080))
         createRetangle()
-        //computaçao
-        button = UIButton(frame: CGRect(x: 33, y: 1060, width: 35, height: 35))
-        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        button.setImage(UIImage(named: "unselectedButton"), for: .normal)
-        containerView.addSubview(button)
+        computation()
         //categoria 2
         createTickLine(point: CGPoint(x: 72, y: 1080), point2: CGPoint(x: 510, y: 1080))
         button3 = UIButton(frame: CGRect(x: 492, y: 935, width: 35, height: 35))
@@ -222,10 +211,91 @@ class TrailViewController: UIViewController {
         weakLines4()
         
     }
+    @objc func button4Action(sender: UIButton) {
+        containerView.layer.sublayers?.removeAll()
+        createTickLine(point: CGPoint(x: 50, y: 1210), point2: CGPoint(x: 50, y: 1080))
+        createRetangle()
+        computation()
+        //categoria 3
+        createTickLine(point: CGPoint(x: 72, y: 1080), point2: CGPoint(x: 950, y: 1080))
+        createTickLine(point: CGPoint(x: 950, y: 1080), point2: CGPoint(x: 950, y: 970))
+        button4 = UIButton(frame: CGRect(x: 932, y: 935, width: 35, height: 35))
+        button4.addTarget(self, action: #selector(button4Action), for: .touchUpInside)
+        button4.setImage(UIImage(named: "selectedButton"), for: .normal)
+        containerView.addSubview(button4)
+        label(text: "name", x: 975, y: 970)
+        createTickLine(point: CGPoint(x: 950, y: 935), point2: CGPoint(x: 950, y: 825))
+        let button12 = UIButton(frame: CGRect(x: 932, y: 790, width: 35, height: 35))
+        button12.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        button12.setImage(UIImage(named: "unselectedButton"), for: .normal)
+        containerView.addSubview(button12)
+        tickSecundaryBranch2(point: CGPoint(x: 970, y: 955), point2: CGPoint(x: 1060, y: 955), point3: CGPoint(x: 1060, y: 845))
+        let button13 = UIButton(frame: CGRect(x: 1042, y: 810, width: 35, height: 35))
+        button13.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        button13.setImage(UIImage(named: "unselectedButton"), for: .normal)
+        containerView.addSubview(button13)
+        tickSecundaryBranch2(point: CGPoint(x: 1060, y: 955), point2: CGPoint(x: 1170, y: 955), point3: CGPoint(x: 1170, y: 845))
+        let button14 = UIButton(frame: CGRect(x: 1152, y: 810, width: 35, height: 35))
+        button14.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        button14.setImage(UIImage(named: "unselectedButton"), for: .normal)
+        containerView.addSubview(button14)
+        principalBranchSub(point: CGPoint(x: 950, y: 790), point2: CGPoint(x: 950, y: 250), X: 945, Y: 250)
+        tickSecundaryBranch(point: CGPoint(x: 950, y: 360), point2: CGPoint(x: 1060, y: 360), point3: CGPoint(x: 1060, y: 250), X: 1055, Y: 250)
+        principalBranchSub(point: CGPoint(x: 1060, y: 810), point2: CGPoint(x: 1060, y: 490), X: 1055, Y: 490)
+        tickSecundaryBranch(point: CGPoint(x: 1060, y: 600), point2: CGPoint(x: 1170, y: 600), point3: CGPoint(x: 1170, y: 490), X: 1165, Y: 490)
+        principalBranchSub(point: CGPoint(x: 1170, y: 810), point2: CGPoint(x: 1170, y: 710), X: 1165, Y: 710)
+        tickSecundaryBranch(point: CGPoint(x: 1190, y: 830), point2: CGPoint(x: 1290, y: 830), point3: CGPoint(x: 1290, y: 710), X: 1285, Y: 710)
+       
+        //weaklines
+        createWeakLine(point: CGPoint(x: 951, y: 1080), point2: CGPoint(x: 1390, y: 1080))
+        weakLines()
+        weakLines2()
+        weakLines4()
+        
+    }
+    @objc func button5Action(sender: UIButton) {
+        containerView.layer.sublayers?.removeAll()
+        createTickLine(point: CGPoint(x: 50, y: 1210), point2: CGPoint(x: 50, y: 1080))
+        createRetangle()
+        computation()
+        //categoria 4
+        createTickLine(point: CGPoint(x: 72, y: 1080), point2: CGPoint(x: 1390, y: 1080))
+        createTickLine(point: CGPoint(x: 1390, y: 1080), point2: CGPoint(x: 1390, y: 970))
+        button5 = UIButton(frame: CGRect(x: 1372, y: 935, width: 35, height: 35))
+        button5.addTarget(self, action: #selector(button5Action), for: .touchUpInside)
+        button5.setImage(UIImage(named: "selectedButton"), for: .normal)
+        containerView.addSubview(button5)
+        label(text: "name", x: 1405, y: 970)
+        createTickLine(point: CGPoint(x: 1390, y: 935), point2: CGPoint(x: 1390, y: 825))
+        let button15 = UIButton(frame: CGRect(x: 1372, y: 790, width: 35, height: 35))
+        button15.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        button15.setImage(UIImage(named: "unselectedButton"), for: .normal)
+        containerView.addSubview(button15)
+        tickSecundaryBranch2(point: CGPoint(x: 1410, y: 955), point2: CGPoint(x: 1520, y: 955), point3: CGPoint(x: 1520, y: 845))
+        let button16 = UIButton(frame: CGRect(x: 1502, y: 810, width: 35, height: 35))
+        button16.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        button16.setImage(UIImage(named: "unselectedButton"), for: .normal)
+        containerView.addSubview(button16)
+        tickSecundaryBranch2(point: CGPoint(x: 1520, y: 955), point2: CGPoint(x: 1630, y: 955), point3: CGPoint(x: 1630, y: 845))
+        let button17 = UIButton(frame: CGRect(x: 1612, y: 810, width: 35, height: 35))
+        button17.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        button17.setImage(UIImage(named: "unselectedButton"), for: .normal)
+        containerView.addSubview(button17)
+        principalBranchSub(point: CGPoint(x: 1390, y: 790), point2: CGPoint(x: 1390, y: 250), X: 1385, Y: 250)
+        tickSecundaryBranch(point: CGPoint(x: 1390, y: 360), point2: CGPoint(x: 1500, y: 360), point3: CGPoint(x: 1500, y: 250), X: 1495, Y: 250)
+        principalBranchSub(point: CGPoint(x: 1520, y: 810), point2: CGPoint(x: 1520, y: 490), X: 1515, Y: 490)
+        tickSecundaryBranch(point: CGPoint(x: 1520, y: 600), point2: CGPoint(x: 1630, y: 600), point3: CGPoint(x: 1630, y: 490), X: 1625, Y: 490)
+        principalBranchSub(point: CGPoint(x: 1630, y: 810), point2: CGPoint(x: 1630, y: 710), X: 1625, Y: 710)
+        tickSecundaryBranch(point: CGPoint(x: 1650, y: 830), point2: CGPoint(x: 1750, y: 830), point3: CGPoint(x: 1750, y: 710), X: 1745, Y: 710)
+        //weaklines
+        weakLines()
+        weakLines2()
+        weakLines3()
+    }
     
     //funcoes repetitivas
     func weakLines() {
-       
+        
         createWeakLine(point: CGPoint(x: 50, y: 1060), point2: CGPoint(x: 50, y: 250))
         weakSecundarybranch(point: CGPoint(x: 50, y: 360), point2: CGPoint(x: 160, y: 360), point3: CGPoint(x: 160, y: 250))
         createWeakLine(point: CGPoint(x: 50, y: 910), point2: CGPoint(x: 290, y: 910))
@@ -327,8 +397,8 @@ class TrailViewController: UIViewController {
         createTickLine(point: point2, point2: point3)
     }
     func weakSecundarybranch(point: CGPoint, point2: CGPoint, point3: CGPoint) {
-            createWeakLine(point: point, point2: point2)
-            createWeakLine(point: point2, point2: point3)
+        createWeakLine(point: point, point2: point2)
+        createWeakLine(point: point2, point2: point3)
     }
     //qualquer label
     func label(text: String, x: Int, y: Int) {
@@ -337,6 +407,13 @@ class TrailViewController: UIViewController {
         label.textColor = UIColor(red: 33/255, green: 158/255, blue: 188/255, alpha: 1.0)
         label.font = UIFont(name: "Raleway-Bold", size: 15)
         containerView.addSubview(label)
+    }
+    func computation() {
+        button = UIButton(frame: CGRect(x: 33, y: 1060, width: 35, height: 35))
+        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        button.setImage(UIImage(named: "unselectedButton"), for: .normal)
+        containerView.addSubview(button)
+        label(text: "Computação", x: 65, y: 1095)
     }
     
 }
