@@ -60,7 +60,8 @@ struct SubCardsCategory: View {
                             HStack{
                                 Image(category.subcategories[count].image!)
                                     .resizable()
-                                    .scaledToFit()
+                                    .scaledToFill()
+                                   // .scaledToFit()
                                     .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                                     .clipShape(Rectangle(), style: /*@START_MENU_TOKEN@*/FillStyle()/*@END_MENU_TOKEN@*/)
                                     .cornerRadius(10)
