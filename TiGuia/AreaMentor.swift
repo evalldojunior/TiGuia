@@ -9,11 +9,11 @@ import Foundation
 import SwiftUI
 
 struct AreaMentorView: View {
-    @State private var favorito: Bool = false
     @State private var presented: Bool = false
     
     var category = Data().returnCategory()
-    static var areasEscolhidas: [Subcategory] = []
+//    static var areasEscolhidas: [Subcategory] = []
+    static var mentor = Mentor()
     
     let titleColor = Color("titleColor")
     let btnColor = Color("btnColor")
@@ -47,7 +47,7 @@ struct AreaMentorView: View {
                 VStack {
                     LazyVGrid(columns: columns) {
                         ForEach(0..<category.subcategories.count, id: \.self) { count in
-                            CardsAreaMentor(category: category, count: count)
+                            CardsAreaMentorView(category: category, count: count)
                         }
                     }
                     
@@ -71,7 +71,7 @@ struct AreaMentorView: View {
                 .padding()
                 .shadow(radius: 10)
                 .fullScreenCover(isPresented: $presented, content: {
-                    SubAreaMentorView(subAreasEscolhidas: AreaMentorView.areasEscolhidas)
+                    SubAreaMentorView(subAreasEscolhidas: AreaMentorView.mentor.subAreas)
                 })
             }
         }

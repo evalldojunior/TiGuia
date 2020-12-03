@@ -11,12 +11,12 @@ import UIKit
 
 class MacroAreaMentorViewController: UIViewController {
     
-    var macroAreaMentorUIHost: UIHostingController<MacroAreaMentorUI>?
+    var macroAreaMentorUIHost: UIHostingController<MacroAreaMentorUIView>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        macroAreaMentorUIHost = UIHostingController(rootView: MacroAreaMentorUI())
+        macroAreaMentorUIHost = UIHostingController(rootView: MacroAreaMentorUIView())
         macroAreaMentorUIHost?.view.translatesAutoresizingMaskIntoConstraints = false
         
         self.view.addSubview(macroAreaMentorUIHost!.view)

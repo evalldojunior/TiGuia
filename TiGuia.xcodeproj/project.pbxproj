@@ -54,14 +54,15 @@
 		8B2FA2352575A43D00EACCA0 /* MacroAreaMentorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2FA2342575A43D00EACCA0 /* MacroAreaMentorView.swift */; };
 		8B2FA2382575A91A00EACCA0 /* ConteudosMentorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2FA2372575A91A00EACCA0 /* ConteudosMentorView.swift */; };
 		8B2FA23B2575A94F00EACCA0 /* ConteudosMentorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2FA23A2575A94F00EACCA0 /* ConteudosMentorViewController.swift */; };
-		8B2FA23F2575A99C00EACCA0 /* Conteudos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2FA23E2575A99C00EACCA0 /* Conteudos.swift */; };
 		8B3DAF4C25645094002FEE6E /* FavoriteList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3DAF4B25645094002FEE6E /* FavoriteList.swift */; };
+		8B6140B625796E61009BAC19 /* PaginaConteudoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6140B525796E61009BAC19 /* PaginaConteudoView.swift */; };
+		8B6140C025799024009BAC19 /* SubCardLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6140BF25799024009BAC19 /* SubCardLink.swift */; };
 		8BA5806D2576C33C007FE7B5 /* CardAreaMentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA5806C2576C33C007FE7B5 /* CardAreaMentor.swift */; };
 		8BA580702576C687007FE7B5 /* AreaMentorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA5806F2576C687007FE7B5 /* AreaMentorViewController.swift */; };
 		8BA5807925770A90007FE7B5 /* AreaMentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA5807825770A90007FE7B5 /* AreaMentor.swift */; };
 		8BB67236257814A600CF22DB /* SubAreaMentorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB67235257814A600CF22DB /* SubAreaMentorViewController.swift */; };
-		8BB672392578264100CF22DB /* SubArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB672382578264100CF22DB /* SubArea.swift */; };
-		8BB6723D25783B6200CF22DB /* CardSubAreaMentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB6723C25783B6200CF22DB /* CardSubAreaMentor.swift */; };
+		8BB672392578264100CF22DB /* SubAreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB672382578264100CF22DB /* SubAreaView.swift */; };
+		8BB6723D25783B6200CF22DB /* CardSubAreaMentorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB6723C25783B6200CF22DB /* CardSubAreaMentorView.swift */; };
 		8BF09B862562FB8300D881D9 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF09B852562FB8300D881D9 /* FavoriteViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -115,14 +116,15 @@
 		8B2FA2342575A43D00EACCA0 /* MacroAreaMentorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroAreaMentorView.swift; sourceTree = "<group>"; };
 		8B2FA2372575A91A00EACCA0 /* ConteudosMentorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConteudosMentorView.swift; sourceTree = "<group>"; };
 		8B2FA23A2575A94F00EACCA0 /* ConteudosMentorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConteudosMentorViewController.swift; sourceTree = "<group>"; };
-		8B2FA23E2575A99C00EACCA0 /* Conteudos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conteudos.swift; sourceTree = "<group>"; };
 		8B3DAF4B25645094002FEE6E /* FavoriteList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteList.swift; sourceTree = "<group>"; };
+		8B6140B525796E61009BAC19 /* PaginaConteudoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaConteudoView.swift; sourceTree = "<group>"; };
+		8B6140BF25799024009BAC19 /* SubCardLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCardLink.swift; sourceTree = "<group>"; };
 		8BA5806C2576C33C007FE7B5 /* CardAreaMentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardAreaMentor.swift; sourceTree = "<group>"; };
 		8BA5806F2576C687007FE7B5 /* AreaMentorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaMentorViewController.swift; sourceTree = "<group>"; };
 		8BA5807825770A90007FE7B5 /* AreaMentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaMentor.swift; sourceTree = "<group>"; };
 		8BB67235257814A600CF22DB /* SubAreaMentorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubAreaMentorViewController.swift; sourceTree = "<group>"; };
-		8BB672382578264100CF22DB /* SubArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubArea.swift; sourceTree = "<group>"; };
-		8BB6723C25783B6200CF22DB /* CardSubAreaMentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSubAreaMentor.swift; sourceTree = "<group>"; };
+		8BB672382578264100CF22DB /* SubAreaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubAreaView.swift; sourceTree = "<group>"; };
+		8BB6723C25783B6200CF22DB /* CardSubAreaMentorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSubAreaMentorView.swift; sourceTree = "<group>"; };
 		8BF09B852562FB8300D881D9 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		ADB1C8E3F18B32085B059A10 /* Pods_TiGuia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TiGuia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF9F6E8A65367280734B8D8B /* Pods-TiGuia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TiGuia.debug.xcconfig"; path = "Target Support Files/Pods-TiGuia/Pods-TiGuia.debug.xcconfig"; sourceTree = "<group>"; };
@@ -219,7 +221,6 @@
 				47A2FC8D2565BC0A00A5013E /* Link.swift */,
 				47A2FC902565BC2900A5013E /* Favorite.swift */,
 				47A2FCA4256D9BF900A5013E /* Data.swift */,
-				8B2FA23E2575A99C00EACCA0 /* Conteudos.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -234,9 +235,11 @@
 				8B2FA2342575A43D00EACCA0 /* MacroAreaMentorView.swift */,
 				8BA5806C2576C33C007FE7B5 /* CardAreaMentor.swift */,
 				8BA5807825770A90007FE7B5 /* AreaMentor.swift */,
-				8BB6723C25783B6200CF22DB /* CardSubAreaMentor.swift */,
-				8BB672382578264100CF22DB /* SubArea.swift */,
+				8BB6723C25783B6200CF22DB /* CardSubAreaMentorView.swift */,
+				8BB672382578264100CF22DB /* SubAreaView.swift */,
 				8B2FA2372575A91A00EACCA0 /* ConteudosMentorView.swift */,
+				8B6140BF25799024009BAC19 /* SubCardLink.swift */,
+				8B6140B525796E61009BAC19 /* PaginaConteudoView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 			files = (
 				47A2FC882565BBCE00A5013E /* Mentor.swift in Sources */,
 				47A2FCA5256D9BFA00A5013E /* Data.swift in Sources */,
+				8B6140C025799024009BAC19 /* SubCardLink.swift in Sources */,
 				47F3F00025636F160007B7B1 /* CardLink.swift in Sources */,
 				8B2FA23B2575A94F00EACCA0 /* ConteudosMentorViewController.swift in Sources */,
 				4780500325630A4F0004919D /* CategoryView.swift in Sources */,
@@ -414,24 +418,24 @@
 				0831EF9A2553497600D6EFFC /* AppDelegate.swift in Sources */,
 				8B2FA23125759D3D00EACCA0 /* MacroAreaMentorViewController.swift in Sources */,
 				8B2FA2352575A43D00EACCA0 /* MacroAreaMentorView.swift in Sources */,
+				8B6140B625796E61009BAC19 /* PaginaConteudoView.swift in Sources */,
 				8BF09B862562FB8300D881D9 /* FavoriteViewController.swift in Sources */,
 				08FB1460256327F60045919B /* MacroAreaViewController.swift in Sources */,
 				08FB145D25630E720045919B /* StudentMentorViewController.swift in Sources */,
 				08DD49002564898E00BEF67C /* MacroAreaUI.swift in Sources */,
-				8BB6723D25783B6200CF22DB /* CardSubAreaMentor.swift in Sources */,
+				8BB6723D25783B6200CF22DB /* CardSubAreaMentorView.swift in Sources */,
 				0831EF9C2553497600D6EFFC /* SceneDelegate.swift in Sources */,
 				8BA580702576C687007FE7B5 /* AreaMentorViewController.swift in Sources */,
 				082158DC256702F800E54196 /* OnboardingUI.swift in Sources */,
 				08FB145A256306DE0045919B /* StudentMentorUI.swift in Sources */,
 				47A2FC852565BBBC00A5013E /* Student.swift in Sources */,
 				0890AF64256DCB9E00525E41 /* OnboardingViewController.swift in Sources */,
-				8B2FA23F2575A99C00EACCA0 /* Conteudos.swift in Sources */,
 				8BA5807925770A90007FE7B5 /* AreaMentor.swift in Sources */,
 				47A2FC912565BC2900A5013E /* Favorite.swift in Sources */,
 				8BB67236257814A600CF22DB /* SubAreaMentorViewController.swift in Sources */,
 				8B2FA2382575A91A00EACCA0 /* ConteudosMentorView.swift in Sources */,
 				47A2FCA1256D9A8000A5013E /* SubcategoryView.swift in Sources */,
-				8BB672392578264100CF22DB /* SubArea.swift in Sources */,
+				8BB672392578264100CF22DB /* SubAreaView.swift in Sources */,
 				47A2FC8B2565BBF800A5013E /* Subcategory.swift in Sources */,
 				47A2FC822565BB9E00A5013E /* Category.swift in Sources */,
 				8BA5806D2576C33C007FE7B5 /* CardAreaMentor.swift in Sources */,

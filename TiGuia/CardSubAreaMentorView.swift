@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct CardsSubAreaMentor: View {
+struct CardsSubAreaMentorView: View {
     
     @State private var checkSelected: Bool = false
     
@@ -32,8 +32,17 @@ struct CardsSubAreaMentor: View {
                     Button(action: {
                         //                        self.presented.toggle()
                         self.checkSelected.toggle()
-                        category.subcategories[count].checkMentor.toggle()
-                        AreaMentorView.areasEscolhidas.append(category.subcategories[count])
+//                        category.subcategories[count].checkMentor.toggle()
+                        
+                        if(self.checkSelected) {
+                            AreaMentorView.mentor.addSubArea(subcategory: category.subcategories[count])
+                            
+                        } else {
+                            AreaMentorView.mentor.removeSubArea(subcategory: category.subcategories[count])
+                        }
+                        
+
+//                        AreaMentorView.areasEscolhidas.append(category.subcategories[count])
                         
                     }, label: {
                         

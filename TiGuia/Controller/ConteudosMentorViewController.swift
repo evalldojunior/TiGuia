@@ -11,12 +11,12 @@ import UIKit
 
 class ConteudoViewController: UIViewController {
     
-    var conteudoUIHost: UIHostingController<ConteudoMentor>?
+    var conteudoUIHost: UIHostingController<ConteudoMentorView>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        conteudoUIHost = UIHostingController(rootView: ConteudoMentor())
+        conteudoUIHost = UIHostingController(rootView: ConteudoMentorView( subAreasEscolhidas: AreaMentorView.mentor.subAreas))
         conteudoUIHost?.view.translatesAutoresizingMaskIntoConstraints = false
         
         self.view.addSubview(conteudoUIHost!.view)

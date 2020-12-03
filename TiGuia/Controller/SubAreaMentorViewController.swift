@@ -16,7 +16,7 @@ class SubAreaMentorViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        subAreaMentorUIHost = UIHostingController(rootView: SubAreaMentorView(subAreasEscolhidas: AreaMentorView.areasEscolhidas))
+        subAreaMentorUIHost = UIHostingController(rootView: SubAreaMentorView(subAreasEscolhidas: AreaMentorView.mentor.subAreas))
         subAreaMentorUIHost?.view.translatesAutoresizingMaskIntoConstraints = false
         
         self.view.addSubview(subAreaMentorUIHost!.view)

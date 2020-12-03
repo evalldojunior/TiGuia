@@ -10,7 +10,7 @@ import UIKit
 import SwiftUI
 
 // MARK: - Area Mentor
-struct MacroAreaMentorUI: View {
+struct MacroAreaMentorUIView: View {
     
     // @State var didTap = false
     @State private var presented = false
@@ -84,6 +84,6 @@ struct MacroAreaMentorUI: View {
 // preview
 struct AreaMentorUI_Previews: PreviewProvider {
     static var previews: some View {
-        MacroAreaMentorUI()
+        MacroAreaMentorUIView()
     }
 }

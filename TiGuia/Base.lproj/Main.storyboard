@@ -153,7 +153,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dYW-Jx-bCF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1868" y="3609"/>
+            <point key="canvasLocation" x="-933" y="3609"/>
         </scene>
         <!--Configuração-->
         <scene sceneID="ROa-ED-XTB">
@@ -252,7 +252,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zvY-Qq-HyP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-933" y="3609"/>
+            <point key="canvasLocation" x="-4" y="3609"/>
         </scene>
         <!--Macro Area Mentor View Controller-->
         <scene sceneID="9TA-fu-gAc">
@@ -267,7 +267,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p5r-Y3-X3W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4" y="3609"/>
+            <point key="canvasLocation" x="1080" y="3609"/>
         </scene>
         <!--Area Mentor View Controller-->
         <scene sceneID="1V6-sS-1bn">
@@ -282,12 +282,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bWb-Ow-Vck" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1080" y="3609"/>
+            <point key="canvasLocation" x="2100" y="3609"/>
         </scene>
-        <!--Conteudo View Controller-->
+        <!--View Controller-->
         <scene sceneID="fSu-Le-OJB">
             <objects>
-                <viewController id="cLw-iO-8Nw" customClass="ConteudoViewController" customModule="TiGuia" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="cLw-iO-8Nw" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="axg-A9-80w">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -297,7 +297,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g06-Nd-hZ0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2100" y="3609"/>
+            <point key="canvasLocation" x="6051" y="2869"/>
         </scene>
         <!--Subarea-->
         <scene sceneID="SEE-Eb-E5K">
@@ -349,7 +349,7 @@
         <!--Conteúdos-->
         <scene sceneID="rTk-9M-kEa">
             <objects>
-                <viewController id="SSg-8I-tkv" sceneMemberID="viewController">
+                <viewController id="SSg-8I-tkv" customClass="ConteudoViewController" customModule="TiGuia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zfe-bK-La9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

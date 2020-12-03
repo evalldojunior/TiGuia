@@ -55,7 +55,7 @@ struct SubAreaMentorView: View {
                     VStack {
                         LazyVGrid(columns: columns) {
                             ForEach(0..<subAreasEscolhidas[index].subcategories.count, id: \.self) { count in
-                                CardsSubAreaMentor(category: subAreasEscolhidas[index], count: count)
+                                CardsSubAreaMentorView(category: subAreasEscolhidas[index], count: count)
                             }
                         }
                         
@@ -79,6 +79,9 @@ struct SubAreaMentorView: View {
                 .cornerRadius(10)
                 .padding()
                 .shadow(radius: 10)
+                .fullScreenCover(isPresented: $presented, content: {
+                    ConteudoMentorView(subAreasEscolhidas: AreaMentorView.mentor.subAreas)
+                })
                 
             }
         }
@@ -89,6 +92,6 @@ struct SubAreaMentorView: View {
 
 struct SubAreaMentorView_Previews: PreviewProvider {
     static var previews: some View {
-        SubAreaMentorView(subAreasEscolhidas: AreaMentorView.areasEscolhidas)
+        SubAreaMentorView(subAreasEscolhidas: AreaMentorView.mentor.subAreas)
     }
 }
