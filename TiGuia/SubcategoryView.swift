@@ -19,6 +19,7 @@ struct SubcategoryView: View {
     
     var category:Subcategory
     
+    
     var body: some View {
         
         
@@ -90,7 +91,13 @@ struct SubcategoryView: View {
                     Spacer()
                 }.padding([.top, .leading, .trailing])
                 
-                SubCardsCategory(category: category)
+                VStack {
+                    LazyVStack {
+                        ForEach(0..<category.subcategories.count, id: \.self) { count in
+                            SubCardsCategory(category: category, count: count)
+                        }
+                    }
+                }.padding()
                 
                 VStack {
                     Button(action: {
@@ -120,8 +127,12 @@ struct SubcategoryView: View {
                 Spacer(minLength: 20)
                 
             }
+            .navigationBarTitle("", displayMode: .inline)
+            //.navigationTitle(Text(""))
+            //.navigationBarHidden(true)
+            .statusBar(hidden: true)
             
-        }
+        }//.edgesIgnoringSafeArea(.top)
         
     }
     

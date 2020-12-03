@@ -92,7 +92,7 @@
             </objects>
             <point key="canvasLocation" x="-1867" y="299"/>
         </scene>
-        <!--Trilha-->
+        <!--Card Category View Controller-->
         <scene sceneID="toY-Nt-DVH">
             <objects>
                 <viewController id="rHm-hd-XBE" customClass="CardCategoryViewController" customModule="TiGuia" customModuleProvider="target" sceneMemberID="viewController">
@@ -102,11 +102,11 @@
                         <viewLayoutGuide key="safeArea" id="F0V-d7-1vb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Trilha" image="point.topleft.down.curvedto.point.bottomright.up" catalog="system" id="vRw-dl-p9e"/>
+                    <navigationItem key="navigationItem" id="0MV-22-Jqr"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1L2-EE-pZW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2100" y="-37"/>
+            <point key="canvasLocation" x="3010.144927536232" y="-37.5"/>
         </scene>
         <!--Student Mentor View Controller-->
         <scene sceneID="Kyf-em-PV2">
@@ -184,7 +184,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z9h-pt-LA9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2994" y="-38"/>
+            <point key="canvasLocation" x="3902.898550724638" y="-38.169642857142854"/>
         </scene>
         <!--Favoritos-->
         <scene sceneID="RQP-5v-7tI">
@@ -212,9 +212,14 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" red="0.10980392160000001" green="0.46274509800000002" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="selectedIndex">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="beY-R6-NMO" kind="relationship" relationship="viewControllers" id="Hk4-km-rDU"/>
-                        <segue destination="rHm-hd-XBE" kind="relationship" relationship="viewControllers" id="chg-LG-xs9"/>
+                        <segue destination="MHB-rT-duf" kind="relationship" relationship="viewControllers" id="chg-LG-xs9"/>
                         <segue destination="U1z-lB-m4r" kind="relationship" relationship="viewControllers" id="pBX-kD-rCw"/>
                         <segue destination="LY4-md-YNz" kind="relationship" relationship="viewControllers" id="4Fa-hQ-70g"/>
                     </connections>
@@ -222,6 +227,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="111-za-jZ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1081" y="299"/>
+        </scene>
+        <!--Trilha-->
+        <scene sceneID="WwS-Zy-Ecb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="MHB-rT-duf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Trilha" image="point.topleft.down.curvedto.point.bottomright.up" catalog="system" id="vRw-dl-p9e"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" alpha="0.0" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="0w3-pH-tDm">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Cy3-4r-Cfw">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="Qka-lF-ge6" kind="relationship" relationship="rootViewController" id="ECa-vY-ZUM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tqc-lM-yC5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2100" y="-37.5"/>
+        </scene>
+        <!--Trail Hosting Controller-->
+        <scene sceneID="0wW-yw-kgy">
+            <objects>
+                <hostingController id="Qka-lF-ge6" customClass="TrailHostingController" customModule="TiGuia" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="q3O-XA-Pio"/>
+                </hostingController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LTO-SC-pW1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3010" y="-706"/>
         </scene>
     </scenes>
     <resources>

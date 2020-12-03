@@ -76,7 +76,13 @@ struct CategoryView: View {
                     }.padding([.top, .leading, .trailing])
                     
                     
-                    CardsCategory(category: category)
+                    VStack {
+                        LazyVStack {
+                            ForEach(0..<category.subcategories.count, id: \.self) { count in
+                                CardsCategory(category: category, count: count)
+                            }
+                        }
+                    }.padding()
                     
                     
                     
@@ -116,13 +122,24 @@ struct CategoryView: View {
                     Spacer(minLength: 20)
                 }
                 
-            }//.edgesIgnoringSafeArea(.bottom)
+            }//edgesIgnoringSafeArea(.top)
             //.navigationBarTitle("", displayMode: .inline)
             .navigationBarTitle("")
             .navigationBarHidden(true)
             //.navigationBarBackButtonHidden(true)
         }.accentColor(.titleColor)
         .navigationBarBackButtonHidden(true)
+        .navigationBarHidden(true)
+        .onAppear(perform: {
+//            let appearance = UINavigationBarAppearance()
+//            appearance.shadowColor = .clear
+//            UINavigationBar.appearance().standardAppearance = appearance
+//            UINavigationBar.appearance().scrollEdgeAppearance = appearance
+            //UINavigationBar.appearance().isTranslucent = true
+            UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+            UINavigationBar.appearance().shadowImage = UIImage()
+        })
+        
         
     }
 }

@@ -127,6 +127,13 @@ class Data{
         self.subcategory.image = "robotica"
         self.category.subcategories.append(subcategory)
         
+        //apagar depois
+        subcategory = Subcategory()
+        self.subcategory.title = "hgfhsgudfgsud"
+        self.subcategory.content = "É a área que trata de sistemas compostos por partes mecânicas automáticas e controladas por circuitos integrados.."
+        self.subcategory.image = "robotica"
+        self.category.subcategories[0].subcategories.append(subcategory)
+        
         Data.categories.append(self.category)
     }
     
