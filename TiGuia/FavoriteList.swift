@@ -39,16 +39,16 @@ struct Favorite: View {
     
     @State var presented = false
     
-    let subcategory = Favorites().returnSubcategories()
+    @ObservedObject var subcategory = SubcategoryView.favorite
     
-    var imageFavorite = ["seguranca","cienciadedados","firewall","robotica"]
+     //   var imageFavorite = ["seguranca","cienciadedados","firewall","robotica"]
     
-    var titleFavorite = ["Segurança \nda Informação", "Ciência de dados", "Gerenciamento \nde Firewall", "Robótica"]
+     //   var titleFavorite = ["Segurança \nda Informação", "Ciência de dados", "Gerenciamento \nde Firewall", "Robótica"]
     
     var collums = [
         // define number of caullum here
-        GridItem(.flexible()),
-        GridItem(.flexible())
+        GridItem(.flexible(), spacing: 20),
+        GridItem(.flexible(), spacing: 20)
     ]
     var body: some View {
         GeometryReader { geometry in
@@ -68,15 +68,15 @@ struct Favorite: View {
                 ScrollView(.vertical) {
                     VStack {
                         LazyVGrid(columns: collums, alignment: .center) {
-                            ForEach(0..<imageFavorite.count, id: \.self) { count in
+                            ForEach(0..<subcategory.subcategories.count, id: \.self) { count in
                                 Button(action: {
                                     self.presented.toggle()
                                 }, label: {
-                                    Image(imageFavorite[count])
+                                    Image(subcategory.subcategories[count].image ?? "seguranca" )
                                         .resizable()
                                         .frame(width: (geometry.size.width/2) - 25, height: 170)
                                         .cornerRadius(10)
-                                        .overlay(ImageOverlay(title: titleFavorite[count]), alignment: .bottomLeading)
+                                        .overlay(ImageOverlay(title: subcategory.subcategories[count].title), alignment: .bottomLeading)
                                 })
                                 .fullScreenCover(isPresented: $presented, content: {
                                     OtherUI()
@@ -87,7 +87,7 @@ struct Favorite: View {
                         .aspectRatio(1, contentMode: .fit)
                     }.padding(.all)
                     
-                }//.padding([.leading, .bottom, .trailing])
+                }
                 //.offset(y: -15)
                 .edgesIgnoringSafeArea(.bottom)
                 //Spacer()

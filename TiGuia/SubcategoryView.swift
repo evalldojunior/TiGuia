@@ -9,18 +9,21 @@ import Foundation
 
 import SwiftUI
 //titulo, conteúdo, links, cards subcategorias, btn favorito
-struct SubcategoryView: View {
+public struct SubcategoryView: View {
     @State private var favorito: Bool = false
     @State private var presented: Bool = false
     
     //var category = Data().returnCategory()
-    var favorite = Favorites()
+    
     //var index:Int
     
     var category:Subcategory
     
+    static var favorite = Favorites()
+    //var index:Int
     
-    var body: some View {
+    
+    public var body: some View {
         
         
         VStack {
@@ -38,10 +41,10 @@ struct SubcategoryView: View {
                 
                 Button(action: {
                     self.favorito.toggle()
-                    if(self.favorito){
-                        favorite.addSubcategory(subcategory: category)
-                    }else{
-                        favorite.removeSubcategory(subcategory: category)
+                    if (self.favorito) {
+                        SubcategoryView.favorite.addSubcategory(subcategory: category)
+                    } else {
+                        SubcategoryView.favorite.removeSubcategory(subcategory: category)
                     }
                     category.favorite = favorito
                     

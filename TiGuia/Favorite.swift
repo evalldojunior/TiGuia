@@ -8,9 +8,9 @@
 import Foundation
 import SwiftUI
 
-class Favorites {
-    
-    var subcategories: [Subcategory]
+public class Favorites: ObservableObject {
+        
+    @Published var subcategories: [Subcategory]
     var subcategory: Subcategory
     
     init() {
@@ -19,6 +19,7 @@ class Favorites {
     }
     
     func returnSubcategories() -> [Subcategory] {
+        print(subcategories)
         return self.subcategories
     }
     
@@ -29,7 +30,7 @@ class Favorites {
     
     func removeSubcategory(subcategory: Subcategory) {
         for index in 0...(self.subcategories.count-1) {
-            if(self.subcategories[index].title == subcategory.title) {
+            if (self.subcategories[index].title == subcategory.title) {
                 self.subcategories.remove(at: index)
                 print("removeu")
                 break
