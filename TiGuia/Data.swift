@@ -295,6 +295,7 @@ class Data{
         self.subcategory.links.append(link)
         self.category.subcategories.append(subcategory)
         
+       
         Data.categories.append(self.category)
     }
     

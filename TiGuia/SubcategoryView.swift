@@ -19,6 +19,7 @@ struct SubcategoryView: View {
     
     var category:Subcategory
     
+    
     var body: some View {
         
         
@@ -83,14 +84,24 @@ struct SubcategoryView: View {
                 
                 SubCardLink(category: category)
                 
-                HStack{
-                    Text("Categorias")
-                        .font(.custom("Raleway-Bold", size: 20))
-                        .foregroundColor(.titleColor)
-                    Spacer()
-                }.padding([.top, .leading, .trailing])
-                
-                SubCardsCategory(category: category)
+                if !category.subcategories.isEmpty {
+                    HStack{
+                        Text("Categorias")
+                            .font(.custom("Raleway-Bold", size: 20))
+                            .foregroundColor(.titleColor)
+                        Spacer()
+                    }.padding([.top, .leading, .trailing])
+                    
+                    VStack {
+                        LazyVStack {
+                            ForEach(0..<category.subcategories.count, id: \.self) { count in
+                                SubCardsCategory(category: category, count: count)
+                            }
+                        }
+                    }.padding()
+                } else {
+                    Spacer(minLength: 30)
+                }
                 
                 VStack {
                     Button(action: {
@@ -120,8 +131,12 @@ struct SubcategoryView: View {
                 Spacer(minLength: 20)
                 
             }
+            .navigationBarTitle("", displayMode: .inline)
+            //.navigationTitle(Text(""))
+            //.navigationBarHidden(true)
+            .statusBar(hidden: true)
             
-        }
+        }//.edgesIgnoringSafeArea(.top)
         
     }
     
