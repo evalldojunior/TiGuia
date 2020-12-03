@@ -84,20 +84,24 @@ struct SubcategoryView: View {
                 
                 SubCardLink(category: category)
                 
-                HStack{
-                    Text("Categorias")
-                        .font(.custom("Raleway-Bold", size: 20))
-                        .foregroundColor(.titleColor)
-                    Spacer()
-                }.padding([.top, .leading, .trailing])
-                
-                VStack {
-                    LazyVStack {
-                        ForEach(0..<category.subcategories.count, id: \.self) { count in
-                            SubCardsCategory(category: category, count: count)
+                if !category.subcategories.isEmpty {
+                    HStack{
+                        Text("Categorias")
+                            .font(.custom("Raleway-Bold", size: 20))
+                            .foregroundColor(.titleColor)
+                        Spacer()
+                    }.padding([.top, .leading, .trailing])
+                    
+                    VStack {
+                        LazyVStack {
+                            ForEach(0..<category.subcategories.count, id: \.self) { count in
+                                SubCardsCategory(category: category, count: count)
+                            }
                         }
-                    }
-                }.padding()
+                    }.padding()
+                } else {
+                    Spacer(minLength: 30)
+                }
                 
                 VStack {
                     Button(action: {
