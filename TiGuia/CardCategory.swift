@@ -16,7 +16,7 @@ struct CardsCategory: View {
     
     var body: some View {
         
-        NavigationLink(destination: SubcategoryView(category: category.subcategories[count]), tag: count, selection: $selection) {
+        NavigationLink(destination: SubcategoryView(favorito: category.subcategories[count].favorite, category: category.subcategories[count]), tag: count, selection: $selection) {
             
             Button(action: {
                 //self.presented.toggle()

@@ -15,7 +15,7 @@ struct CategoryView: View {
     var categoryIndex: Int = 0 //tirar o =0 depois 
     //let category = Data.categories[categoryIndex]
     
-    //APAGAR DEPOIS
+    // VARIAVEL QUE INICIALIZA TODOS OS DADOS - MOVER E APAGAR DEPOIS
     var socorro = Data()
     
     

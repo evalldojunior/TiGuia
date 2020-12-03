@@ -14,6 +14,7 @@ class Data{
   //  var subcategories:[Subcategory] = []
     var subcategory:Subcategory = Subcategory()
     var link:Link = Link()
+    static var favorite = Favorites()
     
     init() {
         self.category.title = "Computação"

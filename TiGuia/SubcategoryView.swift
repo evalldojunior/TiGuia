@@ -10,7 +10,7 @@ import Foundation
 import SwiftUI
 //titulo, conteúdo, links, cards subcategorias, btn favorito
 public struct SubcategoryView: View {
-    @State private var favorito: Bool = false
+    @State var favorito: Bool
     @State private var presented: Bool = false
     
     //var category = Data().returnCategory()
@@ -19,7 +19,7 @@ public struct SubcategoryView: View {
     
     var category:Subcategory
     
-    static var favorite = Favorites()
+    //static var favorite = Favorites()
     //var index:Int
     
     
@@ -42,9 +42,9 @@ public struct SubcategoryView: View {
                 Button(action: {
                     self.favorito.toggle()
                     if (self.favorito) {
-                        SubcategoryView.favorite.addSubcategory(subcategory: category)
+                        Data.favorite.addSubcategory(subcategory: category)
                     } else {
-                        SubcategoryView.favorite.removeSubcategory(subcategory: category)
+                        Data.favorite.removeSubcategory(subcategory: category)
                     }
                     category.favorite = favorito
                     

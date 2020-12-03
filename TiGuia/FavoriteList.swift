@@ -38,8 +38,8 @@ struct ImageOverlay: View {
 struct Favorite: View {
     
     @State var presented = false
+    @ObservedObject var subcategory = Data.favorite
     
-    @ObservedObject var subcategory = SubcategoryView.favorite
     
      //   var imageFavorite = ["seguranca","cienciadedados","firewall","robotica"]
     
@@ -67,7 +67,7 @@ struct Favorite: View {
                 
                 ScrollView(.vertical) {
                     VStack {
-                        LazyVGrid(columns: collums, alignment: .center) {
+                        LazyVGrid(columns: collums, alignment: .center, spacing: 0) {
                             ForEach(0..<subcategory.subcategories.count, id: \.self) { count in
                                 Button(action: {
                                     self.presented.toggle()
