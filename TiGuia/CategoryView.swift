@@ -16,6 +16,7 @@ struct CategoryView: View {
     //let category = Data.categories[categoryIndex]
     
     // VARIAVEL QUE INICIALIZA TODOS OS DADOS - MOVER E APAGAR DEPOIS
+    // ta sendo inicalizada na macroarea ate agora
     var socorro = Data()
     
     
