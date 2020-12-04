@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cls-2F-tPS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UYU-lD-9aC">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
@@ -29,7 +29,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yEX-Ew-i9a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2775" y="299"/>
+            <point key="canvasLocation" x="-1925" y="299"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -90,7 +90,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1867" y="299"/>
+            <point key="canvasLocation" x="8257" y="299"/>
         </scene>
         <!--Card Category View Controller-->
         <scene sceneID="toY-Nt-DVH">
@@ -106,7 +106,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1L2-EE-pZW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3010.144927536232" y="-37.5"/>
+            <point key="canvasLocation" x="6843" y="299"/>
         </scene>
         <!--Student Mentor View Controller-->
         <scene sceneID="Kyf-em-PV2">
@@ -124,6 +124,14 @@
             </objects>
             <point key="canvasLocation" x="-933.33333333333337" y="298.66071428571428"/>
         </scene>
+        <!--Macro Area Student Hosting Controller-->
+        <scene sceneID="shR-xd-2AT">
+            <objects>
+                <hostingController id="cGZ-zn-84X" customClass="MacroAreaStudentHostingController" customModule="TiGuia" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GNk-1i-NiM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="65" y="299"/>
+        </scene>
         <!--Macro Area View Controller-->
         <scene sceneID="0Nv-Xw-8V3">
             <objects>
@@ -137,39 +145,27 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Veh-vM-9Ko" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4.3478260869565224" y="298.66071428571428"/>
+            <point key="canvasLocation" x="7538" y="299"/>
         </scene>
         <!--Configuração-->
-        <scene sceneID="ROa-ED-XTB">
+        <scene sceneID="JtX-MI-Md0">
             <objects>
-                <viewController id="LY4-md-YNz" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Dfu-9f-2QX">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="rJC-rl-ox0"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Configuração" image="gearshape" catalog="system" id="Pjw-bM-fSi"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Hbf-8L-OCd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <hostingController id="kzn-eY-TZf" customClass="ConfigHostingController" customModule="TiGuia" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Configuração" image="gearshape" catalog="system" id="8UQ-5y-dlU"/>
+                </hostingController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nXH-n8-SDS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2100" y="2192"/>
+            <point key="canvasLocation" x="2100" y="1978"/>
         </scene>
         <!--Mentoria-->
-        <scene sceneID="e3l-ch-QsO">
+        <scene sceneID="0Yf-p9-Qpo">
             <objects>
-                <viewController id="U1z-lB-m4r" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="mWN-yv-Lsn">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="8tR-2Q-enH"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Mentoria" image="person.2" catalog="system" id="6oG-9d-9KO"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fa2-gw-4f0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <hostingController id="WRd-hD-nrT" customClass="ChatHostingController" customModule="TiGuia" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Mentoria" image="person.2" catalog="system" id="Oa3-df-5VF"/>
+                </hostingController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BeD-Th-rhY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2100" y="1042"/>
+            <point key="canvasLocation" x="2100" y="1024"/>
         </scene>
         <!--Card Category View Controller-->
         <scene sceneID="VzN-f4-cia">
@@ -200,12 +196,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AOr-Pb-CyQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2100" y="-1259"/>
+            <point key="canvasLocation" x="6119" y="299"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Favorito-->
+        <scene sceneID="Etl-1h-DR1">
+            <objects>
+                <hostingController id="mvy-2h-dZm" customClass="FavoriteHostingController" customModule="TiGuia" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favorito" image="star" catalog="system" id="gwM-tY-Zqb"/>
+                </hostingController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c9m-NC-3Xw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2100" y="-894"/>
+        </scene>
+        <!--Tab Bar View Controller-->
         <scene sceneID="ZC0-Ge-Jy5">
             <objects>
-                <tabBarController id="cls-2F-tPS" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBar_vc" id="cls-2F-tPS" customClass="TabBarViewController" customModule="TiGuia" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cIw-C6-SZB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -218,10 +224,10 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <segue destination="beY-R6-NMO" kind="relationship" relationship="viewControllers" id="Hk4-km-rDU"/>
+                        <segue destination="mvy-2h-dZm" kind="relationship" relationship="viewControllers" id="fhq-01-3zN"/>
                         <segue destination="MHB-rT-duf" kind="relationship" relationship="viewControllers" id="chg-LG-xs9"/>
-                        <segue destination="U1z-lB-m4r" kind="relationship" relationship="viewControllers" id="pBX-kD-rCw"/>
-                        <segue destination="LY4-md-YNz" kind="relationship" relationship="viewControllers" id="4Fa-hQ-70g"/>
+                        <segue destination="WRd-hD-nrT" kind="relationship" relationship="viewControllers" id="LIY-t0-dfP"/>
+                        <segue destination="kzn-eY-TZf" kind="relationship" relationship="viewControllers" id="Qni-pz-fV4"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="111-za-jZ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -257,7 +263,7 @@
                 </hostingController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LTO-SC-pW1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3010" y="-706"/>
+            <point key="canvasLocation" x="3016" y="-38"/>
         </scene>
     </scenes>
     <resources>

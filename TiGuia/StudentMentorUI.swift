@@ -9,16 +9,16 @@ import Foundation
 import UIKit
 import SwiftUI
 
-// Apresentar proxima tela: Macro Area
-struct NextUI: UIViewControllerRepresentable {
-    
-    func makeUIViewController(context: Context) -> UIViewController {
-        return MacroAreaViewController()
-    }
-    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
-        
-    }
-}
+// Apresentar proxima tela: Macro Area NAO ESTA SENDO USADA
+//struct NextUI: UIViewControllerRepresentable {
+//    
+//    func makeUIViewController(context: Context) -> UIViewController {
+//        return MacroAreaViewController()
+//    }
+//    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
+//        
+//    }
+//}
 
 // MARK: - Tela de estudante e mentor
 struct StudentMentorUI: View {
@@ -81,7 +81,7 @@ struct StudentMentorUI: View {
                     }).padding(.bottom, 20.0)
                     .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
                     .fullScreenCover(isPresented: $presented, content: {
-                        NextUI()
+                        MacroAreaUI()
                     })
                 }
             }

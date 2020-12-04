@@ -14,9 +14,15 @@
 		0831EFA32553497700D6EFFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0831EFA22553497700D6EFFC /* Assets.xcassets */; };
 		0831EFA62553497700D6EFFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0831EFA42553497700D6EFFC /* LaunchScreen.storyboard */; };
 		08631442257704B00083DB37 /* SubCardLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08631441257704B00083DB37 /* SubCardLink.swift */; };
-		087DCD7225784F96008C1667 /* TrailHosting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087DCD7125784F96008C1667 /* TrailHosting.swift */; };
+		087DCD7225784F96008C1667 /* TrailHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087DCD7125784F96008C1667 /* TrailHostingController.swift */; };
 		088320B8256DC2B5004D0C9C /* ExtensionColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088320B7256DC2B5004D0C9C /* ExtensionColor.swift */; };
 		0890AF64256DCB9E00525E41 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0890AF63256DCB9E00525E41 /* OnboardingViewController.swift */; };
+		08A5C143257999C000180BA9 /* FavoriteHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A5C142257999C000180BA9 /* FavoriteHostingController.swift */; };
+		08A5C14725799CAA00180BA9 /* ChatHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A5C14625799CAA00180BA9 /* ChatHostingController.swift */; };
+		08A5C14B25799DBF00180BA9 /* TempUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A5C14A25799DBF00180BA9 /* TempUI.swift */; };
+		08A5C14F2579AF9C00180BA9 /* ConfigHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A5C14E2579AF9C00180BA9 /* ConfigHostingController.swift */; };
+		08A5C1522579B12100180BA9 /* MacroAreaStudentHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A5C1512579B12100180BA9 /* MacroAreaStudentHostingController.swift */; };
+		08A5C1552579BA4500180BA9 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A5C1542579BA4500180BA9 /* TabBarViewController.swift */; };
 		08A7104625543A17002CB323 /* Raleway-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08A7103425543A17002CB323 /* Raleway-BoldItalic.ttf */; };
 		08A7104725543A17002CB323 /* Raleway-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08A7103525543A17002CB323 /* Raleway-MediumItalic.ttf */; };
 		08A7104825543A17002CB323 /* Raleway-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08A7103625543A17002CB323 /* Raleway-ThinItalic.ttf */; };
@@ -38,7 +44,6 @@
 		08DD49002564898E00BEF67C /* MacroAreaUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DD48FF2564898E00BEF67C /* MacroAreaUI.swift */; };
 		08FB145A256306DE0045919B /* StudentMentorUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FB1459256306DE0045919B /* StudentMentorUI.swift */; };
 		08FB145D25630E720045919B /* StudentMentorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FB145C25630E720045919B /* StudentMentorViewController.swift */; };
-		08FB1460256327F60045919B /* MacroAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FB145F256327F60045919B /* MacroAreaViewController.swift */; };
 		4741B04925702A90008B0873 /* CardCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4741B04825702A90008B0873 /* CardCategoryViewController.swift */; };
 		4780500325630A4F0004919D /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4780500225630A4F0004919D /* CategoryView.swift */; };
 		47A2FC822565BB9E00A5013E /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A2FC812565BB9E00A5013E /* Category.swift */; };
@@ -67,9 +72,15 @@
 		0831EFA52553497700D6EFFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0831EFA72553497700D6EFFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08631441257704B00083DB37 /* SubCardLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCardLink.swift; sourceTree = "<group>"; };
-		087DCD7125784F96008C1667 /* TrailHosting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailHosting.swift; sourceTree = "<group>"; };
+		087DCD7125784F96008C1667 /* TrailHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailHostingController.swift; sourceTree = "<group>"; };
 		088320B7256DC2B5004D0C9C /* ExtensionColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionColor.swift; sourceTree = "<group>"; };
 		0890AF63256DCB9E00525E41 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		08A5C142257999C000180BA9 /* FavoriteHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteHostingController.swift; sourceTree = "<group>"; };
+		08A5C14625799CAA00180BA9 /* ChatHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHostingController.swift; sourceTree = "<group>"; };
+		08A5C14A25799DBF00180BA9 /* TempUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempUI.swift; sourceTree = "<group>"; };
+		08A5C14E2579AF9C00180BA9 /* ConfigHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigHostingController.swift; sourceTree = "<group>"; };
+		08A5C1512579B12100180BA9 /* MacroAreaStudentHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroAreaStudentHostingController.swift; sourceTree = "<group>"; };
+		08A5C1542579BA4500180BA9 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		08A7103425543A17002CB323 /* Raleway-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-BoldItalic.ttf"; sourceTree = "<group>"; };
 		08A7103525543A17002CB323 /* Raleway-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-MediumItalic.ttf"; sourceTree = "<group>"; };
 		08A7103625543A17002CB323 /* Raleway-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ThinItalic.ttf"; sourceTree = "<group>"; };
@@ -91,7 +102,6 @@
 		08DD48FF2564898E00BEF67C /* MacroAreaUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroAreaUI.swift; sourceTree = "<group>"; };
 		08FB1459256306DE0045919B /* StudentMentorUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentMentorUI.swift; sourceTree = "<group>"; };
 		08FB145C25630E720045919B /* StudentMentorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentMentorViewController.swift; sourceTree = "<group>"; };
-		08FB145F256327F60045919B /* MacroAreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroAreaViewController.swift; sourceTree = "<group>"; };
 		34EEFAA7AAED50B9A86EC451 /* Pods-TiGuia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TiGuia.release.xcconfig"; path = "Target Support Files/Pods-TiGuia/Pods-TiGuia.release.xcconfig"; sourceTree = "<group>"; };
 		4741B04825702A90008B0873 /* CardCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCategoryViewController.swift; sourceTree = "<group>"; };
 		4780500225630A4F0004919D /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
@@ -150,17 +160,9 @@
 				47A2FC802565BB6700A5013E /* Controller */,
 				0831EF992553497600D6EFFC /* AppDelegate.swift */,
 				0831EF9B2553497600D6EFFC /* SceneDelegate.swift */,
-				8BF09B852562FB8300D881D9 /* FavoriteViewController.swift */,
-				0890AF63256DCB9E00525E41 /* OnboardingViewController.swift */,
-				08FB145C25630E720045919B /* StudentMentorViewController.swift */,
-				08FB145F256327F60045919B /* MacroAreaViewController.swift */,
-				087DCD7125784F96008C1667 /* TrailHosting.swift */,
 				0831EF9F2553497600D6EFFC /* Main.storyboard */,
 				0831EFA22553497700D6EFFC /* Assets.xcassets */,
 				0831EFA42553497700D6EFFC /* LaunchScreen.storyboard */,
-				08FB1459256306DE0045919B /* StudentMentorUI.swift */,
-				082158DB256702F800E54196 /* OnboardingUI.swift */,
-				08DD48FF2564898E00BEF67C /* MacroAreaUI.swift */,
 				088320B7256DC2B5004D0C9C /* ExtensionColor.swift */,
 				0831EFA72553497700D6EFFC /* Info.plist */,
 				08A7103325543A17002CB323 /* Fonts */,
@@ -216,6 +218,10 @@
 				4780500225630A4F0004919D /* CategoryView.swift */,
 				47A2FCA0256D9A8000A5013E /* SubcategoryView.swift */,
 				8B3DAF4B25645094002FEE6E /* FavoriteList.swift */,
+				08A5C14A25799DBF00180BA9 /* TempUI.swift */,
+				08FB1459256306DE0045919B /* StudentMentorUI.swift */,
+				08DD48FF2564898E00BEF67C /* MacroAreaUI.swift */,
+				082158DB256702F800E54196 /* OnboardingUI.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -225,6 +231,15 @@
 			children = (
 				4741B04825702A90008B0873 /* CardCategoryViewController.swift */,
 				8B8CC9552571911B00489CFB /* SubcategoryViewController.swift */,
+				087DCD7125784F96008C1667 /* TrailHostingController.swift */,
+				08A5C142257999C000180BA9 /* FavoriteHostingController.swift */,
+				08A5C14625799CAA00180BA9 /* ChatHostingController.swift */,
+				08A5C14E2579AF9C00180BA9 /* ConfigHostingController.swift */,
+				08A5C1542579BA4500180BA9 /* TabBarViewController.swift */,
+				08A5C1512579B12100180BA9 /* MacroAreaStudentHostingController.swift */,
+				0890AF63256DCB9E00525E41 /* OnboardingViewController.swift */,
+				8BF09B852562FB8300D881D9 /* FavoriteViewController.swift */,
+				08FB145C25630E720045919B /* StudentMentorViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -378,6 +393,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08A5C1552579BA4500180BA9 /* TabBarViewController.swift in Sources */,
 				47A2FC882565BBCE00A5013E /* Mentor.swift in Sources */,
 				47A2FCA5256D9BFA00A5013E /* Data.swift in Sources */,
 				08631442257704B00083DB37 /* SubCardLink.swift in Sources */,
@@ -385,11 +401,12 @@
 				4780500325630A4F0004919D /* CategoryView.swift in Sources */,
 				47F3F00325637AF80007B7B1 /* CardCategory.swift in Sources */,
 				47A2FC8E2565BC0A00A5013E /* Link.swift in Sources */,
+				08A5C143257999C000180BA9 /* FavoriteHostingController.swift in Sources */,
 				4741B04925702A90008B0873 /* CardCategoryViewController.swift in Sources */,
 				8B3DAF4C25645094002FEE6E /* FavoriteList.swift in Sources */,
 				0831EF9A2553497600D6EFFC /* AppDelegate.swift in Sources */,
+				08A5C1522579B12100180BA9 /* MacroAreaStudentHostingController.swift in Sources */,
 				8BF09B862562FB8300D881D9 /* FavoriteViewController.swift in Sources */,
-				08FB1460256327F60045919B /* MacroAreaViewController.swift in Sources */,
 				08FB145D25630E720045919B /* StudentMentorViewController.swift in Sources */,
 				08DD49002564898E00BEF67C /* MacroAreaUI.swift in Sources */,
 				0831EF9C2553497600D6EFFC /* SceneDelegate.swift in Sources */,
@@ -397,11 +414,14 @@
 				08FB145A256306DE0045919B /* StudentMentorUI.swift in Sources */,
 				47A2FC852565BBBC00A5013E /* Student.swift in Sources */,
 				0890AF64256DCB9E00525E41 /* OnboardingViewController.swift in Sources */,
+				08A5C14F2579AF9C00180BA9 /* ConfigHostingController.swift in Sources */,
 				47A2FC912565BC2900A5013E /* Favorite.swift in Sources */,
 				47A2FCA1256D9A8000A5013E /* SubcategoryView.swift in Sources */,
+				08A5C14725799CAA00180BA9 /* ChatHostingController.swift in Sources */,
+				08A5C14B25799DBF00180BA9 /* TempUI.swift in Sources */,
 				47A2FC8B2565BBF800A5013E /* Subcategory.swift in Sources */,
 				47A2FC822565BB9E00A5013E /* Category.swift in Sources */,
-				087DCD7225784F96008C1667 /* TrailHosting.swift in Sources */,
+				087DCD7225784F96008C1667 /* TrailHostingController.swift in Sources */,
 				088320B8256DC2B5004D0C9C /* ExtensionColor.swift in Sources */,
 				8B8CC9562571911B00489CFB /* SubcategoryViewController.swift in Sources */,
 			);
