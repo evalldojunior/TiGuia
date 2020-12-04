@@ -208,10 +208,11 @@
             </objects>
             <point key="canvasLocation" x="2100" y="-894"/>
         </scene>
-        <!--Tab Bar View Controller-->
+        <!--Tab Bar Controller-->
         <scene sceneID="ZC0-Ge-Jy5">
             <objects>
-                <tabBarController storyboardIdentifier="tabBar_vc" id="cls-2F-tPS" customClass="TabBarViewController" customModule="TiGuia" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBar_vc" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cls-2F-tPS" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="sgM-hX-xtP"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cIw-C6-SZB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

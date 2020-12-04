@@ -22,7 +22,6 @@
 		08A5C14B25799DBF00180BA9 /* TempUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A5C14A25799DBF00180BA9 /* TempUI.swift */; };
 		08A5C14F2579AF9C00180BA9 /* ConfigHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A5C14E2579AF9C00180BA9 /* ConfigHostingController.swift */; };
 		08A5C1522579B12100180BA9 /* MacroAreaStudentHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A5C1512579B12100180BA9 /* MacroAreaStudentHostingController.swift */; };
-		08A5C1552579BA4500180BA9 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A5C1542579BA4500180BA9 /* TabBarViewController.swift */; };
 		08A7104625543A17002CB323 /* Raleway-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08A7103425543A17002CB323 /* Raleway-BoldItalic.ttf */; };
 		08A7104725543A17002CB323 /* Raleway-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08A7103525543A17002CB323 /* Raleway-MediumItalic.ttf */; };
 		08A7104825543A17002CB323 /* Raleway-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08A7103625543A17002CB323 /* Raleway-ThinItalic.ttf */; };
@@ -80,7 +79,6 @@
 		08A5C14A25799DBF00180BA9 /* TempUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempUI.swift; sourceTree = "<group>"; };
 		08A5C14E2579AF9C00180BA9 /* ConfigHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigHostingController.swift; sourceTree = "<group>"; };
 		08A5C1512579B12100180BA9 /* MacroAreaStudentHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroAreaStudentHostingController.swift; sourceTree = "<group>"; };
-		08A5C1542579BA4500180BA9 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		08A7103425543A17002CB323 /* Raleway-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-BoldItalic.ttf"; sourceTree = "<group>"; };
 		08A7103525543A17002CB323 /* Raleway-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-MediumItalic.ttf"; sourceTree = "<group>"; };
 		08A7103625543A17002CB323 /* Raleway-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ThinItalic.ttf"; sourceTree = "<group>"; };
@@ -235,7 +233,6 @@
 				08A5C142257999C000180BA9 /* FavoriteHostingController.swift */,
 				08A5C14625799CAA00180BA9 /* ChatHostingController.swift */,
 				08A5C14E2579AF9C00180BA9 /* ConfigHostingController.swift */,
-				08A5C1542579BA4500180BA9 /* TabBarViewController.swift */,
 				08A5C1512579B12100180BA9 /* MacroAreaStudentHostingController.swift */,
 				0890AF63256DCB9E00525E41 /* OnboardingViewController.swift */,
 				8BF09B852562FB8300D881D9 /* FavoriteViewController.swift */,
@@ -393,7 +390,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08A5C1552579BA4500180BA9 /* TabBarViewController.swift in Sources */,
 				47A2FC882565BBCE00A5013E /* Mentor.swift in Sources */,
 				47A2FCA5256D9BFA00A5013E /* Data.swift in Sources */,
 				08631442257704B00083DB37 /* SubCardLink.swift in Sources */,
