@@ -22,7 +22,7 @@ struct CardsCategory: View {
                 //self.presented.toggle()
                 self.selection = count
             }, label: {
-                HStack{
+                HStack {
                     Image(category.subcategories[count].image!)
                         .resizable()
                         .scaledToFit()
@@ -30,7 +30,7 @@ struct CardsCategory: View {
                         .clipShape(Rectangle(), style: /*@START_MENU_TOKEN@*/FillStyle()/*@END_MENU_TOKEN@*/)
                         .cornerRadius(10)
                         .shadow(radius: 8)
-                    VStack(alignment: .leading){
+                    VStack(alignment: .leading) {
                         Text(category.subcategories[count].title)
                             .font(.custom("Raleway-SemiBold", size: 16))
                             .padding([.leading, .bottom, .trailing], 5.0)
