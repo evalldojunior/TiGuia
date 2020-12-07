@@ -37,7 +37,7 @@ struct MacroAreaUI: View {
                 LazyVStack {
                     ForEach((0..<Data.categories.count)){ index in
                         Button(action: {
-                            // falta implementar as funcoes dos botoes.
+                            self.presented.toggle()
                         }, label: {
                             HStack {
                                 Image(systemName: "\(image[index])")
@@ -71,6 +71,9 @@ struct MacroAreaUI: View {
                             .cornerRadius(10)
                         }).padding(.bottom, 20.0)
                         .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                        .fullScreenCover(isPresented: $presented, content: {
+                            NextTrailUI(teste: index).ignoresSafeArea(.all)
+                        })
                         
                     }
                 }
@@ -78,6 +81,22 @@ struct MacroAreaUI: View {
                 Spacer()
             }
         }
+    }
+}
+
+struct NextTrailUI: UIViewControllerRepresentable {
+    var teste: Int
+    func makeUIViewController(context: UIViewControllerRepresentableContext<NextTrailUI>) -> UIViewController {
+        
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        // swiftlint:disable force_cast
+        let mainViewController = mainStoryboard.instantiateViewController(withIdentifier: "tabBar_vc") as! UITabBarController
+        // swiftlint:enable force_cast
+        return mainViewController
+        
+    }
+    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
+        
     }
 }
 

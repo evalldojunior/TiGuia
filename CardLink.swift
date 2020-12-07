@@ -20,52 +20,45 @@ struct ImageOverlayCardLink: View {
             Rectangle().fill(gradient)
                 .frame(width: 164, height: 121)
                 .cornerRadius(10)
-                .offset(x: 8, y: -8)
             
             VStack(alignment: .leading) {
                 Text(title)
-                    .offset(x: 25, y: -25)
-                    .foregroundColor(.white)
+                    .foregroundColor(.lightColor)
                     .font(.custom("Raleway-SemiBold", size: 14))
-                    .frame(width: 140, height: 45, alignment: .bottomLeading)
+                    .frame(width: 140, height: 55, alignment: .bottomLeading)
+                    .padding(9.0)
             }
         }
     }
 }
 
 struct CardLink: View {
- 
-    let lightColor = Color("lightColor")
+    
+    @Environment(\.openURL) private var openURL
     var category:Category
     
-    var row = [
-        // define number of caullum here
-        GridItem(.flexible())
-    ]
-    
     var body: some View {
-      //  ZStack{
-            VStack(alignment: .leading) {
-                ScrollView(.horizontal) {
-                    LazyHGrid(rows: row) {
-                        ForEach(0..<category.links.count, id: \.self) { count in
-                            Button(action: {
-                              //  self.presented.toggle()
-                            }, label: {
-                                Image(category.links[count].image!)
-                                    .resizable()
-                                    .frame(width: 164, height: 121)
-                                    .cornerRadius(10)
-                                    .padding(8)
-                                    .shadow(color: .init(.sRGB, red: 0, green: 0, blue: 0, opacity: 0.4), radius: 10, x: 0.0, y: 4.0)
-                                    .overlay(ImageOverlayCardLink(title: category.links[count].titulo), alignment: .bottomLeading)
-                            })
-                          
-                        }
-                   // }
+        //  ZStack{
+        HStack{
+            ScrollView(.horizontal) {
+                LazyHStack {
+                    ForEach(0..<category.links.count, id: \.self) { count in
+                        Button(action: {
+                            let stringUrl = (category.links[count].url).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+                            openURL(URL(string: stringUrl!)!)
+                        }, label: {
+                            Image(category.links[count].image!)
+                                .resizable()
+                                .frame(width: 164, height: 121)
+                                .cornerRadius(10)
+                                .overlay(ImageOverlayCardLink(title: category.links[count].titulo), alignment: .bottomLeading)
+                        })
+                        
+                    }.padding(.trailing, 5.0)
+                    .shadow(color: .init(.sRGB, red: 0, green: 0, blue: 0, opacity: 0.4), radius: 8, x: 0.0, y: 4.0)
                 }
-                    
-            }                
+                .padding(.all)
+            }
         }
     }
 }
