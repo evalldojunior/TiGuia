@@ -16,18 +16,6 @@ class ChatViewController: UIViewController {
         super.viewDidLoad()
         
         
-//        let mjks = "lady+gaga"
-//        SearchSong.fetchBy(artistName: mjks){result in
-//            if case .success(let song) = result {
-//                print(song.data![0].attributes!.artistName!)
-//            }
-//            else if case .failure(let error) = result{
-//                print(error.localizedDescription)
-//            }
-//
-//        }
-        // Do any additional setup after loading the view.
-        
         artistsHost = UIHostingController(rootView: ContentView())
         artistsHost?.view.translatesAutoresizingMaskIntoConstraints = false
         

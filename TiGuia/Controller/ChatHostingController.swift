@@ -9,10 +9,10 @@ import Foundation
 import UIKit
 import SwiftUI
 
-class ChatHostingController: UIHostingController<TempUI> {
+class ChatHostingController: UIHostingController<ContentView> {
 
     required init?(coder: NSCoder) {
-        super.init(coder: coder,rootView: TempUI());
+        super.init(coder: coder,rootView: ContentView());
     }
 
     override func viewDidLoad() {
