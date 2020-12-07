@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -58,6 +58,16 @@
 		47F3F00025636F160007B7B1 /* CardLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F3EFFF25636F160007B7B1 /* CardLink.swift */; };
 		47F3F00325637AF80007B7B1 /* CardCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F3F00225637AF80007B7B1 /* CardCategory.swift */; };
 		65D0491140E1507108E211F7 /* Pods_TiGuia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB1C8E3F18B32085B059A10 /* Pods_TiGuia.framework */; };
+		6640BBAF256C640500B1333C /* ChatUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6640BBAE256C640500B1333C /* ChatUIApp.swift */; };
+		6640BBB3256C642600B1333C /* ChatUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6640BBB2256C642600B1333C /* ChatUI.swift */; };
+		6640BBB6256C644C00B1333C /* KeyboardResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6640BBB5256C644C00B1333C /* KeyboardResponder.swift */; };
+		6640BBB9256C646700B1333C /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6640BBB8256C646700B1333C /* ChatBubble.swift */; };
+		6640BBBF256C655700B1333C /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6640BBBE256C655700B1333C /* PhotoPicker.swift */; };
+		6652AADA2576C30000970030 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6652AAD92576C30000970030 /* ContentView.swift */; };
+		667A046125781C4700171797 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667A046025781C4700171797 /* ChatViewController.swift */; };
+		66A42803257575BA006C9AC1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 66A42802257575BA006C9AC1 /* GoogleService-Info.plist */; };
+		66FF6FDE25645FFA005ACC0A /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66FF6FDD25645FFA005ACC0A /* CloudKit.framework */; };
+		66FF6FE225646082005ACC0A /* CloudKitMagicCRUD in Frameworks */ = {isa = PBXBuildFile; productRef = 66FF6FE125646082005ACC0A /* CloudKitMagicCRUD */; };
 		8B2FA23125759D3D00EACCA0 /* MacroAreaMentorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2FA23025759D3D00EACCA0 /* MacroAreaMentorViewController.swift */; };
 		8B2FA2352575A43D00EACCA0 /* MacroAreaMentorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2FA2342575A43D00EACCA0 /* MacroAreaMentorView.swift */; };
 		8B2FA2382575A91A00EACCA0 /* ConteudosMentorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2FA2372575A91A00EACCA0 /* ConteudosMentorView.swift */; };
@@ -125,6 +135,16 @@
 		47A2FC8A2565BBF800A5013E /* Subcategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subcategory.swift; sourceTree = "<group>"; };
 		47A2FC8D2565BC0A00A5013E /* Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
 		47A2FC902565BC2900A5013E /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
+		6640BBAE256C640500B1333C /* ChatUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatUIApp.swift; sourceTree = "<group>"; };
+		6640BBB2256C642600B1333C /* ChatUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatUI.swift; sourceTree = "<group>"; };
+		6640BBB5256C644C00B1333C /* KeyboardResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardResponder.swift; sourceTree = "<group>"; };
+		6640BBB8256C646700B1333C /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
+		6640BBBE256C655700B1333C /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
+		6652AAD92576C30000970030 /* ContentView.swift */ = {isa = PBXFileReference; indentWidth = 7; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		667A046025781C4700171797 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatViewController.swift; path = TiGuia/ChatViewController.swift; sourceTree = SOURCE_ROOT; };
+		66A42802257575BA006C9AC1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		66FF6FDB25645FD2005ACC0A /* TiGuia.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TiGuia.entitlements; sourceTree = "<group>"; };
+		66FF6FDD25645FFA005ACC0A /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		47A2FCA0256D9A8000A5013E /* SubcategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubcategoryView.swift; sourceTree = "<group>"; };
 		47A2FCA4256D9BF900A5013E /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		47F3EFFF25636F160007B7B1 /* CardLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardLink.swift; path = ../CardLink.swift; sourceTree = "<group>"; };
@@ -155,6 +175,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				65D0491140E1507108E211F7 /* Pods_TiGuia.framework in Frameworks */,
+				66FF6FE225646082005ACC0A /* CloudKitMagicCRUD in Frameworks */,
+				66FF6FDE25645FFA005ACC0A /* CloudKit.framework in Frameworks */,
 				8B69B122256F527300350705 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -165,6 +187,7 @@
 		0831EF8D2553497600D6EFFC = {
 			isa = PBXGroup;
 			children = (
+				6640BBAD256C63B100B1333C /* ChatUI */,
 				0831EF982553497600D6EFFC /* TiGuia */,
 				0831EF972553497600D6EFFC /* Products */,
 				657953A7B58E407686F9EFDE /* Pods */,
@@ -183,6 +206,9 @@
 		0831EF982553497600D6EFFC /* TiGuia */ = {
 			isa = PBXGroup;
 			children = (
+				66A42802257575BA006C9AC1 /* GoogleService-Info.plist */,
+				66FF6FDB25645FD2005ACC0A /* TiGuia.entitlements */,
+				6652AAD92576C30000970030 /* ContentView.swift */,
 				47A2FC7E2565BB5300A5013E /* Model */,
 				47A2FC7F2565BB5E00A5013E /* View */,
 				47A2FC802565BB6700A5013E /* Controller */,
@@ -265,6 +291,7 @@
 		47A2FC802565BB6700A5013E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				667A046025781C4700171797 /* ChatViewController.swift */,
 				4741B04825702A90008B0873 /* CardCategoryViewController.swift */,
 				8B2FA23025759D3D00EACCA0 /* MacroAreaMentorViewController.swift */,
 				8BA5806F2576C687007FE7B5 /* AreaMentorViewController.swift */,
@@ -288,6 +315,7 @@
 		50F284CDA64B0B50DB155990 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				66FF6FDD25645FFA005ACC0A /* CloudKit.framework */,
 				8B69B121256F527300350705 /* StoreKit.framework */,
 				ADB1C8E3F18B32085B059A10 /* Pods_TiGuia.framework */,
 			);
@@ -303,6 +331,18 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		6640BBAD256C63B100B1333C /* ChatUI */ = {
+			isa = PBXGroup;
+			children = (
+				6640BBAE256C640500B1333C /* ChatUIApp.swift */,
+				6640BBB2256C642600B1333C /* ChatUI.swift */,
+				6640BBB5256C644C00B1333C /* KeyboardResponder.swift */,
+				6640BBB8256C646700B1333C /* ChatBubble.swift */,
+				6640BBBE256C655700B1333C /* PhotoPicker.swift */,
+			);
+			path = ChatUI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -315,12 +355,16 @@
 				0831EF932553497600D6EFFC /* Frameworks */,
 				0831EF942553497600D6EFFC /* Resources */,
 				08F26C53255DBB4700DA3378 /* ShellScript */,
+				ED1A7BA1C86CB3130FBDC7A1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = TiGuia;
+			packageProductDependencies = (
+				66FF6FE125646082005ACC0A /* CloudKitMagicCRUD */,
+			);
 			productName = TiGuia;
 			productReference = 0831EF962553497600D6EFFC /* TiGuia.app */;
 			productType = "com.apple.product-type.application";
@@ -348,6 +392,9 @@
 				Base,
 			);
 			mainGroup = 0831EF8D2553497600D6EFFC;
+			packageReferences = (
+				66FF6FE025646082005ACC0A /* XCRemoteSwiftPackageReference "CloudKitMagicCRUD" */,
+			);
 			productRefGroup = 0831EF972553497600D6EFFC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -381,6 +428,7 @@
 				08A7105225543A17002CB323 /* Raleway-Black.ttf in Resources */,
 				08A7104625543A17002CB323 /* Raleway-BoldItalic.ttf in Resources */,
 				08A7104925543A17002CB323 /* Raleway-ExtraLight.ttf in Resources */,
+				66A42803257575BA006C9AC1 /* GoogleService-Info.plist in Resources */,
 				08A7104825543A17002CB323 /* Raleway-ThinItalic.ttf in Resources */,
 				08A7105325543A17002CB323 /* Raleway-BlackItalic.ttf in Resources */,
 			);
@@ -428,6 +476,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		ED1A7BA1C86CB3130FBDC7A1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TiGuia/Pods-TiGuia-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TiGuia/Pods-TiGuia-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TiGuia/Pods-TiGuia-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -435,6 +500,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08FB1460256327F60045919B /* MacroAreaViewController.swift in Sources */,
+				08FB145D25630E720045919B /* StudentMentorViewController.swift in Sources */,
+				0831EF9E2553497600D6EFFC /* ViewController.swift in Sources */,
+				6640BBB6256C644C00B1333C /* KeyboardResponder.swift in Sources */,
+				6640BBAF256C640500B1333C /* ChatUIApp.swift in Sources */,
+				6640BBB9256C646700B1333C /* ChatBubble.swift in Sources */,
+				6640BBBF256C655700B1333C /* PhotoPicker.swift in Sources */,
+				6652AADA2576C30000970030 /* ContentView.swift in Sources */,
 				47A2FC882565BBCE00A5013E /* Mentor.swift in Sources */,
 				47A2FCA5256D9BFA00A5013E /* Data.swift in Sources */,
 				08631442257704B00083DB37 /* SubCardLink.swift in Sources */,
@@ -455,6 +528,9 @@
 				8BF09B862562FB8300D881D9 /* FavoriteViewController.swift in Sources */,
 				08FB145D25630E720045919B /* StudentMentorViewController.swift in Sources */,
 				08DD49002564898E00BEF67C /* MacroAreaUI.swift in Sources */,
+				667A046125781C4700171797 /* ChatViewController.swift in Sources */,
+				0831EF9C2553497600D6EFFC /* SceneDelegate.swift in Sources */,
+				6640BBB3256C642600B1333C /* ChatUI.swift in Sources */,
 				8BB6723D25783B6200CF22DB /* CardSubAreaMentorView.swift in Sources */,
 				0890F06D257EB3C9009A7C90 /* ConfigMentorHostingController.swift in Sources */,
 				0831EF9C2553497600D6EFFC /* SceneDelegate.swift in Sources */,
@@ -625,6 +701,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TiGuia/TiGuia.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R9YW8SQC7S;
 				INFOPLIST_FILE = TiGuia/Info.plist;
@@ -645,6 +722,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TiGuia/TiGuia.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R9YW8SQC7S;
 				INFOPLIST_FILE = TiGuia/Info.plist;
@@ -681,6 +759,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		66FF6FE025646082005ACC0A /* XCRemoteSwiftPackageReference "CloudKitMagicCRUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rvenieris/CloudKitMagicCRUD.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		66FF6FE125646082005ACC0A /* CloudKitMagicCRUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66FF6FE025646082005ACC0A /* XCRemoteSwiftPackageReference "CloudKitMagicCRUD" */;
+			productName = CloudKitMagicCRUD;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0831EF8E2553497600D6EFFC /* Project object */;
 }
