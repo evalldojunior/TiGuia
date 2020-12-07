@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="U1z-lB-m4r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="voc-2n-jVH">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -23,13 +24,13 @@
                     <view key="view" contentMode="scaleToFill" id="Ey9-dQ-Jv7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="VRz-vb-3GT"/>
+                        <viewLayoutGuide key="safeArea" id="2ew-is-8iv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yEX-Ew-i9a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2775" y="299"/>
+            <point key="canvasLocation" x="-1925" y="299"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -78,7 +79,7 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="jz5-nK-mka"/>
                             </scrollView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="Drw-I1-adL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
@@ -90,23 +91,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1867" y="299"/>
+            <point key="canvasLocation" x="8257" y="299"/>
         </scene>
-        <!--Trilha-->
+        <!--Card Category View Controller-->
         <scene sceneID="toY-Nt-DVH">
             <objects>
-                <viewController id="rHm-hd-XBE" sceneMemberID="viewController">
+                <viewController id="rHm-hd-XBE" customClass="CardCategoryViewController" customModule="TiGuia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7lB-V3-hJZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="EmZ-PK-Frg"/>
+                        <viewLayoutGuide key="safeArea" id="F0V-d7-1vb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Trilha" image="point.topleft.down.curvedto.point.bottomright.up" catalog="system" id="vRw-dl-p9e"/>
+                    <navigationItem key="navigationItem" id="0MV-22-Jqr"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1L2-EE-pZW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2100" y="-37"/>
+            <point key="canvasLocation" x="6843" y="299"/>
         </scene>
         <!--Student Mentor View Controller-->
         <scene sceneID="Kyf-em-PV2">
@@ -115,7 +116,7 @@
                     <view key="view" contentMode="scaleToFill" id="mm7-D7-IRn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="CHy-ts-krm"/>
+                        <viewLayoutGuide key="safeArea" id="EOu-gT-t1x"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="6fb-tj-3Hc"/>
@@ -124,6 +125,14 @@
             </objects>
             <point key="canvasLocation" x="-933.33333333333337" y="298.66071428571428"/>
         </scene>
+        <!--Macro Area Student Hosting Controller-->
+        <scene sceneID="shR-xd-2AT">
+            <objects>
+                <hostingController id="cGZ-zn-84X" customClass="MacroAreaStudentHostingController" customModule="TiGuia" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GNk-1i-NiM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="65" y="299"/>
+        </scene>
         <!--Macro Area View Controller-->
         <scene sceneID="0Nv-Xw-8V3">
             <objects>
@@ -131,104 +140,232 @@
                     <view key="view" contentMode="scaleToFill" id="klA-cl-dOU" customClass="MacroAreaViewController">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="oYq-Dg-dtm"/>
+                        <viewLayoutGuide key="safeArea" id="1KR-ts-6Td"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Veh-vM-9Ko" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4.3478260869565224" y="298.66071428571428"/>
+            <point key="canvasLocation" x="7538" y="299"/>
         </scene>
-        <!--Configuração-->
-        <scene sceneID="ROa-ED-XTB">
+        <!--Configurações-->
+        <scene sceneID="JtX-MI-Md0">
             <objects>
-                <viewController id="LY4-md-YNz" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Dfu-9f-2QX">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="efD-QZ-Nk4"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Configuração" image="gearshape" catalog="system" id="Pjw-bM-fSi"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Hbf-8L-OCd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <hostingController id="kzn-eY-TZf" customClass="ConfigHostingController" customModule="TiGuia" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Configurações" image="gearshape" catalog="system" id="8UQ-5y-dlU"/>
+                </hostingController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nXH-n8-SDS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2100" y="2192"/>
+            <point key="canvasLocation" x="2100" y="1978"/>
         </scene>
         <!--Mentoria-->
-        <scene sceneID="e3l-ch-QsO">
+        <scene sceneID="0Yf-p9-Qpo">
             <objects>
-                <viewController id="U1z-lB-m4r" customClass="ChatViewController" customModule="TiGuia" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="mWN-yv-Lsn">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="HN0-Mu-rO6"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Mentoria" image="person.2" catalog="system" id="6oG-9d-9KO"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fa2-gw-4f0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <hostingController id="WRd-hD-nrT" customClass="ChatHostingController" customModule="TiGuia" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Mentoria" image="person.2" catalog="system" id="Oa3-df-5VF"/>
+                </hostingController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BeD-Th-rhY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2100" y="1042"/>
+            <point key="canvasLocation" x="2100" y="1024"/>
         </scene>
-        <!--View Controller-->
+        <!--Card Category View Controller-->
         <scene sceneID="VzN-f4-cia">
             <objects>
-                <viewController id="ry4-nH-Nss" sceneMemberID="viewController">
+                <viewController id="ry4-nH-Nss" customClass="CardCategoryViewController" customModule="TiGuia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SVO-IF-mlG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="KVN-IT-Fc0"/>
+                        <viewLayoutGuide key="safeArea" id="D9v-vc-fKi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z9h-pt-LA9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2994" y="-38"/>
+            <point key="canvasLocation" x="3902.898550724638" y="-38.169642857142854"/>
         </scene>
         <!--Favoritos-->
         <scene sceneID="RQP-5v-7tI">
             <objects>
-                <viewController id="beY-R6-NMO" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Favorite" useStoryboardIdentifierAsRestorationIdentifier="YES" id="beY-R6-NMO" customClass="FavoriteViewController" customModule="TiGuia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="llH-YG-PuM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="igQ-g7-uTu"/>
+                        <viewLayoutGuide key="safeArea" id="m4h-eB-Hoc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Favoritos" image="star" catalog="system" id="dwB-Qw-FmM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AOr-Pb-CyQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2100" y="-1259"/>
+            <point key="canvasLocation" x="6119" y="299"/>
+        </scene>
+        <!--Favorito-->
+        <scene sceneID="Etl-1h-DR1">
+            <objects>
+                <hostingController id="mvy-2h-dZm" customClass="FavoriteHostingController" customModule="TiGuia" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favorito" image="star" catalog="system" id="gwM-tY-Zqb"/>
+                </hostingController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c9m-NC-3Xw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2100" y="-894"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ZC0-Ge-Jy5">
             <objects>
-                <tabBarController id="cls-2F-tPS" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBar_vc" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cls-2F-tPS" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="sgM-hX-xtP"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cIw-C6-SZB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" red="0.10980392160000001" green="0.46274509800000002" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="selectedIndex">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
-                        <segue destination="beY-R6-NMO" kind="relationship" relationship="viewControllers" id="Hk4-km-rDU"/>
-                        <segue destination="rHm-hd-XBE" kind="relationship" relationship="viewControllers" id="chg-LG-xs9"/>
-                        <segue destination="U1z-lB-m4r" kind="relationship" relationship="viewControllers" id="pBX-kD-rCw"/>
-                        <segue destination="LY4-md-YNz" kind="relationship" relationship="viewControllers" id="4Fa-hQ-70g"/>
+                        <segue destination="mvy-2h-dZm" kind="relationship" relationship="viewControllers" id="fhq-01-3zN"/>
+                        <segue destination="MHB-rT-duf" kind="relationship" relationship="viewControllers" id="chg-LG-xs9"/>
+                        <segue destination="WRd-hD-nrT" kind="relationship" relationship="viewControllers" id="LIY-t0-dfP"/>
+                        <segue destination="kzn-eY-TZf" kind="relationship" relationship="viewControllers" id="Qni-pz-fV4"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="111-za-jZ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1081" y="299"/>
         </scene>
+        <!--Area Mentor View Controller-->
+        <scene sceneID="ZFM-Ox-Qne">
+            <objects>
+                <hostingController id="pJy-mw-RKL" customClass="AreaMentorViewController" customModule="TiGuia" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TDL-l5-oky" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2100" y="3609"/>
+        </scene>
+        <!--Macro Area Mentor View Controller-->
+        <scene sceneID="c08-7Q-ZoK">
+            <objects>
+                <hostingController id="voc-2n-jVH" customClass="MacroAreaMentorViewController" customModule="TiGuia" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mdK-B2-UnQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1080" y="3609"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="fSu-Le-OJB">
+            <objects>
+                <viewController id="cLw-iO-8Nw" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="axg-A9-80w">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="evv-ck-AR3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g06-Nd-hZ0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6051" y="2869"/>
+        </scene>
+        <!--Sub Area Mentor View Controller-->
+        <scene sceneID="cui-B2-LQe">
+            <objects>
+                <hostingController id="dTX-el-1Rl" customClass="SubAreaMentorViewController" customModule="TiGuia" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BHT-MQ-uvZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3180" y="3609"/>
+        </scene>
+        <!--Mentoria-->
+        <scene sceneID="hxC-DT-JKk">
+            <objects>
+                <hostingController id="zCt-Xc-WTf" customClass="ChatMentorHostingController" customModule="TiGuia" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Mentoria" image="person.2" catalog="system" id="MVs-sU-EQT"/>
+                </hostingController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FeK-29-Of4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5141" y="3591"/>
+        </scene>
+        <!--Configurações-->
+        <scene sceneID="rKQ-tz-rFf">
+            <objects>
+                <hostingController id="9ZA-mc-GBZ" customClass="ConfigMentorHostingController" customModule="TiGuia" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Configurações" image="gearshape" catalog="system" id="H8E-qr-qkd"/>
+                </hostingController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4HE-Xx-Amo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5141" y="4372"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="7JL-59-qps">
+            <objects>
+                <tabBarController storyboardIdentifier="tabBarMentor_vc" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AUx-Fo-oiN" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bZE-Xp-w4y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" name="btnColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="eS0-ac-3CI" kind="relationship" relationship="viewControllers" id="Ju6-DO-sy9"/>
+                        <segue destination="zCt-Xc-WTf" kind="relationship" relationship="viewControllers" id="Oqv-Ym-1NM"/>
+                        <segue destination="9ZA-mc-GBZ" kind="relationship" relationship="viewControllers" id="MCG-GS-rat"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n4J-qN-TfE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4255" y="3609"/>
+        </scene>
+        <!--Trilha-->
+        <scene sceneID="WwS-Zy-Ecb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="MHB-rT-duf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Trilha" image="point.topleft.down.curvedto.point.bottomright.up" catalog="system" id="vRw-dl-p9e"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" alpha="0.0" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="0w3-pH-tDm">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Cy3-4r-Cfw">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="Qka-lF-ge6" kind="relationship" relationship="rootViewController" id="ECa-vY-ZUM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tqc-lM-yC5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2100" y="-37.5"/>
+        </scene>
+        <!--Trail Hosting Controller-->
+        <scene sceneID="0wW-yw-kgy">
+            <objects>
+                <hostingController id="Qka-lF-ge6" customClass="TrailHostingController" customModule="TiGuia" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="q3O-XA-Pio"/>
+                </hostingController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LTO-SC-pW1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3016" y="-38"/>
+        </scene>
+        <!--Conteúdos-->
+        <scene sceneID="SBv-LM-3RE">
+            <objects>
+                <hostingController id="eS0-ac-3CI" customClass="ConteudoHostingController" customModule="TiGuia" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Conteúdos" image="square.grid.2x2" catalog="system" id="rjX-8w-DFw"/>
+                </hostingController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yf6-el-ESQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5141" y="2837"/>
+        </scene>
     </scenes>
     <resources>
         <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="person.2" catalog="system" width="128" height="81"/>
         <image name="point.topleft.down.curvedto.point.bottomright.up" catalog="system" width="121" height="128"/>
+        <image name="square.grid.2x2" catalog="system" width="128" height="114"/>
         <image name="star" catalog="system" width="128" height="116"/>
+        <namedColor name="btnColor">
+            <color red="0.10980392156862745" green="0.46274509803921571" blue="0.56470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

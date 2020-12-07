@@ -14,7 +14,7 @@ struct MacroAreaUI: View {
     
     // @State var didTap = false
     @State private var presented = false
-    
+    var teste = Data() //acho que vai precisar apagar essa linha aqui. é que precisa iniciar a classe Data pra poder pegar o arrey de categorias
     var image = ["desktopcomputer", "paintbrush", "desktopcomputer", "paintbrush", "desktopcomputer", "paintbrush"]
     var title = ["Computação", "Design", "Computação", "Design", "Computação", "Design"]
     var descrip = ["Estuda as técnicas, metodologias, instrumentos computacionais e aplicações tecnológicas...", "Desenvolve conceitos visuais para peças gráficas e materiais. Se preocupa com funcionalidade...", "Estuda as técnicas, metodologias, instrumentos computacionais e aplicações tecnológicas...", "Desenvolve conceitos visuais para peças gráficas e materiais. Se preocupa com funcionalidade...", "Estuda as técnicas, metodologias, instrumentos computacionais e aplicações tecnológicas...", "Desenvolve conceitos visuais para peças gráficas e materiais. Se preocupa com funcionalidade..."]
@@ -35,9 +35,9 @@ struct MacroAreaUI: View {
             // scrollview com as macroareas
             ScrollView{
                 LazyVStack {
-                    ForEach((0..<title.count)){ index in
+                    ForEach((0..<Data.categories.count)){ index in
                         Button(action: {
-                            // falta implementar as funcoes dos botoes.
+                            self.presented.toggle()
                         }, label: {
                             HStack {
                                 Image(systemName: "\(image[index])")
@@ -51,13 +51,14 @@ struct MacroAreaUI: View {
                                     .foregroundColor(.orangeColor)
                                     .shadow(radius: 8)
                                 VStack(alignment: .leading) {
-                                    Text(title[index])
+                                    Text(Data.categories[index].title)
                                         .font(.custom("Raleway-Bold", size: 24))
                                         .padding([.leading, .bottom, .trailing], 5.0)
                                         .foregroundColor(.lightColor)
                                     
-                                    Text(descrip[index])
+                                    Text(Data.categories[index].content)
                                         .font(.custom("Raleway", size: 14))
+                                        .lineLimit(3)
                                         .padding([.leading, .bottom, .trailing], 5.0)
                                         .foregroundColor(.lightColor)
                                     
@@ -70,6 +71,9 @@ struct MacroAreaUI: View {
                             .cornerRadius(10)
                         }).padding(.bottom, 20.0)
                         .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                        .fullScreenCover(isPresented: $presented, content: {
+                            NextTrailUI().ignoresSafeArea(.all)
+                        })
                         
                     }
                 }
@@ -77,6 +81,22 @@ struct MacroAreaUI: View {
                 Spacer()
             }
         }
+    }
+}
+
+struct NextTrailUI: UIViewControllerRepresentable {
+    //var teste: Int
+    func makeUIViewController(context: UIViewControllerRepresentableContext<NextTrailUI>) -> UIViewController {
+        
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        // swiftlint:disable force_cast
+        let mainViewController = mainStoryboard.instantiateViewController(withIdentifier: "tabBar_vc") as! UITabBarController
+        // swiftlint:enable force_cast
+        return mainViewController
+        
+    }
+    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
+        
     }
 }
 
