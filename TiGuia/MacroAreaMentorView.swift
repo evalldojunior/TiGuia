@@ -37,7 +37,7 @@ struct MacroAreaMentorUIView: View {
                 LazyVStack {
                     ForEach((0..<Data.categories.count)){ index in
                         Button(action: {
-                            // falta implementar as funcoes dos botoes.
+                            self.presented.toggle()
                         }, label: {
                             HStack {
                                 Image(systemName: "\(image[index])")
@@ -71,6 +71,9 @@ struct MacroAreaMentorUIView: View {
                             .cornerRadius(10)
                         }).padding(.bottom, 20.0)
                         .shadow(radius: 10)
+                        .fullScreenCover(isPresented: $presented, content: {
+                            AreaMentorView()
+                        })
                         
                     }
                 }
@@ -80,6 +83,16 @@ struct MacroAreaMentorUIView: View {
         }
     }
 }
+
+//struct NextMentorUI: UIViewControllerRepresentable {
+//
+//    func makeUIViewController(context: Context) -> UIViewController {
+//        return AreaMentorView()
+//    }
+//    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
+//
+//    }
+//}
 
 // preview
 struct AreaMentorUI_Previews: PreviewProvider {

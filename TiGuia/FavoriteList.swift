@@ -39,6 +39,7 @@ struct Favorite: View {
     
     @State var presented = false
     @ObservedObject var subcategory = Data.favorite
+    @State var selection: Int? = nil
     
     
      //   var imageFavorite = ["seguranca","cienciadedados","firewall","robotica"]
@@ -51,50 +52,72 @@ struct Favorite: View {
         GridItem(.flexible(), spacing: 20)
     ]
     var body: some View {
-        GeometryReader { geometry in
-            VStack(alignment: .leading) {
-                Rectangle().fill(Color.blue)
-                    .frame(height: geometry.size.height / 3, alignment: .center)
-                    .edgesIgnoringSafeArea(.top)
-                    .padding(.bottom, -(geometry.safeAreaInsets.top))
-                
-                HStack{
-                    Text("Favoritos")
-                        .font(.custom("Raleway-Bold", size: 30))
-                        .foregroundColor(.titleColor)
-                    Spacer()
-                }.padding([.top, .leading, .trailing])
-                
-                ScrollView(.vertical) {
-                    VStack {
-                        LazyVGrid(columns: collums, alignment: .center, spacing: 0) {
-                            ForEach(0..<subcategory.subcategories.count, id: \.self) { count in
-                                Button(action: {
-                                    self.presented.toggle()
-                                }, label: {
-                                    Image(subcategory.subcategories[count].image ?? "seguranca" )
-                                        .resizable()
-                                        .frame(width: (geometry.size.width/2) - 25, height: 170)
-                                        .cornerRadius(10)
-                                        .overlay(ImageOverlay(title: subcategory.subcategories[count].title), alignment: .bottomLeading)
-                                })
-                                .fullScreenCover(isPresented: $presented, content: {
-                                    OtherUI()
-                                })
-                            }.padding(.bottom)
-                            .shadow(color: .init(.sRGB, red: 0, green: 0, blue: 0, opacity: 0.4), radius: 10, x: 0.0, y: 4.0)
-                        }
-                        .aspectRatio(1, contentMode: .fit)
-                    }.padding(.all)
+        NavigationView {
+            GeometryReader { geometry in
+                VStack(alignment: .leading) {
+                    Rectangle().fill(Color.blue)
+                        .frame(height: geometry.size.height / 3, alignment: .center)
+                        .edgesIgnoringSafeArea(.top)
+                        .padding(.bottom, -(geometry.safeAreaInsets.top))
                     
-                }
-                //.offset(y: -15)
-                .edgesIgnoringSafeArea(.bottom)
-                //Spacer()
-            }.edgesIgnoringSafeArea(.bottom)
-            //.offset(y: -50)
+                    HStack{
+                        Text("Favoritos")
+                            .font(.custom("Raleway-Bold", size: 30))
+                            .foregroundColor(.titleColor)
+                        Spacer()
+                    }.padding([.top, .leading, .trailing])
+                    
+                    ScrollView(.vertical) {
+                        VStack {
+                            LazyVGrid(columns: collums, alignment: .center, spacing: 0) {
+                                ForEach(0..<subcategory.subcategories.count, id: \.self) { count in
+                                    
+                                    NavigationLink(destination: PaginaConteudoView(category: subcategory.subcategories[count]), tag: count, selection: $selection) {
+                                        Button(action: {
+                                            //self.presented.toggle()
+                                            self.selection = count
+                                        }, label: {
+                                            Image(subcategory.subcategories[count].image ?? "seguranca" )
+                                                .resizable()
+                                                .frame(width: (geometry.size.width/2) - 25, height: 170)
+                                                .cornerRadius(10)
+                                                .overlay(ImageOverlay(title: subcategory.subcategories[count].title), alignment: .bottomLeading)
+                                        })
+                                        
+                                    }
+//                                    .fullScreenCover(isPresented: $presented, content: {
+//                                        PaginaConteudoView(category: subcategory.subcategories[count])
+//
+//                                    })
+                                }.padding(.bottom)
+                                .shadow(color: .init(.sRGB, red: 0, green: 0, blue: 0, opacity: 0.4), radius: 10, x: 0.0, y: 4.0)
+                            }
+                            .aspectRatio(1, contentMode: .fit)
+                        }.padding(.all)
+                        
+                    }
+                    //.offset(y: -15)
+                    .edgesIgnoringSafeArea(.bottom)
+                    //Spacer()
+                }.edgesIgnoringSafeArea(.bottom)
+                //.offset(y: -50)
+                .navigationBarTitle("")
+                .navigationBarHidden(true)
+                
+            }
             
-        }
+        }.accentColor(.titleColor)
+        .navigationBarBackButtonHidden(true)
+        .navigationBarHidden(true)
+        .onAppear(perform: {
+//            let appearance = UINavigationBarAppearance()
+//            appearance.shadowColor = .clear
+//            UINavigationBar.appearance().standardAppearance = appearance
+//            UINavigationBar.appearance().scrollEdgeAppearance = appearance
+            //UINavigationBar.appearance().isTranslucent = true
+            UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+            UINavigationBar.appearance().shadowImage = UIImage()
+        })
     }
 }
 

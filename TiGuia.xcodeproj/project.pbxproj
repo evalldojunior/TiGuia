@@ -17,6 +17,8 @@
 		087DCD7225784F96008C1667 /* TrailHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087DCD7125784F96008C1667 /* TrailHostingController.swift */; };
 		088320B8256DC2B5004D0C9C /* ExtensionColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088320B7256DC2B5004D0C9C /* ExtensionColor.swift */; };
 		0890AF64256DCB9E00525E41 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0890AF63256DCB9E00525E41 /* OnboardingViewController.swift */; };
+		0890F06A257EB3AB009A7C90 /* ChatMentorHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0890F069257EB3AB009A7C90 /* ChatMentorHostingController.swift */; };
+		0890F06D257EB3C9009A7C90 /* ConfigMentorHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0890F06C257EB3C9009A7C90 /* ConfigMentorHostingController.swift */; };
 		08A5C143257999C000180BA9 /* FavoriteHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A5C142257999C000180BA9 /* FavoriteHostingController.swift */; };
 		08A5C14725799CAA00180BA9 /* ChatHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A5C14625799CAA00180BA9 /* ChatHostingController.swift */; };
 		08A5C14B25799DBF00180BA9 /* TempUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A5C14A25799DBF00180BA9 /* TempUI.swift */; };
@@ -62,14 +64,13 @@
 		8B2FA23B2575A94F00EACCA0 /* ConteudosMentorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2FA23A2575A94F00EACCA0 /* ConteudosMentorViewController.swift */; };
 		8B3DAF4C25645094002FEE6E /* FavoriteList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3DAF4B25645094002FEE6E /* FavoriteList.swift */; };
 		8B6140B625796E61009BAC19 /* PaginaConteudoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6140B525796E61009BAC19 /* PaginaConteudoView.swift */; };
-		8B6140C025799024009BAC19 /* SubCardLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6140BF25799024009BAC19 /* SubCardLink.swift */; };
+		8B8CC9562571911B00489CFB /* SubcategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8CC9552571911B00489CFB /* SubcategoryViewController.swift */; };
 		8BA5806D2576C33C007FE7B5 /* CardAreaMentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA5806C2576C33C007FE7B5 /* CardAreaMentor.swift */; };
 		8BA580702576C687007FE7B5 /* AreaMentorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA5806F2576C687007FE7B5 /* AreaMentorViewController.swift */; };
 		8BA5807925770A90007FE7B5 /* AreaMentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA5807825770A90007FE7B5 /* AreaMentor.swift */; };
 		8BB67236257814A600CF22DB /* SubAreaMentorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB67235257814A600CF22DB /* SubAreaMentorViewController.swift */; };
 		8BB672392578264100CF22DB /* SubAreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB672382578264100CF22DB /* SubAreaView.swift */; };
 		8BB6723D25783B6200CF22DB /* CardSubAreaMentorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB6723C25783B6200CF22DB /* CardSubAreaMentorView.swift */; };
-		8B8CC9562571911B00489CFB /* SubcategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8CC9552571911B00489CFB /* SubcategoryViewController.swift */; };
 		8BF09B862562FB8300D881D9 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF09B852562FB8300D881D9 /* FavoriteViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +87,8 @@
 		087DCD7125784F96008C1667 /* TrailHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailHostingController.swift; sourceTree = "<group>"; };
 		088320B7256DC2B5004D0C9C /* ExtensionColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionColor.swift; sourceTree = "<group>"; };
 		0890AF63256DCB9E00525E41 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		0890F069257EB3AB009A7C90 /* ChatMentorHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMentorHostingController.swift; sourceTree = "<group>"; };
+		0890F06C257EB3C9009A7C90 /* ConfigMentorHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigMentorHostingController.swift; sourceTree = "<group>"; };
 		08A5C142257999C000180BA9 /* FavoriteHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteHostingController.swift; sourceTree = "<group>"; };
 		08A5C14625799CAA00180BA9 /* ChatHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHostingController.swift; sourceTree = "<group>"; };
 		08A5C14A25799DBF00180BA9 /* TempUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempUI.swift; sourceTree = "<group>"; };
@@ -132,13 +135,13 @@
 		8B3DAF4B25645094002FEE6E /* FavoriteList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteList.swift; sourceTree = "<group>"; };
 		8B6140B525796E61009BAC19 /* PaginaConteudoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaConteudoView.swift; sourceTree = "<group>"; };
 		8B6140BF25799024009BAC19 /* SubCardLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCardLink.swift; sourceTree = "<group>"; };
+		8B8CC9552571911B00489CFB /* SubcategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubcategoryViewController.swift; sourceTree = "<group>"; };
 		8BA5806C2576C33C007FE7B5 /* CardAreaMentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardAreaMentor.swift; sourceTree = "<group>"; };
 		8BA5806F2576C687007FE7B5 /* AreaMentorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaMentorViewController.swift; sourceTree = "<group>"; };
 		8BA5807825770A90007FE7B5 /* AreaMentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaMentor.swift; sourceTree = "<group>"; };
 		8BB67235257814A600CF22DB /* SubAreaMentorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubAreaMentorViewController.swift; sourceTree = "<group>"; };
 		8BB672382578264100CF22DB /* SubAreaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubAreaView.swift; sourceTree = "<group>"; };
 		8BB6723C25783B6200CF22DB /* CardSubAreaMentorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSubAreaMentorView.swift; sourceTree = "<group>"; };
-		8B8CC9552571911B00489CFB /* SubcategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubcategoryViewController.swift; sourceTree = "<group>"; };
 		8BF09B852562FB8300D881D9 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		ADB1C8E3F18B32085B059A10 /* Pods_TiGuia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TiGuia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF9F6E8A65367280734B8D8B /* Pods-TiGuia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TiGuia.debug.xcconfig"; path = "Target Support Files/Pods-TiGuia/Pods-TiGuia.debug.xcconfig"; sourceTree = "<group>"; };
@@ -268,6 +271,8 @@
 				087DCD7125784F96008C1667 /* TrailHostingController.swift */,
 				08A5C142257999C000180BA9 /* FavoriteHostingController.swift */,
 				08A5C14625799CAA00180BA9 /* ChatHostingController.swift */,
+				0890F069257EB3AB009A7C90 /* ChatMentorHostingController.swift */,
+				0890F06C257EB3C9009A7C90 /* ConfigMentorHostingController.swift */,
 				08A5C14E2579AF9C00180BA9 /* ConfigHostingController.swift */,
 				08A5C1512579B12100180BA9 /* MacroAreaStudentHostingController.swift */,
 				0890AF63256DCB9E00525E41 /* OnboardingViewController.swift */,
@@ -441,11 +446,13 @@
 				8B2FA23125759D3D00EACCA0 /* MacroAreaMentorViewController.swift in Sources */,
 				8B2FA2352575A43D00EACCA0 /* MacroAreaMentorView.swift in Sources */,
 				8B6140B625796E61009BAC19 /* PaginaConteudoView.swift in Sources */,
+				0890F06A257EB3AB009A7C90 /* ChatMentorHostingController.swift in Sources */,
 				08A5C1522579B12100180BA9 /* MacroAreaStudentHostingController.swift in Sources */,
 				8BF09B862562FB8300D881D9 /* FavoriteViewController.swift in Sources */,
 				08FB145D25630E720045919B /* StudentMentorViewController.swift in Sources */,
 				08DD49002564898E00BEF67C /* MacroAreaUI.swift in Sources */,
 				8BB6723D25783B6200CF22DB /* CardSubAreaMentorView.swift in Sources */,
+				0890F06D257EB3C9009A7C90 /* ConfigMentorHostingController.swift in Sources */,
 				0831EF9C2553497600D6EFFC /* SceneDelegate.swift in Sources */,
 				8BA580702576C687007FE7B5 /* AreaMentorViewController.swift in Sources */,
 				082158DC256702F800E54196 /* OnboardingUI.swift in Sources */,

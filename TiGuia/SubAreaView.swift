@@ -80,7 +80,8 @@ struct SubAreaMentorView: View {
                 .padding()
                 .shadow(radius: 10)
                 .fullScreenCover(isPresented: $presented, content: {
-                    ConteudoMentorView(subAreasEscolhidas: AreaMentorView.mentor.subAreas)
+                    NextContentUI().ignoresSafeArea(.all)
+                    //ConteudoMentorView(subAreasEscolhidas: AreaMentorView.mentor.subAreas)
                 })
                 
             }
@@ -88,6 +89,22 @@ struct SubAreaMentorView: View {
         
     }
     
+}
+
+struct NextContentUI: UIViewControllerRepresentable {
+    
+    func makeUIViewController(context: UIViewControllerRepresentableContext<NextContentUI>) -> UIViewController {
+        
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        // swiftlint:disable force_cast
+        let mainViewController = mainStoryboard.instantiateViewController(withIdentifier: "tabBarMentor_vc") as! UITabBarController
+        // swiftlint:enable force_cast
+        return mainViewController
+        
+    }
+    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
+        
+    }
 }
 
 struct SubAreaMentorView_Previews: PreviewProvider {

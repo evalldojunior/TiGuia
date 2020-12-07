@@ -72,7 +72,7 @@ struct MacroAreaUI: View {
                         }).padding(.bottom, 20.0)
                         .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
                         .fullScreenCover(isPresented: $presented, content: {
-                            NextTrailUI(teste: index).ignoresSafeArea(.all)
+                            NextTrailUI().ignoresSafeArea(.all)
                         })
                         
                     }
@@ -85,7 +85,7 @@ struct MacroAreaUI: View {
 }
 
 struct NextTrailUI: UIViewControllerRepresentable {
-    var teste: Int
+    //var teste: Int
     func makeUIViewController(context: UIViewControllerRepresentableContext<NextTrailUI>) -> UIViewController {
         
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)

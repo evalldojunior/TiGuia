@@ -35,6 +35,7 @@ struct ImageOverlayConteudo: View {
 struct ConteudoMentorView: View {
     
     @State var presented = false
+    @State var selection: Int? = nil
     
     var category = Data().returnCategory()
     var subAreasEscolhidas: [Subcategory]
@@ -46,39 +47,60 @@ struct ConteudoMentorView: View {
     ]
     var body: some View {
         
-        VStack(alignment: .leading) {
+        NavigationView {
             
-            Text("Temas de mentoria")
-                .padding()
-                .font(.custom("Raleway-Bold", size: 30))
-                .foregroundColor(Color("ColorTitles"))
-            
-            Text("Áreas que você tem conhecimento para ajudar")
-                .padding()
-                .font(.custom("Raleway-Regular", size: 15))
-                .offset(y: -30)
-            
-            ScrollView(.vertical) {
-                LazyVGrid(columns: collums) {
-                    ForEach(0..<subAreasEscolhidas.count, id: \.self) { count in
-                        Button(action: {
-                            self.presented.toggle()
-                        }, label: {
-                            Image(subAreasEscolhidas[count].image ?? "")
-                                .resizable()
-                                .frame(width: 176, height: 170)
-                                .cornerRadius(10)
-                                .padding(14)
-                                .shadow(color: .init(.sRGB, red: 0, green: 0, blue: 0, opacity: 0.4), radius: 10, x: 0.0, y: 4.0)
-                                .overlay(ImageOverlayConteudo(title: subAreasEscolhidas[count].title), alignment: .bottomLeading)
-                        })
-                        .fullScreenCover(isPresented: $presented, content: {
-                            PaginaConteudoView(category: subAreasEscolhidas[count])
-                        })
+            VStack(alignment: .leading) {
+                
+                Text("Temas de mentoria")
+                    .padding()
+                    .font(.custom("Raleway-Bold", size: 30))
+                    .foregroundColor(Color("ColorTitles"))
+                
+                Text("Áreas que você tem conhecimento para ajudar")
+                    .padding()
+                    .font(.custom("Raleway-Regular", size: 15))
+                    //.offset(y: -30)
+                
+                ScrollView(.vertical) {
+                    LazyVGrid(columns: collums) {
+                        ForEach(0..<subAreasEscolhidas.count, id: \.self) { count in
+                            NavigationLink(destination: PaginaConteudoView(category: subAreasEscolhidas[count]), tag: count, selection: $selection) {
+                                Button(action: {
+                                    //self.presented.toggle()
+                                    self.selection = count
+                                }, label: {
+                                    Image(subAreasEscolhidas[count].image ?? "")
+                                        .resizable()
+                                        .frame(width: 176, height: 170)
+                                        .cornerRadius(10)
+                                        .padding(14)
+                                        .shadow(color: .init(.sRGB, red: 0, green: 0, blue: 0, opacity: 0.4), radius: 10, x: 0.0, y: 4.0)
+                                        .overlay(ImageOverlayConteudo(title: subAreasEscolhidas[count].title), alignment: .bottomLeading)
+                                })
+                                
+                            }
+//                            .fullScreenCover(isPresented: $presented, content: {
+//                                PaginaConteudoView(category: subAreasEscolhidas[count])
+//                            })
+                        }
                     }
                 }
-            }
-            .offset(y: -40)
-        }
+                //.offset(y: -40)
+            }.navigationBarTitle("")
+            .navigationBarHidden(true)
+            //.navigationBarBackButtonHidden(true)
+        }.accentColor(.titleColor)
+        .navigationBarBackButtonHidden(true)
+        .navigationBarHidden(true)
+        .onAppear(perform: {
+//            let appearance = UINavigationBarAppearance()
+//            appearance.shadowColor = .clear
+//            UINavigationBar.appearance().standardAppearance = appearance
+//            UINavigationBar.appearance().scrollEdgeAppearance = appearance
+            //UINavigationBar.appearance().isTranslucent = true
+            UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+            UINavigationBar.appearance().shadowImage = UIImage()
+        })
+        
     }
 }

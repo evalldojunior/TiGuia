@@ -118,7 +118,10 @@ public struct PaginaConteudoView: View {
                 
             }//.edgesIgnoringSafeArea(.top)
             
-        }
+        }.navigationBarTitle("", displayMode: .inline)
+        //.navigationTitle(Text(""))
+        //.navigationBarHidden(true)
+        .statusBar(hidden: true)
         
     }
     
