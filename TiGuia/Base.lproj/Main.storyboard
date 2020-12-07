@@ -393,6 +393,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n4J-qN-TfE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4255" y="3609"/>
+        </scene>
         <!--Trilha-->
         <scene sceneID="WwS-Zy-Ecb">
             <objects>
