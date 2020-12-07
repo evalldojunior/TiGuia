@@ -40,7 +40,6 @@ struct SubCardLink: View {
 }
 
 
-
 struct SubCardsCategory: View {
     
     var category:Subcategory

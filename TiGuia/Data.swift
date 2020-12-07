@@ -295,13 +295,11 @@ class Data{
         self.link.image = "o que e robotica tendencias"
         self.subcategory.links.append(link)
         self.category.subcategories.append(subcategory)
-        
        
         Data.categories.append(self.category)
     }
     
-    
-    func returnCategory()->Category{
+    func returnCategory() -> Category {
         return self.category
     }
 }
