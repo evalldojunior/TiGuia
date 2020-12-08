@@ -17,6 +17,7 @@ class Data{
     static var favorite = Favorites()
     
     init() {
+        self.category.image = "desktopcomputer"
         self.category.title = "Computação"
         self.category.content = "Ciência da Computação é a ciência que estuda as técnicas, metodologias, instrumentos computacionais e aplicações tecnológicas, que automatizem os processos e desenvolvam soluções de processamento de dados de entrada e saída pautado no computador, de forma que se transforme em informação."
        // Data.categories.append(self.category)

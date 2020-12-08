@@ -10,9 +10,10 @@ import SwiftUI
 
 struct AreaMentorView: View {
     @State private var presented: Bool = false
+    @State private var showAlert: Bool = false
     
-    var category = Data().returnCategory()
-//    static var areasEscolhidas: [Subcategory] = []
+    var category: Category
+    //    static var areasEscolhidas: [Subcategory] = []
     static var mentor = Mentor()
     
     var columns = [
@@ -49,8 +50,12 @@ struct AreaMentorView: View {
                 } .padding()
                 
                 Button(action: {
-                    self.presented.toggle()
-
+                    if !AreaMentorView.mentor.subAreas.isEmpty {
+                        self.presented.toggle()
+                    } else {
+                        self.showAlert.toggle()
+                    }
+                    
                 }, label: {
                     Spacer()
                     Text("Continuar")
@@ -68,6 +73,9 @@ struct AreaMentorView: View {
                 .fullScreenCover(isPresented: $presented, content: {
                     SubAreaMentorView(subAreasEscolhidas: AreaMentorView.mentor.subAreas)
                 })
+                .alert(isPresented: $showAlert) {
+                    Alert(title: Text("Atenção!"), message: Text("Selecionar pelo menos uma área de conhecimento."), dismissButton: .default(Text("Ok")))
+                }
             }
         }
         
@@ -75,8 +83,8 @@ struct AreaMentorView: View {
     
 }
 
-struct AreaMentorView_Previews: PreviewProvider {
-    static var previews: some View {
-        AreaMentorView()
-    }
-}
+//struct AreaMentorView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        AreaMentorView()
+//    }
+//}

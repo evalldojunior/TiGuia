@@ -36,11 +36,12 @@ struct MacroAreaUI: View {
             ScrollView{
                 LazyVStack {
                     ForEach((0..<Data.categories.count)){ index in
+                        var category = Data.categories[index]
                         Button(action: {
                             self.presented.toggle()
                         }, label: {
                             HStack {
-                                Image(systemName: "\(image[index])")
+                                Image(systemName: category.image!)
                                     .resizable()
                                     .padding(.all, 30.0)
                                     .scaledToFit()
@@ -51,12 +52,12 @@ struct MacroAreaUI: View {
                                     .foregroundColor(.orangeColor)
                                     .shadow(radius: 8)
                                 VStack(alignment: .leading) {
-                                    Text(Data.categories[index].title)
+                                    Text(category.title)
                                         .font(.custom("Raleway-Bold", size: 24))
                                         .padding([.leading, .bottom, .trailing], 5.0)
                                         .foregroundColor(.lightColor)
                                     
-                                    Text(Data.categories[index].content)
+                                    Text(category.content)
                                         .font(.custom("Raleway", size: 14))
                                         .lineLimit(3)
                                         .padding([.leading, .bottom, .trailing], 5.0)
