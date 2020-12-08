@@ -148,10 +148,11 @@ public struct SubcategoryView: View {
                     .statusBar(hidden: true)
                     
                     
-                }.clipped()
+                }
                 .background(Color.backgroundColor) // ta mostrando o fundo de cores diferentes
                 .cornerRadius(25, corners: [.topLeft, .topRight])
                 //.offset(x: 0, y: -35)
+                .clipped()
                 .shadow(color: .init(.sRGB, red: 0, green: 0, blue: 0, opacity: 0.4), radius: 15, x: 0.0, y: -5.0)
                 
             }.edgesIgnoringSafeArea(.top)

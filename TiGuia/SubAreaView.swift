@@ -44,22 +44,24 @@ struct SubAreaMentorView: View {
             
             ScrollView {
                 ForEach(0..<subAreasEscolhidas.count, id: \.self) { index in
-                    HStack {
-                        Text(subAreasEscolhidas[index].title)
-                            .multilineTextAlignment(.leading)
-                            .padding(.horizontal)
-                            .font(.custom("Raleway-Bold", size: 20))
-                            .foregroundColor(titleColor)
-                        Spacer()
-                    }
-                    VStack {
-                        LazyVGrid(columns: columns) {
-                            ForEach(0..<subAreasEscolhidas[index].subcategories.count, id: \.self) { count in
-                                CardsSubAreaMentorView(category: subAreasEscolhidas[index], count: count)
-                            }
+                    if !subAreasEscolhidas[index].subcategories.isEmpty {
+                        HStack {
+                            Text(subAreasEscolhidas[index].title)
+                                .multilineTextAlignment(.leading)
+                                .padding(.horizontal)
+                                .font(.custom("Raleway-Bold", size: 20))
+                                .foregroundColor(titleColor)
+                            Spacer()
                         }
-                        
-                    } .padding()
+                        VStack {
+                            LazyVGrid(columns: columns) {
+                                ForEach(0..<subAreasEscolhidas[index].subcategories.count, id: \.self) { count in
+                                    CardsSubAreaMentorView(category: subAreasEscolhidas[index], count: count)
+                                }
+                            }
+                            
+                        } .padding()
+                    }
                 }
                 
                 Button(action: {

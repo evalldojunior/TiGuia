@@ -54,52 +54,64 @@ struct Favorite: View {
     var body: some View {
         NavigationView {
             GeometryReader { geometry in
+                
                 VStack(alignment: .leading) {
                     Rectangle().fill(Color.blue)
                         .frame(height: geometry.size.height / 3, alignment: .center)
                         .edgesIgnoringSafeArea(.top)
                         .padding(.bottom, -(geometry.safeAreaInsets.top))
                     
-                    HStack{
-                        Text("Favoritos")
-                            .font(.custom("Raleway-Bold", size: 30))
-                            .foregroundColor(.titleColor)
-                        Spacer()
-                    }.padding([.top, .leading, .trailing])
-                    
-                    ScrollView(.vertical) {
-                        VStack {
-                            LazyVGrid(columns: collums, alignment: .center, spacing: 0) {
-                                ForEach(0..<subcategory.subcategories.count, id: \.self) { count in
-                                    
-                                    NavigationLink(destination: PaginaConteudoView(category: subcategory.subcategories[count]), tag: count, selection: $selection) {
-                                        Button(action: {
-                                            //self.presented.toggle()
-                                            self.selection = count
-                                        }, label: {
-                                            Image(subcategory.subcategories[count].image ?? "seguranca" )
-                                                .resizable()
-                                                .frame(width: (geometry.size.width/2) - 25, height: 170)
-                                                .cornerRadius(10)
-                                                .overlay(ImageOverlay(title: subcategory.subcategories[count].title), alignment: .bottomLeading)
-                                        })
+                    VStack {
+                        HStack{
+                            Text("Favoritos")
+                                .font(.custom("Raleway-Bold", size: 30))
+                                .foregroundColor(.titleColor)
+                            Spacer()
+                        }.padding([.top, .leading, .trailing])
+                        
+                        ScrollView(.vertical) {
+                            VStack {
+                                LazyVGrid(columns: collums, alignment: .center, spacing: 0) {
+                                    ForEach(0..<subcategory.subcategories.count, id: \.self) { count in
                                         
-                                    }
-//                                    .fullScreenCover(isPresented: $presented, content: {
-//                                        PaginaConteudoView(category: subcategory.subcategories[count])
-//
-//                                    })
-                                }.padding(.bottom)
-                                .shadow(color: .init(.sRGB, red: 0, green: 0, blue: 0, opacity: 0.4), radius: 10, x: 0.0, y: 4.0)
+                                        NavigationLink(destination: PaginaConteudoView(category: subcategory.subcategories[count]), tag: count, selection: $selection) {
+                                            Button(action: {
+                                                //self.presented.toggle()
+                                                self.selection = count
+                                            }, label: {
+                                                Image(subcategory.subcategories[count].image ?? "seguranca" )
+                                                    .resizable()
+                                                    .frame(width: (geometry.size.width/2) - 25, height: 170)
+                                                    .cornerRadius(10)
+                                                    .overlay(ImageOverlay(title: subcategory.subcategories[count].title), alignment: .bottomLeading)
+                                            })
+                                            
+                                        }
+                                        //                                    .fullScreenCover(isPresented: $presented, content: {
+                                        //                                        PaginaConteudoView(category: subcategory.subcategories[count])
+                                        //
+                                        //                                    })
+                                    }.padding(.bottom)
+                                    .shadow(color: .init(.sRGB, red: 0, green: 0, blue: 0, opacity: 0.4), radius: 10, x: 0.0, y: 4.0)
+                                }.padding()
+                                //.aspectRatio(1, contentMode: .fit)
                             }
-                            .aspectRatio(1, contentMode: .fit)
-                        }.padding(.all)
+                            
+                        }
+                        //.offset(y: -15)
+                        //.edgesIgnoringSafeArea(.bottom)
+                        //Spacer()
                         
                     }
-                    //.offset(y: -15)
-                    .edgesIgnoringSafeArea(.bottom)
-                    //Spacer()
-                }.edgesIgnoringSafeArea(.bottom)
+                    //.background(Color.backgroundColor) // ta mostrando o fundo de cores diferentes
+                    //.cornerRadius(25, corners: [.topLeft, .topRight])
+    //                    .offset(x: 0, y: -35)
+                    .background(RoundedCorners(tl: 25, tr: 25, bl: 0, br: 0).fill(Color.backgroundColor)) // ta mostrando o fundo de cores diferentes
+                    .clipped()
+                    .shadow(color: .init(.sRGB, red: 0, green: 0, blue: 0, opacity: 0.4), radius: 15, x: 0.0, y: -5.0)
+                    .offset(y: -35)
+                }
+                .edgesIgnoringSafeArea(.bottom)
                 //.offset(y: -50)
                 .navigationBarTitle("")
                 .navigationBarHidden(true)
