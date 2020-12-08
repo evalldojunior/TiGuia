@@ -64,6 +64,7 @@
 		8B2FA23B2575A94F00EACCA0 /* ConteudosMentorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2FA23A2575A94F00EACCA0 /* ConteudosMentorViewController.swift */; };
 		8B3DAF4C25645094002FEE6E /* FavoriteList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3DAF4B25645094002FEE6E /* FavoriteList.swift */; };
 		8B6140B625796E61009BAC19 /* PaginaConteudoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6140B525796E61009BAC19 /* PaginaConteudoView.swift */; };
+		8B69B122256F527300350705 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B69B121256F527300350705 /* StoreKit.framework */; };
 		8B8CC9562571911B00489CFB /* SubcategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8CC9552571911B00489CFB /* SubcategoryViewController.swift */; };
 		8BA5806D2576C33C007FE7B5 /* CardAreaMentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA5806C2576C33C007FE7B5 /* CardAreaMentor.swift */; };
 		8BA580702576C687007FE7B5 /* AreaMentorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA5806F2576C687007FE7B5 /* AreaMentorViewController.swift */; };
@@ -72,7 +73,6 @@
 		8BB672392578264100CF22DB /* SubAreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB672382578264100CF22DB /* SubAreaView.swift */; };
 		8BB6723D25783B6200CF22DB /* CardSubAreaMentorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB6723C25783B6200CF22DB /* CardSubAreaMentorView.swift */; };
 		8BF09B862562FB8300D881D9 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF09B852562FB8300D881D9 /* FavoriteViewController.swift */; };
-		8B69B122256F527300350705 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B69B121256F527300350705 /* StoreKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -136,6 +136,7 @@
 		8B3DAF4B25645094002FEE6E /* FavoriteList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteList.swift; sourceTree = "<group>"; };
 		8B6140B525796E61009BAC19 /* PaginaConteudoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaConteudoView.swift; sourceTree = "<group>"; };
 		8B6140BF25799024009BAC19 /* SubCardLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCardLink.swift; sourceTree = "<group>"; };
+		8B69B121256F527300350705 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		8B8CC9552571911B00489CFB /* SubcategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubcategoryViewController.swift; sourceTree = "<group>"; };
 		8BA5806C2576C33C007FE7B5 /* CardAreaMentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardAreaMentor.swift; sourceTree = "<group>"; };
 		8BA5806F2576C687007FE7B5 /* AreaMentorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaMentorViewController.swift; sourceTree = "<group>"; };
@@ -144,7 +145,6 @@
 		8BB672382578264100CF22DB /* SubAreaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubAreaView.swift; sourceTree = "<group>"; };
 		8BB6723C25783B6200CF22DB /* CardSubAreaMentorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSubAreaMentorView.swift; sourceTree = "<group>"; };
 		8BF09B852562FB8300D881D9 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
-		8B69B121256F527300350705 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		ADB1C8E3F18B32085B059A10 /* Pods_TiGuia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TiGuia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF9F6E8A65367280734B8D8B /* Pods-TiGuia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TiGuia.debug.xcconfig"; path = "Target Support Files/Pods-TiGuia/Pods-TiGuia.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -632,6 +632,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = TiGuia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -652,6 +653,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = TiGuia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
