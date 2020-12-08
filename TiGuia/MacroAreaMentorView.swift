@@ -40,7 +40,7 @@ struct MacroAreaMentorUIView: View {
                             self.presented.toggle()
                         }, label: {
                             HStack {
-                                Image(systemName: "\(image[index])")
+                                Image(systemName: "\(image[index])") //mudar depois que adicionar uma imagem na categoria no arquivo DATA
                                     .resizable()
                                     .padding(.all, 30.0)
                                     .scaledToFit()

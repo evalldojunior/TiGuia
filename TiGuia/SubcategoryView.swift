@@ -38,12 +38,13 @@ public struct SubcategoryView: View {
                     //
                     //MARK: -Header - titulo + botao de favoritos
                     //
-                    HStack {
+                    HStack(alignment: .top) {
                         //título
                         Text(category.title)
                             .foregroundColor(.titleColor)
                             .font(.custom("Raleway-Bold", size: 30))
                             .multilineTextAlignment(.leading)
+                            .padding()
                         
                         Spacer()
                         
@@ -66,10 +67,11 @@ public struct SubcategoryView: View {
                                 .frame(width: 48, height: 48, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                                 .cornerRadius(10)
                         })
+                        .padding([.top, .trailing])
                         .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
-                        .offset(y: -10) // realmente necessario?
+                        //.offset(y: -10) // realmente necessario?
                         
-                    }.padding()
+                    }//.padding()
                     
                     //
                     //MARK: -inicio do conteúdo

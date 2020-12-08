@@ -15,11 +15,6 @@ struct AreaMentorView: View {
 //    static var areasEscolhidas: [Subcategory] = []
     static var mentor = Mentor()
     
-    let titleColor = Color("titleColor")
-    let btnColor = Color("btnColor")
-    let lightColor = Color("lightColor")
-    let textColor = Color("darkColor")
-    
     var columns = [
         // define number of caullum here
         GridItem(.flexible())
@@ -60,13 +55,13 @@ struct AreaMentorView: View {
                     Spacer()
                     Text("Continuar")
                         .font(.custom("Raleway-Bold", size: 18))
-                        .foregroundColor(lightColor)
+                        .foregroundColor(.lightColor)
                         .frame(alignment: .center)
                     Spacer()
                     
                 }).padding()
                 .clipped()
-                .background(btnColor)
+                .background(Color.btnColor)
                 .cornerRadius(10)
                 .padding()
                 .shadow(radius: 10)

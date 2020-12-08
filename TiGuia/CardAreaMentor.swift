@@ -12,8 +12,6 @@ struct CardsAreaMentorView: View {
     
     @State private var checkSelected: Bool = false
     
-    let lightColor = Color("lightColor")
-    let textColor = Color("darkColor")
     let category: Category
     
     var count: Int
@@ -52,14 +50,15 @@ struct CardsAreaMentorView: View {
                                 .clipShape(Rectangle(), style: FillStyle())
                                 .cornerRadius(10)
                                 .padding(.top)
+                                .shadow(radius: 8)
                             VStack(alignment: .leading) {
                                 
                                 HStack(alignment: .top) {
                                     Text(category.subcategories[count].title)
-                                        .font(.custom("Raleway-SemiBold", size: 16))
+                                        .font(.custom("Raleway-Bold", size: 16))
                                         .padding([.leading, .bottom], 5.0)
                                         .padding(.top)
-                                        .foregroundColor(textColor)
+                                        .foregroundColor(.darkColor)
                                         .lineLimit(1)
                                         Spacer()
                                     
@@ -73,7 +72,7 @@ struct CardsAreaMentorView: View {
                                 Text(category.subcategories[count].content)
                                     .font(.custom("Raleway-Regular", size: 14))
                                     .padding([.leading, .bottom], 5.0)
-                                    .foregroundColor(textColor)
+                                    .foregroundColor(.darkColor)
                                     .lineLimit(4)
                                 //Spacer()
                                 
@@ -83,7 +82,7 @@ struct CardsAreaMentorView: View {
                         }
                         .padding([.leading, .bottom])
                         .clipped()
-                        .background(lightColor)
+                        .background(Color.bgcardColor)
                         .cornerRadius(10)
                         
                     })

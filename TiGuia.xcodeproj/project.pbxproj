@@ -14,6 +14,7 @@
 		0831EFA32553497700D6EFFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0831EFA22553497700D6EFFC /* Assets.xcassets */; };
 		0831EFA62553497700D6EFFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0831EFA42553497700D6EFFC /* LaunchScreen.storyboard */; };
 		08631442257704B00083DB37 /* SubCardLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08631441257704B00083DB37 /* SubCardLink.swift */; };
+		0869423A2580157E008A514C /* PaginaConteudoMentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086942392580157E008A514C /* PaginaConteudoMentor.swift */; };
 		087DCD7225784F96008C1667 /* TrailHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087DCD7125784F96008C1667 /* TrailHostingController.swift */; };
 		088320B8256DC2B5004D0C9C /* ExtensionColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088320B7256DC2B5004D0C9C /* ExtensionColor.swift */; };
 		0890AF64256DCB9E00525E41 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0890AF63256DCB9E00525E41 /* OnboardingViewController.swift */; };
@@ -85,6 +86,7 @@
 		0831EFA52553497700D6EFFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0831EFA72553497700D6EFFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08631441257704B00083DB37 /* SubCardLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCardLink.swift; sourceTree = "<group>"; };
+		086942392580157E008A514C /* PaginaConteudoMentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaConteudoMentor.swift; sourceTree = "<group>"; };
 		087DCD7125784F96008C1667 /* TrailHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailHostingController.swift; sourceTree = "<group>"; };
 		088320B7256DC2B5004D0C9C /* ExtensionColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionColor.swift; sourceTree = "<group>"; };
 		0890AF63256DCB9E00525E41 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 				8B2FA2372575A91A00EACCA0 /* ConteudosMentorView.swift */,
 				8B6140BF25799024009BAC19 /* SubCardLink.swift */,
 				8B6140B525796E61009BAC19 /* PaginaConteudoView.swift */,
+				086942392580157E008A514C /* PaginaConteudoMentor.swift */,
 				8B3DAF4B25645094002FEE6E /* FavoriteList.swift */,
 				08A5C14A25799DBF00180BA9 /* TempUI.swift */,
 				08FB1459256306DE0045919B /* StudentMentorUI.swift */,
@@ -478,6 +481,7 @@
 				087DCD7225784F96008C1667 /* TrailHostingController.swift in Sources */,
 				088320B8256DC2B5004D0C9C /* ExtensionColor.swift in Sources */,
 				8B8CC9562571911B00489CFB /* SubcategoryViewController.swift in Sources */,
+				0869423A2580157E008A514C /* PaginaConteudoMentor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
