@@ -143,7 +143,7 @@ public struct SubcategoryView: View {
                         
                         Spacer(minLength: 20)
                         
-                    }
+                    }.frame(height: geometry.size.height - ((geometry.size.height / 5)))
                     .navigationBarTitle("", displayMode: .inline)
                     //.navigationTitle(Text(""))
                     //.navigationBarHidden(true)
@@ -151,8 +151,9 @@ public struct SubcategoryView: View {
                     
                     
                 }
-                .background(Color.backgroundColor) // ta mostrando o fundo de cores diferentes
-                .cornerRadius(25, corners: [.topLeft, .topRight])
+                .background(RoundedCorners(tl: 25, tr: 25, bl: 0, br: 0).fill(Color.backgroundColor))
+                //.background(Color.backgroundColor) // ta mostrando o fundo de cores diferentes
+                //.cornerRadius(25, corners: [.topLeft, .topRight])
                 //.offset(x: 0, y: -35)
                 .clipped()
                 .shadow(color: .init(.sRGB, red: 0, green: 0, blue: 0, opacity: 0.4), radius: 15, x: 0.0, y: -5.0)
