@@ -11,6 +11,7 @@ import SwiftUI
 struct CategoryView: View {
     @State private var favorito: Bool = false
     @State private var presented: Bool = false
+    @State var showModal: Bool = false
     
     var categoryIndex: Int = 0 //tirar o =0 depois 
     //let category = Data.categories[categoryIndex]
@@ -30,7 +31,7 @@ struct CategoryView: View {
                         Rectangle().fill(Color.blue)
                             .frame(height: geometry.size.height / 4 + 30, alignment: .center)
                             .edgesIgnoringSafeArea(.top)
-                            //.padding(.bottom, -(geometry.safeAreaInsets.top))
+                        //.padding(.bottom, -(geometry.safeAreaInsets.top))
                     }
                     
                     //
@@ -100,7 +101,8 @@ struct CategoryView: View {
                         //
                         VStack {
                             Button(action: {
-                                self.presented.toggle()
+                                // self.presented.toggle()
+                                self.showModal.toggle()
                             }, label: {
                                 Spacer()
                                 Image(systemName: "ellipses.bubble")
@@ -118,9 +120,11 @@ struct CategoryView: View {
                             .background(Color.btnColor)
                             .cornerRadius(10)
                             .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
-                            .fullScreenCover(isPresented: $presented, content: {
-                                //HelpUI()
-                            })
+                            //                            .fullScreenCover(isPresented: $showModal, content: {
+                            //                                HelpUI(showModal: $showModal)
+                            //                            })
+                            //.overlay(HelpUI(showModal: $showModal).opacity(showModal ? 1 : 0).frame(width: geometry.size.width, height: geometry.size.height, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/))
+                            
                         }.padding()
                         //.edgesIgnoringSafeArea(.bottom)
                         
@@ -135,17 +139,21 @@ struct CategoryView: View {
                 //.navigationBarTitle("", displayMode: .inline)
                 .navigationBarTitle("")
                 .navigationBarHidden(true)
+                .overlay(HelpUI(showModal: $showModal).opacity(showModal ? 1 : 0).frame(width: geometry.size.width, height: geometry.size.height, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/))
                 //.navigationBarBackButtonHidden(true)
                 
             }
+//            if self.showModal {
+//                HelpUI(showModal: $showModal)
+//            }
         }.accentColor(.titleColor)
         .navigationBarBackButtonHidden(true)
         .navigationBarHidden(true)
         .onAppear(perform: {
-//            let appearance = UINavigationBarAppearance()
-//            appearance.shadowColor = .clear
-//            UINavigationBar.appearance().standardAppearance = appearance
-//            UINavigationBar.appearance().scrollEdgeAppearance = appearance
+            //            let appearance = UINavigationBarAppearance()
+            //            appearance.shadowColor = .clear
+            //            UINavigationBar.appearance().standardAppearance = appearance
+            //            UINavigationBar.appearance().scrollEdgeAppearance = appearance
             //UINavigationBar.appearance().isTranslucent = true
             UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
             UINavigationBar.appearance().shadowImage = UIImage()
