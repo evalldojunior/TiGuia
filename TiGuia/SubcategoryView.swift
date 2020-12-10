@@ -26,7 +26,7 @@ public struct SubcategoryView: View {
     
     
     public var body: some View {
-      
+        
         GeometryReader { geometry in
             ScrollView {
                 ZStack(alignment: .center) {
@@ -37,7 +37,7 @@ public struct SubcategoryView: View {
                             .frame(height: geometry.size.height, alignment: .center)
                             //.edgesIgnoringSafeArea(.top)
                             .offset(y: gmt.frame(in: .global).minY > 0 ? -gmt.frame(in: .global).minY : 0)
-
+                        
                     }.frame(height: geometry.size.height / 4 + 30)
                     
                 }
@@ -55,7 +55,7 @@ public struct SubcategoryView: View {
                             .padding()
                         
                         Spacer()
-
+                        
                         Button(action: {
                             self.favorito.toggle()
                             if (self.favorito) {
@@ -126,27 +126,27 @@ public struct SubcategoryView: View {
                         
                         VStack {
                             Button(action: {
-                            self.showModal.toggle()
-                        }, label: {
-                            Spacer()
-                            Image(systemName: "ellipses.bubble")
-                                .resizable()
-                                .scaledToFit()
-                                .foregroundColor(.lightColor)
-                                .frame(width: 20, height: 20, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                            Text("Pedir ajuda")
-                                .font(.custom("Raleway-Bold", size: 18))
-                                .foregroundColor(.lightColor)
-                            Spacer()
-                            
-                        }).padding()
-                        .clipped()
-                        .background(Color.btnColor)
-                        .cornerRadius(10)
-                        .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
-//                        .fullScreenCover(isPresented: $presented, content: {
-//                            //HelpUI()
-//                        })
+                                self.showModal.toggle()
+                            }, label: {
+                                Spacer()
+                                Image(systemName: "ellipses.bubble")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .foregroundColor(.lightColor)
+                                    .frame(width: 20, height: 20, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                Text("Pedir ajuda")
+                                    .font(.custom("Raleway-Bold", size: 18))
+                                    .foregroundColor(.lightColor)
+                                Spacer()
+                                
+                            }).padding()
+                            .clipped()
+                            .background(Color.btnColor)
+                            .cornerRadius(10)
+                            .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                            //                        .fullScreenCover(isPresented: $presented, content: {
+                            //                            //HelpUI()
+                            //                        })
                         }.padding()
                         
                         Spacer(minLength: 20)
@@ -159,8 +159,6 @@ public struct SubcategoryView: View {
                     
                     
                 }
-                      .overlay(HelpUI(showModal: $showModal, completed: $completed).opacity(showModal ? 1 : 0).frame(width: geometry.size.width, height: geometry.size.height, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).animation(.easeInOut(duration: 0.3)))
-            .overlay(DoubtSentUI(completed: $completed).opacity(completed ? 1 : 0).frame(width: geometry.size.width, height: geometry.size.height, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).animation(.easeInOut(duration: 0.3)))
                 .background(RoundedCorners(tl: 25, tr: 25, bl: 0, br: 0).fill(Color.backgroundColor))
                 //.background(Color.backgroundColor) // ta mostrando o fundo de cores diferentes
                 //.cornerRadius(25, corners: [.topLeft, .topRight])
@@ -169,6 +167,8 @@ public struct SubcategoryView: View {
                 .shadow(color: .init(.sRGB, red: 0, green: 0, blue: 0, opacity: 0.4), radius: 15, x: 0.0, y: -5.0)
                 
             }.edgesIgnoringSafeArea(.top)
+            .overlay(HelpUI(showModal: $showModal, completed: $completed).opacity(showModal ? 1 : 0).frame(width: geometry.size.width, height: geometry.size.height, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).animation(.easeInOut(duration: 0.3)))
+            .overlay(DoubtSentUI(completed: $completed).opacity(completed ? 1 : 0).frame(width: geometry.size.width, height: geometry.size.height, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).animation(.easeInOut(duration: 0.3)))
             
         }
         
