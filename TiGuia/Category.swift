@@ -12,7 +12,7 @@ import SwiftUI
 class Category {
     var title:String
     var content:String
-    var image:Image?
+    var image:String?
     var links:[Link]
     var subcategories:[Subcategory]
     

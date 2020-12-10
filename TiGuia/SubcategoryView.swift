@@ -12,6 +12,8 @@ import SwiftUI
 public struct SubcategoryView: View {
     @State var favorito: Bool
     @State private var presented: Bool = false
+    @State var showModal: Bool = false
+    @State var completed: Bool = false
     
     //var category = Data().returnCategory()
     
@@ -27,23 +29,30 @@ public struct SubcategoryView: View {
         
         GeometryReader { geometry in
             ScrollView {
-                GeometryReader { gmt in
-                    Rectangle().fill(Color.gray.opacity(0.5))
-                        .frame(height: geometry.size.height, alignment: .center) // aqui antes era  geometry.size.height / 4 + 30
-                        .edgesIgnoringSafeArea(.top)
-                        .offset(y: gmt.frame(in: .global).minY > 0 ? -gmt.frame(in: .global).minY : 0)
-                }.frame(height: geometry.size.height / 4 + 30)
+                ZStack(alignment: .center) {
+                    GeometryReader { gmt in
+                        Image("tempTrilha")
+                            .resizable()
+                            .scaledToFill()
+                            .frame(height: geometry.size.height, alignment: .center)
+                            //.edgesIgnoringSafeArea(.top)
+                            .offset(y: gmt.frame(in: .global).minY > 0 ? -gmt.frame(in: .global).minY : 0)
+                        
+                    }.frame(height: geometry.size.height / 4 + 30)
+                    
+                }
                 
                 VStack {
                     //
                     //MARK: -Header - titulo + botao de favoritos
                     //
-                    HStack {
+                    HStack(alignment: .top) {
                         //título
                         Text(category.title)
                             .foregroundColor(.titleColor)
                             .font(.custom("Raleway-Bold", size: 30))
                             .multilineTextAlignment(.leading)
+                            .padding()
                         
                         Spacer()
                         
@@ -66,10 +75,11 @@ public struct SubcategoryView: View {
                                 .frame(width: 48, height: 48, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                                 .cornerRadius(10)
                         })
+                        .padding([.top, .trailing])
                         .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
-                        .offset(y: -10) // realmente necessario?
+                        //.offset(y: -10) // realmente necessario?
                         
-                    }.padding()
+                    }//.padding()
                     
                     //
                     //MARK: -inicio do conteúdo
@@ -116,7 +126,7 @@ public struct SubcategoryView: View {
                         
                         VStack {
                             Button(action: {
-                                self.presented.toggle()
+                                self.showModal.toggle()
                             }, label: {
                                 Spacer()
                                 Image(systemName: "ellipses.bubble")
@@ -134,14 +144,14 @@ public struct SubcategoryView: View {
                             .background(Color.btnColor)
                             .cornerRadius(10)
                             .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
-                            .fullScreenCover(isPresented: $presented, content: {
-                                //HelpUI()
-                            })
+                            //                        .fullScreenCover(isPresented: $presented, content: {
+                            //                            //HelpUI()
+                            //                        })
                         }.padding()
                         
                         Spacer(minLength: 20)
                         
-                    }
+                    }.frame(height: geometry.size.height - ((geometry.size.height / 5)))
                     .navigationBarTitle("", displayMode: .inline)
                     //.navigationTitle(Text(""))
                     //.navigationBarHidden(true)
@@ -149,13 +159,16 @@ public struct SubcategoryView: View {
                     
                     
                 }
-                .background(Color.backgroundColor) // ta mostrando o fundo de cores diferentes
-                .cornerRadius(25, corners: [.topLeft, .topRight])
+                .background(RoundedCorners(tl: 25, tr: 25, bl: 0, br: 0).fill(Color.backgroundColor))
+                //.background(Color.backgroundColor) // ta mostrando o fundo de cores diferentes
+                //.cornerRadius(25, corners: [.topLeft, .topRight])
                 //.offset(x: 0, y: -35)
                 .clipped()
                 .shadow(color: .init(.sRGB, red: 0, green: 0, blue: 0, opacity: 0.4), radius: 15, x: 0.0, y: -5.0)
                 
             }.edgesIgnoringSafeArea(.top)
+            .overlay(HelpUI(showModal: $showModal, completed: $completed).opacity(showModal ? 1 : 0).frame(width: geometry.size.width, height: geometry.size.height, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).animation(.easeInOut(duration: 0.3)))
+            .overlay(DoubtSentUI(completed: $completed).opacity(completed ? 1 : 0).frame(width: geometry.size.width, height: geometry.size.height, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).animation(.easeInOut(duration: 0.3)))
             
         }
         

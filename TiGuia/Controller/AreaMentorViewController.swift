@@ -40,7 +40,7 @@ import SwiftUI
 class AreaMentorViewController: UIHostingController<AreaMentorView> {
 
     required init?(coder: NSCoder) {
-        super.init(coder: coder,rootView: AreaMentorView());
+        super.init(coder: coder,rootView: AreaMentorView(category: Data.categories[0]));
     }
 
     override func viewDidLoad() {

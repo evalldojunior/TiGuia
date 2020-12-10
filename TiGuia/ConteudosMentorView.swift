@@ -27,8 +27,10 @@ struct ImageOverlayConteudo: View {
                 VStack(alignment: .leading) {
                     Text(title)
                         //.offset(x: 25, y: -25)
+                        .font(.custom("Raleway-Bold", size: 16))
+                        .lineLimit(4)
                         .foregroundColor(.lightColor)
-                        .padding([.leading, .bottom], 9.0)
+                        .padding(9.0)
                 }
             }
         }
@@ -60,17 +62,18 @@ struct ConteudoMentorView: View {
                     VStack (alignment: .leading){
                         Text("Temas de mentoria")
                             .font(.custom("Raleway-Bold", size: 30))
-                            .foregroundColor(Color("ColorTitles"))
+                            .foregroundColor(.titleColor)
                         
                         Text("Áreas que você tem conhecimento para ajudar")
                             .font(.custom("Raleway-Regular", size: 15))
+                            .foregroundColor(.darkColor)
                     }.padding()
                     
                     
                     ScrollView(.vertical) {
                         LazyVGrid(columns: collums) {
                             ForEach(0..<subAreasEscolhidas.count, id: \.self) { count in
-                                NavigationLink(destination: PaginaConteudoView(category: subAreasEscolhidas[count]), tag: count, selection: $selection) {
+                                NavigationLink(destination: PaginaConteudoMentor(category: subAreasEscolhidas[count]), tag: count, selection: $selection) {
                                     Button(action: {
                                         //self.presented.toggle()
                                         self.selection = count

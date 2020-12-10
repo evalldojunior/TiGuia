@@ -15,9 +15,6 @@ struct MacroAreaMentorUIView: View {
     // @State var didTap = false
     @State private var presented = false
     var teste = Data() //acho que vai precisar apagar essa linha aqui. é que precisa iniciar a classe Data pra poder pegar o arrey de categorias
-    var image = ["desktopcomputer", "paintbrush", "desktopcomputer", "paintbrush", "desktopcomputer", "paintbrush"]
-    var title = ["Computação", "Design", "Computação", "Design", "Computação", "Design"]
-    var descrip = ["Estuda as técnicas, metodologias, instrumentos computacionais e aplicações tecnológicas...", "Desenvolve conceitos visuais para peças gráficas e materiais. Se preocupa com funcionalidade...", "Estuda as técnicas, metodologias, instrumentos computacionais e aplicações tecnológicas...", "Desenvolve conceitos visuais para peças gráficas e materiais. Se preocupa com funcionalidade...", "Estuda as técnicas, metodologias, instrumentos computacionais e aplicações tecnológicas...", "Desenvolve conceitos visuais para peças gráficas e materiais. Se preocupa com funcionalidade..."]
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -36,11 +33,12 @@ struct MacroAreaMentorUIView: View {
             ScrollView {
                 LazyVStack {
                     ForEach((0..<Data.categories.count)){ index in
+                        var category: Category = Data.categories[index]
                         Button(action: {
                             self.presented.toggle()
                         }, label: {
                             HStack {
-                                Image(systemName: "\(image[index])")
+                                Image(systemName: category.image!)
                                     .resizable()
                                     .padding(.all, 30.0)
                                     .scaledToFit()
@@ -51,12 +49,12 @@ struct MacroAreaMentorUIView: View {
                                     .foregroundColor(.orangeColor)
                                     .shadow(radius: 8)
                                 VStack(alignment: .leading) {
-                                    Text(Data.categories[index].title)
+                                    Text(category.title)
                                         .font(.custom("Raleway-Bold", size: 24))
                                         .padding([.leading, .bottom, .trailing], 5.0)
                                         .foregroundColor(.lightColor)
                                     
-                                    Text(Data.categories[index].content)
+                                    Text(category.content)
                                         .font(.custom("Raleway", size: 14))
                                         .lineLimit(3)
                                         .padding([.leading, .bottom, .trailing], 5.0)
@@ -72,7 +70,7 @@ struct MacroAreaMentorUIView: View {
                         }).padding(.bottom, 20.0)
                         .shadow(radius: 10)
                         .fullScreenCover(isPresented: $presented, content: {
-                            AreaMentorView()
+                            AreaMentorView(category: Data.categories[index])
                         })
                         
                     }

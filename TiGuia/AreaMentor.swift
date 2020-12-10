@@ -10,15 +10,11 @@ import SwiftUI
 
 struct AreaMentorView: View {
     @State private var presented: Bool = false
+    @State private var showAlert: Bool = false
     
-    var category = Data().returnCategory()
-//    static var areasEscolhidas: [Subcategory] = []
+    var category: Category
+    //    static var areasEscolhidas: [Subcategory] = []
     static var mentor = Mentor()
-    
-    let titleColor = Color("titleColor")
-    let btnColor = Color("btnColor")
-    let lightColor = Color("lightColor")
-    let textColor = Color("darkColor")
     
     var columns = [
         // define number of caullum here
@@ -54,25 +50,32 @@ struct AreaMentorView: View {
                 } .padding()
                 
                 Button(action: {
-                    self.presented.toggle()
-
+                    if !AreaMentorView.mentor.subAreas.isEmpty {
+                        self.presented.toggle()
+                    } else {
+                        self.showAlert.toggle()
+                    }
+                    
                 }, label: {
                     Spacer()
                     Text("Continuar")
                         .font(.custom("Raleway-Bold", size: 18))
-                        .foregroundColor(lightColor)
+                        .foregroundColor(.lightColor)
                         .frame(alignment: .center)
                     Spacer()
                     
                 }).padding()
                 .clipped()
-                .background(btnColor)
+                .background(Color.btnColor)
                 .cornerRadius(10)
                 .padding()
                 .shadow(radius: 10)
                 .fullScreenCover(isPresented: $presented, content: {
                     SubAreaMentorView(subAreasEscolhidas: AreaMentorView.mentor.subAreas)
                 })
+                .alert(isPresented: $showAlert) {
+                    Alert(title: Text("Atenção!"), message: Text("Selecionar pelo menos uma área de conhecimento."), dismissButton: .default(Text("Ok")))
+                }
             }
         }
         
@@ -80,8 +83,8 @@ struct AreaMentorView: View {
     
 }
 
-struct AreaMentorView_Previews: PreviewProvider {
-    static var previews: some View {
-        AreaMentorView()
-    }
-}
+//struct AreaMentorView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        AreaMentorView()
+//    }
+//}

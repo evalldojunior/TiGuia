@@ -16,17 +16,20 @@ struct ImageOverlayCardLink: View {
     }
     
     var body: some View {
-        ZStack(alignment: .bottomLeading) {
-            Rectangle().fill(gradient)
-                .frame(width: 164, height: 121)
-                .cornerRadius(10)
-            
-            VStack(alignment: .leading) {
-                Text(title)
-                    .foregroundColor(.lightColor)
-                    .font(.custom("Raleway-SemiBold", size: 14))
-                    .frame(width: 140, height: 55, alignment: .bottomLeading)
-                    .padding(9.0)
+        GeometryReader { geometry in
+            ZStack(alignment: .bottomLeading) {
+                Rectangle().fill(gradient)
+                    .frame(width: geometry.size.width, height: geometry.size.height)
+                    .cornerRadius(10)
+                
+                VStack(alignment: .leading) {
+                    Text(title)
+                        .foregroundColor(.lightColor)
+                        .font(.custom("Raleway-Regular", size: 14))
+                        .lineLimit(3)
+                        //.frame(width: 140, height: 55, alignment: .bottomLeading)
+                        .padding(9.0)
+                }
             }
         }
     }

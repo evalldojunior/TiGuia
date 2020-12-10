@@ -15,10 +15,6 @@ struct SubAreaMentorView: View {
     var category = Data().returnCategory()
     var subAreasEscolhidas: [Subcategory]
         
-    let titleColor = Color("titleColor")
-    let btnColor = Color("btnColor")
-    let lightColor = Color("lightColor")
-    let textColor = Color("darkColor")
     
     var columns = [
         // define number of caullum here
@@ -50,7 +46,7 @@ struct SubAreaMentorView: View {
                                 .multilineTextAlignment(.leading)
                                 .padding(.horizontal)
                                 .font(.custom("Raleway-Bold", size: 20))
-                                .foregroundColor(titleColor)
+                                .foregroundColor(.titleColor)
                             Spacer()
                         }
                         VStack {
@@ -71,13 +67,13 @@ struct SubAreaMentorView: View {
                     Spacer()
                     Text("Finalizar")
                         .font(.custom("Raleway-Bold", size: 18))
-                        .foregroundColor(lightColor)
+                        .foregroundColor(.lightColor)
                         .frame(alignment: .center)
                     Spacer()
                     
                 }).padding()
                 .clipped()
-                .background(btnColor)
+                .background(Color.btnColor)
                 .cornerRadius(10)
                 .padding()
                 .shadow(radius: 10)

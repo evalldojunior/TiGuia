@@ -11,6 +11,8 @@ import SwiftUI
 struct CategoryView: View {
     @State private var favorito: Bool = false
     @State private var presented: Bool = false
+    @State var showModal: Bool = false
+    @State var completed: Bool = false
     
     var categoryIndex: Int = 0 //tirar o =0 depois 
     //let category = Data.categories[categoryIndex]
@@ -27,17 +29,20 @@ struct CategoryView: View {
                 var category = Data.categories[categoryIndex] //nao sei se é aqui, mas acho que sim pq nos outros lugares nao pegava
                 ScrollView {
                     GeometryReader { gmt in
-                        Rectangle().fill(Color.gray.opacity(0.5))
-                            .frame(height: geometry.size.height, alignment: .center) // aqui antes era  geometry.size.height / 4 + 30
-                            .edgesIgnoringSafeArea(.top)
+                        Image("tempTrilha")
+                            .resizable()
+                            .scaledToFill()
+                            .frame(height: geometry.size.height, alignment: .center)
+                            //.edgesIgnoringSafeArea(.top)
                             .offset(y: gmt.frame(in: .global).minY > 0 ? -gmt.frame(in: .global).minY : 0)
+                        
                     }.frame(height: geometry.size.height / 4 + 30)
-//                    VStack {
-//                        Rectangle().fill(Color.gray.opacity(0.5))
-//                            .frame(height: geometry.size.height / 4 + 30, alignment: .center)
-//                            .edgesIgnoringSafeArea(.top)
-//                            //.padding(.bottom, -(geometry.safeAreaInsets.top))
-//                    }
+                    //                    VStack {
+                    //                        Rectangle().fill(Color.gray.opacity(0.5))
+                    //                            .frame(height: geometry.size.height / 4 + 30, alignment: .center)
+                    //                            .edgesIgnoringSafeArea(.top)
+                    //                            //.padding(.bottom, -(geometry.safeAreaInsets.top))
+                    //                    }
                     VStack {
                         //
                         //MARK: -Header - titulo + botao de favoritos
@@ -107,7 +112,8 @@ struct CategoryView: View {
                                 //
                                 VStack {
                                     Button(action: {
-                                        self.presented.toggle()
+                                        // self.presented.toggle()
+                                        self.showModal.toggle()
                                     }, label: {
                                         Spacer()
                                         Image(systemName: "ellipses.bubble")
@@ -125,9 +131,11 @@ struct CategoryView: View {
                                     .background(Color.btnColor)
                                     .cornerRadius(10)
                                     .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
-                                    .fullScreenCover(isPresented: $presented, content: {
-                                        //HelpUI()
-                                    })
+                                    //                            .fullScreenCover(isPresented: $showModal, content: {
+                                    //                                HelpUI(showModal: $showModal)
+                                    //                            })
+                                    //.overlay(HelpUI(showModal: $showModal).opacity(showModal ? 1 : 0).frame(width: geometry.size.width, height: geometry.size.height, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/))
+                                    
                                 }.padding()
                                 //.edgesIgnoringSafeArea(.bottom)
                                 
@@ -137,36 +145,36 @@ struct CategoryView: View {
                                 
                                 Spacer(minLength: 20)
                             }
-
-                        }//.frame(height: geometry.size.height - ((geometry.size.height / 5)))
+                            
+                        }.frame(height: geometry.size.height - ((geometry.size.height / 5)))
                         //.frame(height: geometry.size.height - ((geometry.size.height / 4) + 30))
                         
                     }//.frame(height: geometry.size.height - ((geometry.size.height / 5)))
-                    .background(Color.backgroundColor)
-                    //.background(RoundedCorners(tl: 25, tr: 25, bl: 0, br: 0).fill(Color.backgroundColor)) // ta mostrando o fundo de cores diferentes
-                    .cornerRadius(25, corners: [.topLeft, .topRight])
-//                    .offset(x: 0, y: -35)
+                    //.background(Color.backgroundColor)
+                    .background(RoundedCorners(tl: 25, tr: 25, bl: 0, br: 0).fill(Color.backgroundColor)) // ta mostrando o fundo de cores diferentes
+                    //.cornerRadius(25, corners: [.topLeft, .topRight])
+                    //                    .offset(x: 0, y: -35)
                     .clipped()
                     .shadow(color: .init(.sRGB, red: 0, green: 0, blue: 0, opacity: 0.4), radius: 15, x: 0.0, y: -5.0)
+                    .offset(y: geometry.frame(in: .global).maxY < 0 ? geometry.frame(in: .global).maxY : 0)
                     
                 }.edgesIgnoringSafeArea(.top)
                 //.navigationBarTitle("", displayMode: .inline)
                 .navigationBarTitle("")
                 .navigationBarHidden(true)
+                .overlay(HelpUI(showModal: $showModal, completed: $completed).opacity(showModal ? 1 : 0).frame(width: geometry.size.width, height: geometry.size.height, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).animation(.easeInOut(duration: 0.3)))
+                .overlay(DoubtSentUI(completed: $completed).opacity(completed ? 1 : 0).frame(width: geometry.size.width, height: geometry.size.height, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).animation(.easeInOut(duration: 0.3)))
                 //.navigationBarBackButtonHidden(true)
                 
-            }
+            }//.frame(height: UIScreen.main.bounds.height)
+            
         }.accentColor(.titleColor)
         .navigationBarBackButtonHidden(true)
         .navigationBarHidden(true)
         .onAppear(perform: {
-//            let appearance = UINavigationBarAppearance()
-//            appearance.shadowColor = .clear
-//            UINavigationBar.appearance().standardAppearance = appearance
-//            UINavigationBar.appearance().scrollEdgeAppearance = appearance
-            //UINavigationBar.appearance().isTranslucent = true
             UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
             UINavigationBar.appearance().shadowImage = UIImage()
+            UITextView.appearance().backgroundColor = .clear
         })
         
         
@@ -198,18 +206,18 @@ extension View {
 }
 
 struct RoundedCorner: Shape {
-
+    
     var radius: CGFloat = .infinity
     var corners: UIRectCorner = .allCorners
-
+    
     func path(in rect: CGRect) -> Path {
         let path = UIBezierPath(roundedRect: rect, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
         return Path(path.cgPath)
     }
     
-//    func path(in rect: CGRect) -> Path {
-//        return Path(roundedRect: rect, cornerSize: CGSize(width: radius, height: radius))
-//    }
+    //    func path(in rect: CGRect) -> Path {
+    //        return Path(roundedRect: rect, cornerSize: CGSize(width: radius, height: radius))
+    //    }
 }
 
 //struct RoundedCorners: View {
@@ -252,36 +260,36 @@ struct RoundedCorners: Shape {
     var tr: CGFloat = 0.0
     var bl: CGFloat = 0.0
     var br: CGFloat = 0.0
-
+    
     func path(in rect: CGRect) -> Path {
         var path = Path()
-
+        
         let w = rect.size.width
         let h = rect.size.height
-
+        
         // Make sure we do not exceed the size of the rectangle
         let tr = min(min(self.tr, h/2), w/2)
         let tl = min(min(self.tl, h/2), w/2)
         let bl = min(min(self.bl, h/2), w/2)
         let br = min(min(self.br, h/2), w/2)
-
+        
         path.move(to: CGPoint(x: w / 2.0, y: 0))
         path.addLine(to: CGPoint(x: w - tr, y: 0))
         path.addArc(center: CGPoint(x: w - tr, y: tr), radius: tr,
                     startAngle: Angle(degrees: -90), endAngle: Angle(degrees: 0), clockwise: false)
-
+        
         path.addLine(to: CGPoint(x: w, y: h - br))
         path.addArc(center: CGPoint(x: w - br, y: h - br), radius: br,
                     startAngle: Angle(degrees: 0), endAngle: Angle(degrees: 90), clockwise: false)
-
+        
         path.addLine(to: CGPoint(x: bl, y: h))
         path.addArc(center: CGPoint(x: bl, y: h - bl), radius: bl,
                     startAngle: Angle(degrees: 90), endAngle: Angle(degrees: 180), clockwise: false)
-
+        
         path.addLine(to: CGPoint(x: 0, y: tl))
         path.addArc(center: CGPoint(x: tl, y: tl), radius: tl,
                     startAngle: Angle(degrees: 180), endAngle: Angle(degrees: 270), clockwise: false)
-
+        
         return path
     }
 }

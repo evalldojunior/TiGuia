@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 //titulo, conteúdo, links, cards subcategorias, btn favorito
 public struct PaginaConteudoView: View {
-    @State private var favorito: Bool = false
+    @State var favorito: Bool
     @State private var presented: Bool = false
     
     //var category = Data().returnCategory()
@@ -21,56 +21,117 @@ public struct PaginaConteudoView: View {
     static var favorite = Favorites()
     //var index:Int
     
+    @Environment(\.openURL) private var openURL
+    var collums = [
+        // define number of caullum here
+        GridItem(.flexible(), spacing: 20),
+        GridItem(.flexible(), spacing: 20)
+    ]
+    
     
     public var body: some View {
-        
-        
-        VStack {
-            //
-            //MARK: -Header - titulo + botao de favoritos
-            //
-            HStack {
-                //título
-                Text(category.title)
-                    .foregroundColor(.titleColor)
-                    .font(.custom("Raleway-Bold", size: 30))
-                    .multilineTextAlignment(.leading)
+        GeometryReader { geometry in
+            VStack {
+                //
+                //MARK: -Header - titulo + botao de favoritos
+                //
+//                HStack {
+//                    //título
+//                    Text(category.title)
+//                        .foregroundColor(.titleColor)
+//                        .font(.custom("Raleway-Bold", size: 30))
+//                        .multilineTextAlignment(.leading)
+//
+//                    Spacer()
+//
+//                }.padding()
                 
-                Spacer()
-                
-            }.padding()
-            
-            //
-            //MARK: -inicio do conteúdo
-            //
-            
-            ScrollView{
-                VStack {
-                    Text(category.content)
-                        .font(.custom("Raleway-Regular", size: 15))
-                        .multilineTextAlignment(.leading)
-                        //.padding()
-                        .foregroundColor(.darkColor)
-                        .fixedSize(horizontal: false, vertical: true)
-                }.padding()
-                
-                HStack{
-                    Text("Links úteis")
-                        .multilineTextAlignment(.leading)
-                        .font(.custom("Raleway-Bold", size: 20))
+                HStack(alignment: .center) {
+                    //título
+                    Text(category.title)
                         .foregroundColor(.titleColor)
+                        .font(.custom("Raleway-Bold", size: 30))
+                        .multilineTextAlignment(.leading)
+                        .padding()
+                    
                     Spacer()
-                }.padding([.top, .leading, .trailing])
+                    
+                    // CODIGO DO BOTAO DE FAVORITOS - apresentando bugs
+//                    Button(action: {
+//                        self.favorito.toggle()
+//                        if (self.favorito) {
+//                            Data.favorite.addSubcategory(subcategory: category)
+//                        } else {
+//                            Data.favorite.removeSubcategory(subcategory: category)
+//                        }
+//                        category.favorite = favorito
+//
+//                    }, label: {
+//                        Image(systemName: self.favorito == true ? "star.fill" : "star")
+//                            .resizable()
+//                            .scaledToFit()
+//                            .padding(10)
+//                            .background(Color.btnColor)
+//                            .foregroundColor(.lightColor)
+//                            .frame(width: 48, height: 48, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+//                            .cornerRadius(10)
+//                    })
+//                    .padding([.top, .trailing])
+//                    .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+//                    //.offset(y: -10) // realmente necessario?
+                    
+                }//.padding()
                 
-                SubCardLink(category: category)
+                //
+                //MARK: -inicio do conteúdo
+                //
                 
-//                if !category.subcategories.isEmpty {
-//                    HStack{
-//                        Text("Categorias")
-//                            .font(.custom("Raleway-Bold", size: 20))
-//                            .foregroundColor(.titleColor)
-//                        Spacer()
-//                    }.padding([.top, .leading, .trailing])
+                ScrollView{
+                    VStack {
+                        Text(category.content)
+                            .font(.custom("Raleway-Regular", size: 15))
+                            .multilineTextAlignment(.leading)
+                            //.padding()
+                            .foregroundColor(.darkColor)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }.padding()
+                    
+                    HStack{
+                        Text("Links úteis")
+                            .multilineTextAlignment(.leading)
+                            .font(.custom("Raleway-Bold", size: 20))
+                            .foregroundColor(.titleColor)
+                        Spacer()
+                    }.padding([.top, .leading, .trailing])
+                    
+                    VStack{
+                        LazyVGrid(columns: collums, alignment: .center, spacing: 0) {
+                            ForEach(0..<category.links.count, id: \.self) { count in
+                                Button(action: {
+                                    let stringUrl = (category.links[count].url).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+                                    openURL(URL(string: stringUrl!)!)
+                                }, label: {
+                                    Image(category.links[count].image!)
+                                        .resizable()
+                                        .frame(width: (geometry.size.width/2) - 25, height: 170)
+                                        .cornerRadius(10)
+                                        //.shadow(color: .init(.sRGB, red: 0, green: 0, blue: 0, opacity: 0.4), radius: 10, x: 0.0, y: 4.0)
+                                        .overlay(ImageOverlayCardLink(title: category.links[count].titulo), alignment: .bottomLeading)
+                                })
+                                
+                            }.padding(.bottom)
+                            .shadow(color: .init(.sRGB, red: 0, green: 0, blue: 0, opacity: 0.4), radius: 8, x: 0.0, y: 4.0)
+                        }.padding()
+                    }
+                    
+                    //Spacer(minLength: 100)
+                    //                if !category.subcategories.isEmpty {
+                    //                    HStack{
+                    //                        Text("Categorias")
+                    //                            .font(.custom("Raleway-Bold", size: 20))
+                    //                            .foregroundColor(.titleColor)
+                    //                        Spacer()
+                    //                    }.padding([.top, .leading, .trailing])
                     
                     //                    VStack {
                     //                        LazyVStack {
@@ -108,20 +169,24 @@ public struct PaginaConteudoView: View {
                     //                    })
                     //                }.padding()
                     
-//                    Spacer(minLength: 20)
-//
-//                }
-                //            .navigationBarTitle("", displayMode: .inline)
-                //.navigationTitle(Text(""))
-                //.navigationBarHidden(true)
-                //            .statusBar(hidden: true)
-                
-            }//.edgesIgnoringSafeArea(.top)
+                    //                    Spacer(minLength: 20)
+                    //
+                    //                }
+                    //            .navigationBarTitle("", displayMode: .inline)
+                    //.navigationTitle(Text(""))
+                    //.navigationBarHidden(true)
+                    //            .statusBar(hidden: true)
+                    
+                }//.edgesIgnoringSafeArea(.top)
+                //.navigationBarTitle("", displayMode: .inline)
+                //.statusBar(hidden: true)
+            }.navigationBarTitle("", displayMode: .inline)
+            //.navigationTitle(Text(""))
+            //.navigationBarHidden(true)
+            .statusBar(hidden: true)
             
-        }.navigationBarTitle("", displayMode: .inline)
-        //.navigationTitle(Text(""))
-        //.navigationBarHidden(true)
-        .statusBar(hidden: true)
+        }
+        
         
     }
     

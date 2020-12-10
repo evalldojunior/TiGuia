@@ -64,8 +64,10 @@ struct SubCardsCategory: View {
                         .shadow(radius: 8)
                     VStack(alignment: .leading){
                         Text(category.subcategories[count].title)
-                            .font(.custom("Raleway-SemiBold", size: 16))
-                            .padding([.leading, .bottom, .trailing], 5.0)
+                            .font(.custom("Raleway-Bold", size: 16))
+                            .lineLimit(1)
+                            .padding([.leading, .trailing], 5.0)
+                            .padding(.bottom, 1)
                             .foregroundColor(.darkColor)
                         
                         
