@@ -9,11 +9,7 @@ import Foundation
 import SwiftUI
 import UIKit
 
-protocol MacroAreaDelegate{
-    func finishMacroArea()
-}
-
-class MacroAreaStudentHostingController: UIHostingController<MacroAreaUI>, MacroAreaDelegate {
+class MacroAreaStudentHostingController: UIHostingController<MacroAreaUI> {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder,rootView: MacroAreaUI());
@@ -22,15 +18,5 @@ class MacroAreaStudentHostingController: UIHostingController<MacroAreaUI>, Macro
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-    func finishMacroArea() {
-        let vc = TabBarViewController()
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true)
-    }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//            if segue.identifier == "tabBar_vc", case let nextVC = segue.destination as? TabBarViewController {
-//            }
-//        }
+
 }

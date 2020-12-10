@@ -145,7 +145,8 @@ struct PageViewController: UIViewControllerRepresentable {
         func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
             guard let index = self.parent.controllers.firstIndex(of: viewController) else { return nil }
             if index == 0 {
-                return self.parent.controllers.last
+                return nil
+                //return self.parent.controllers.last
             }
             return self.parent.controllers[index - 1]
         }
@@ -153,7 +154,8 @@ struct PageViewController: UIViewControllerRepresentable {
         func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
             guard let index = self.parent.controllers.firstIndex(of: viewController) else { return nil }
             if index == self.parent.controllers.count - 1 {
-                return self.parent.controllers.first
+                return nil
+                //return self.parent.controllers.first
             }
             return self.parent.controllers[index + 1]
         }

@@ -26,90 +26,106 @@ public struct SubcategoryView: View {
     
     
     public var body: some View {
+      
         GeometryReader { geometry in
-            
-            VStack {
-                //
-                //MARK: -Header - titulo + botao de favoritos
-                //
-                HStack {
-                    //título
-                    Text(category.title)
-                        .foregroundColor(.titleColor)
-                        .font(.custom("Raleway-Bold", size: 30))
-                        .multilineTextAlignment(.leading)
-                    
-                    Spacer()
-                    
-                    Button(action: {
-                        self.favorito.toggle()
-                        if (self.favorito) {
-                            Data.favorite.addSubcategory(subcategory: category)
-                        } else {
-                            Data.favorite.removeSubcategory(subcategory: category)
-                        }
-                        category.favorite = favorito
-                        
-                    }, label: {
-                        Image(systemName: self.favorito == true ? "star.fill" : "star")
+            ScrollView {
+                ZStack(alignment: .center) {
+                    GeometryReader { gmt in
+                        Image("tempTrilha")
                             .resizable()
-                            .scaledToFit()
-                            .padding(10)
-                            .background(Color.btnColor)
-                            .foregroundColor(.lightColor)
-                            .frame(width: 48, height: 48, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                            .cornerRadius(10)
-                    })
-                    .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
-                    .offset(y: -10) // realmente necessario?
+                            .scaledToFill()
+                            .frame(height: geometry.size.height, alignment: .center)
+                            //.edgesIgnoringSafeArea(.top)
+                            .offset(y: gmt.frame(in: .global).minY > 0 ? -gmt.frame(in: .global).minY : 0)
+
+                    }.frame(height: geometry.size.height / 4 + 30)
                     
-                }.padding()
+                }
                 
-                //
-                //MARK: -inicio do conteúdo
-                //
-                
-                ScrollView{
-                    VStack {
-                        Text(category.content)
-                            .font(.custom("Raleway-Regular", size: 15))
-                            .multilineTextAlignment(.leading)
-                            //.padding()
-                            .foregroundColor(.darkColor)
-                            .fixedSize(horizontal: false, vertical: true)
-                    }.padding()
-                    
-                    HStack{
-                        Text("Links úteis")
-                            .multilineTextAlignment(.leading)
-                            .font(.custom("Raleway-Bold", size: 20))
+                VStack {
+                    //
+                    //MARK: -Header - titulo + botao de favoritos
+                    //
+                    HStack(alignment: .top) {
+                        //título
+                        Text(category.title)
                             .foregroundColor(.titleColor)
+                            .font(.custom("Raleway-Bold", size: 30))
+                            .multilineTextAlignment(.leading)
+                            .padding()
+                        
                         Spacer()
-                    }.padding([.top, .leading, .trailing])
+
+                        Button(action: {
+                            self.favorito.toggle()
+                            if (self.favorito) {
+                                Data.favorite.addSubcategory(subcategory: category)
+                            } else {
+                                Data.favorite.removeSubcategory(subcategory: category)
+                            }
+                            category.favorite = favorito
+                            
+                        }, label: {
+                            Image(systemName: self.favorito == true ? "star.fill" : "star")
+                                .resizable()
+                                .scaledToFit()
+                                .padding(10)
+                                .background(Color.btnColor)
+                                .foregroundColor(.lightColor)
+                                .frame(width: 48, height: 48, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                .cornerRadius(10)
+                        })
+                        .padding([.top, .trailing])
+                        .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                        //.offset(y: -10) // realmente necessario?
+                        
+                    }//.padding()
                     
-                    SubCardLink(category: category)
+                    //
+                    //MARK: -inicio do conteúdo
+                    //
                     
-                    if !category.subcategories.isEmpty {
+                    ScrollView{
+                        VStack {
+                            Text(category.content)
+                                .font(.custom("Raleway-Regular", size: 15))
+                                .multilineTextAlignment(.leading)
+                                //.padding()
+                                .foregroundColor(.darkColor)
+                                .fixedSize(horizontal: false, vertical: true)
+                        }.padding()
+                        
                         HStack{
-                            Text("Categorias")
+                            Text("Links úteis")
+                                .multilineTextAlignment(.leading)
                                 .font(.custom("Raleway-Bold", size: 20))
                                 .foregroundColor(.titleColor)
                             Spacer()
                         }.padding([.top, .leading, .trailing])
                         
-                        VStack {
-                            LazyVStack {
-                                ForEach(0..<category.subcategories.count, id: \.self) { count in
-                                    SubCardsCategory(category: category, count: count)
+                        SubCardLink(category: category)
+                        
+                        if !category.subcategories.isEmpty {
+                            HStack{
+                                Text("Categorias")
+                                    .font(.custom("Raleway-Bold", size: 20))
+                                    .foregroundColor(.titleColor)
+                                Spacer()
+                            }.padding([.top, .leading, .trailing])
+                            
+                            VStack {
+                                LazyVStack {
+                                    ForEach(0..<category.subcategories.count, id: \.self) { count in
+                                        SubCardsCategory(category: category, count: count)
+                                    }
                                 }
-                            }
-                        }.padding()
-                    } else {
-                        Spacer(minLength: 30)
-                    }
-                    
-                    VStack {
-                        Button(action: {
+                            }.padding()
+                        } else {
+                            Spacer(minLength: 30)
+                        }
+                        
+                        VStack {
+                            Button(action: {
                             self.showModal.toggle()
                         }, label: {
                             Spacer()
@@ -131,21 +147,30 @@ public struct SubcategoryView: View {
 //                        .fullScreenCover(isPresented: $presented, content: {
 //                            //HelpUI()
 //                        })
-                    }.padding()
+                        }.padding()
+                        
+                        Spacer(minLength: 20)
+                        
+                    }.frame(height: geometry.size.height - ((geometry.size.height / 5)))
+                    .navigationBarTitle("", displayMode: .inline)
+                    //.navigationTitle(Text(""))
+                    //.navigationBarHidden(true)
+                    .statusBar(hidden: true)
                     
-                    Spacer(minLength: 20)
                     
-                }//.edgesIgnoringSafeArea(.top)
-                .navigationBarTitle("", displayMode: .inline)
-                //.navigationTitle(Text(""))
-                //.navigationBarHidden(true)
-                .statusBar(hidden: true)
-                
-            }//.edgesIgnoringSafeArea(.top)
-            .overlay(HelpUI(showModal: $showModal, completed: $completed).opacity(showModal ? 1 : 0).frame(width: geometry.size.width, height: geometry.size.height, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).animation(.easeInOut(duration: 0.3)))
+                }
+                      .overlay(HelpUI(showModal: $showModal, completed: $completed).opacity(showModal ? 1 : 0).frame(width: geometry.size.width, height: geometry.size.height, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).animation(.easeInOut(duration: 0.3)))
             .overlay(DoubtSentUI(completed: $completed).opacity(completed ? 1 : 0).frame(width: geometry.size.width, height: geometry.size.height, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).animation(.easeInOut(duration: 0.3)))
+                .background(RoundedCorners(tl: 25, tr: 25, bl: 0, br: 0).fill(Color.backgroundColor))
+                //.background(Color.backgroundColor) // ta mostrando o fundo de cores diferentes
+                //.cornerRadius(25, corners: [.topLeft, .topRight])
+                //.offset(x: 0, y: -35)
+                .clipped()
+                .shadow(color: .init(.sRGB, red: 0, green: 0, blue: 0, opacity: 0.4), radius: 15, x: 0.0, y: -5.0)
+                
+            }.edgesIgnoringSafeArea(.top)
+            
         }
-        
         
     }
     

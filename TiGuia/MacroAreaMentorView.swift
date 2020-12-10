@@ -1,42 +1,39 @@
 //
-//  MacroArea.swift
+//  areaMentor.swift
 //  TiGuia
 //
-//  Created by Evaldo Garcia de Souza Júnior on 17/11/20.
+//  Created by Meyrillan Silva on 30/11/20.
 //
 
 import Foundation
 import UIKit
 import SwiftUI
 
-// MARK: - Macro Area
-struct MacroAreaUI: View {
+// MARK: - Area Mentor
+struct MacroAreaMentorUIView: View {
     
     // @State var didTap = false
     @State private var presented = false
     var teste = Data() //acho que vai precisar apagar essa linha aqui. é que precisa iniciar a classe Data pra poder pegar o arrey de categorias
-    var image = ["desktopcomputer", "paintbrush", "desktopcomputer", "paintbrush", "desktopcomputer", "paintbrush"]
-    var title = ["Computação", "Design", "Computação", "Design", "Computação", "Design"]
-    var descrip = ["Estuda as técnicas, metodologias, instrumentos computacionais e aplicações tecnológicas...", "Desenvolve conceitos visuais para peças gráficas e materiais. Se preocupa com funcionalidade...", "Estuda as técnicas, metodologias, instrumentos computacionais e aplicações tecnológicas...", "Desenvolve conceitos visuais para peças gráficas e materiais. Se preocupa com funcionalidade...", "Estuda as técnicas, metodologias, instrumentos computacionais e aplicações tecnológicas...", "Desenvolve conceitos visuais para peças gráficas e materiais. Se preocupa com funcionalidade..."]
     
     var body: some View {
         VStack(alignment: .leading) {
             Spacer()
                 .frame(height: 75.0)
             HStack {
-                Text("O que você deseja explorar?")
+                Text("O que você deseja mentorar?")
                     .font(.custom("Raleway-Bold", size: 30))
                     .multilineTextAlignment(.leading)
                     .padding()
-                    .frame(width: 280.0, alignment: .leading)
+                    .frame(width: 300.0, alignment: .leading)
                     .foregroundColor(.darkColor)
                 Spacer()
             }
             // scrollview com as macroareas
-            ScrollView{
+            ScrollView {
                 LazyVStack {
                     ForEach((0..<Data.categories.count)){ index in
-                        var category = Data.categories[index]
+                        var category: Category = Data.categories[index]
                         Button(action: {
                             self.presented.toggle()
                         }, label: {
@@ -45,8 +42,8 @@ struct MacroAreaUI: View {
                                     .resizable()
                                     .padding(.all, 30.0)
                                     .scaledToFit()
-                                    .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                                    .clipShape(Rectangle(), style: /*@START_MENU_TOKEN@*/FillStyle()/*@END_MENU_TOKEN@*/)
+                                    .frame(width: 100, height: 100, alignment: .center)
+                                    .clipShape(Rectangle(), style: FillStyle())
                                     .background(Color.lightColor)
                                     .cornerRadius(10)
                                     .foregroundColor(.orangeColor)
@@ -71,39 +68,33 @@ struct MacroAreaUI: View {
                             .background(Color.btnColor)
                             .cornerRadius(10)
                         }).padding(.bottom, 20.0)
-                        .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                        .shadow(radius: 10)
                         .fullScreenCover(isPresented: $presented, content: {
-                            NextTrailUI().ignoresSafeArea(.all)
+                            AreaMentorView(category: Data.categories[index])
                         })
                         
                     }
                 }
-                .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                .padding(.all)
                 Spacer()
             }
         }
     }
 }
 
-struct NextTrailUI: UIViewControllerRepresentable {
-    //var teste: Int
-    func makeUIViewController(context: UIViewControllerRepresentableContext<NextTrailUI>) -> UIViewController {
-        
-        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        // swiftlint:disable force_cast
-        let mainViewController = mainStoryboard.instantiateViewController(withIdentifier: "tabBar_vc") as! UITabBarController
-        // swiftlint:enable force_cast
-        return mainViewController
-        
-    }
-    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
-        
-    }
-}
+//struct NextMentorUI: UIViewControllerRepresentable {
+//
+//    func makeUIViewController(context: Context) -> UIViewController {
+//        return AreaMentorView()
+//    }
+//    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
+//
+//    }
+//}
 
 // preview
-struct MacroAreaUI_Previews: PreviewProvider {
+struct AreaMentorUI_Previews: PreviewProvider {
     static var previews: some View {
-        MacroAreaUI()
+        MacroAreaMentorUIView()
     }
 }
