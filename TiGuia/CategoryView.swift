@@ -11,6 +11,8 @@ import SwiftUI
 struct CategoryView: View {
     @State private var favorito: Bool = false
     @State private var presented: Bool = false
+    @State var showModal: Bool = false
+    @State var completed: Bool = false
     
     var categoryIndex: Int = 0 //tirar o =0 depois 
     //let category = Data.categories[categoryIndex]
@@ -110,27 +112,30 @@ struct CategoryView: View {
                                 //
                                 VStack {
                                     Button(action: {
-                                        self.presented.toggle()
-                                    }, label: {
-                                        Spacer()
-                                        Image(systemName: "ellipses.bubble")
-                                            .resizable()
-                                            .scaledToFit()
-                                            .foregroundColor(.lightColor)
-                                            .frame(width: 20, height: 20, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                                        Text("Pedir ajuda")
-                                            .font(.custom("Raleway-Bold", size: 18))
-                                            .foregroundColor(.lightColor)
-                                        Spacer()
-                                        
-                                    }).padding()
-                                    .clipped()
-                                    .background(Color.btnColor)
-                                    .cornerRadius(10)
-                                    .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
-                                    .fullScreenCover(isPresented: $presented, content: {
-                                        //HelpUI()
-                                    })
+                                // self.presented.toggle()
+                                self.showModal.toggle()
+                            }, label: {
+                                Spacer()
+                                Image(systemName: "ellipses.bubble")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .foregroundColor(.lightColor)
+                                    .frame(width: 20, height: 20, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                Text("Pedir ajuda")
+                                    .font(.custom("Raleway-Bold", size: 18))
+                                    .foregroundColor(.lightColor)
+                                Spacer()
+                                
+                            }).padding()
+                            .clipped()
+                            .background(Color.btnColor)
+                            .cornerRadius(10)
+                            .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                            //                            .fullScreenCover(isPresented: $showModal, content: {
+                            //                                HelpUI(showModal: $showModal)
+                            //                            })
+                            //.overlay(HelpUI(showModal: $showModal).opacity(showModal ? 1 : 0).frame(width: geometry.size.width, height: geometry.size.height, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/))
+                            
                                 }.padding()
                                 //.edgesIgnoringSafeArea(.bottom)
                                 
@@ -157,15 +162,19 @@ struct CategoryView: View {
                 //.navigationBarTitle("", displayMode: .inline)
                 .navigationBarTitle("")
                 .navigationBarHidden(true)
+                .overlay(HelpUI(showModal: $showModal, completed: $completed).opacity(showModal ? 1 : 0).frame(width: geometry.size.width, height: geometry.size.height, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).animation(.easeInOut(duration: 0.3)))
+                .overlay(DoubtSentUI(completed: $completed).opacity(completed ? 1 : 0).frame(width: geometry.size.width, height: geometry.size.height, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).animation(.easeInOut(duration: 0.3)))
                 //.navigationBarBackButtonHidden(true)
-                
+
             }//.frame(height: UIScreen.main.bounds.height)
+
         }.accentColor(.titleColor)
         .navigationBarBackButtonHidden(true)
         .navigationBarHidden(true)
         .onAppear(perform: {
             UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
             UINavigationBar.appearance().shadowImage = UIImage()
+            UITextView.appearance().backgroundColor = .clear
         })
         
         
