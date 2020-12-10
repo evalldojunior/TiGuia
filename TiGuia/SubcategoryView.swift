@@ -27,12 +27,18 @@ public struct SubcategoryView: View {
         
         GeometryReader { geometry in
             ScrollView {
-                GeometryReader { gmt in
-                    Rectangle().fill(Color.gray.opacity(0.5))
-                        .frame(height: geometry.size.height, alignment: .center) // aqui antes era  geometry.size.height / 4 + 30
-                        .edgesIgnoringSafeArea(.top)
-                        .offset(y: gmt.frame(in: .global).minY > 0 ? -gmt.frame(in: .global).minY : 0)
-                }.frame(height: geometry.size.height / 4 + 30)
+                ZStack(alignment: .center) {
+                    GeometryReader { gmt in
+                        Image("tempTrilha")
+                            .resizable()
+                            .scaledToFill()
+                            .frame(height: geometry.size.height, alignment: .center)
+                            //.edgesIgnoringSafeArea(.top)
+                            .offset(y: gmt.frame(in: .global).minY > 0 ? -gmt.frame(in: .global).minY : 0)
+
+                    }.frame(height: geometry.size.height / 4 + 30)
+                    
+                }
                 
                 VStack {
                     //

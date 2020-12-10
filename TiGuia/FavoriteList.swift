@@ -58,10 +58,21 @@ struct Favorite: View {
             GeometryReader { geometry in
                 
                 VStack(alignment: .leading) {
-                    Rectangle().fill(Color.gray.opacity(0.5))
-                        .frame(height: geometry.size.height / 3, alignment: .center)
-                        .edgesIgnoringSafeArea(.top)
-                        .padding(.bottom, -(geometry.safeAreaInsets.top))
+                    
+                    
+                        Image("favorito")
+                            .resizable()
+                            .scaledToFill()
+                            .frame(height: (geometry.size.height/3) + 35, alignment: .center)
+                            .edgesIgnoringSafeArea(.top)
+                            .padding(.bottom, -(geometry.safeAreaInsets.top))
+            
+
+                    
+//                    Rectangle().fill(Color.gray.opacity(0.5))
+//                        .frame(height: geometry.size.height / 3, alignment: .center)
+//                        .edgesIgnoringSafeArea(.top)
+//                        .padding(.bottom, -(geometry.safeAreaInsets.top))
                     
                     VStack {
                         HStack{

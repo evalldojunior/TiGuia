@@ -27,10 +27,13 @@ struct CategoryView: View {
                 var category = Data.categories[categoryIndex] //nao sei se é aqui, mas acho que sim pq nos outros lugares nao pegava
                 ScrollView {
                     GeometryReader { gmt in
-                        Rectangle().fill(Color.gray.opacity(0.5))
-                            .frame(height: geometry.size.height, alignment: .center) // aqui antes era  geometry.size.height / 4 + 30
-                            .edgesIgnoringSafeArea(.top)
+                        Image("tempTrilha")
+                            .resizable()
+                            .scaledToFill()
+                            .frame(height: geometry.size.height, alignment: .center)
+                            //.edgesIgnoringSafeArea(.top)
                             .offset(y: gmt.frame(in: .global).minY > 0 ? -gmt.frame(in: .global).minY : 0)
+
                     }.frame(height: geometry.size.height / 4 + 30)
                     //                    VStack {
                     //                        Rectangle().fill(Color.gray.opacity(0.5))
