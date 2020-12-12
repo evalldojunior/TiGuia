@@ -107,6 +107,8 @@ struct DataOnboardingPage: View {
                 .foregroundColor(.darkColor)
                 .multilineTextAlignment(.center)
                 .padding([.top, .leading, .trailing])
+                .lineSpacing(2)
+
         }//.background(Color.backgroundColor)
     }
 }

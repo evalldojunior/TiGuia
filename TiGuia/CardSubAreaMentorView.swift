@@ -76,6 +76,8 @@ struct CardsSubAreaMentorView: View {
                                     .padding([.leading, .bottom], 5.0)
                                     .foregroundColor(.darkColor)
                                     .lineLimit(4)
+                                    .lineSpacing(1)
+
                                 //Spacer()
                                 
                             }

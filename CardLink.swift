@@ -27,6 +27,7 @@ struct ImageOverlayCardLink: View {
                         .foregroundColor(.lightColor)
                         .font(.custom("Raleway-Regular", size: 14))
                         .lineLimit(3)
+                        .lineSpacing(1)
                         //.frame(width: 140, height: 55, alignment: .bottomLeading)
                         .padding(9.0)
                 }

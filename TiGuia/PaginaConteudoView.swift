@@ -93,6 +93,7 @@ public struct PaginaConteudoView: View {
                             .multilineTextAlignment(.leading)
                             //.padding()
                             .foregroundColor(.darkColor)
+                            .lineSpacing(3)
                             .fixedSize(horizontal: false, vertical: true)
                     }.padding()
                     

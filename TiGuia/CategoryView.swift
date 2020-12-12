@@ -69,6 +69,7 @@ struct CategoryView: View {
                                         //.padding()
                                         .foregroundColor(.darkColor)
                                         .fixedSize(horizontal: false, vertical: true)
+                                        .lineSpacing(3)
                                     
                                     
                                 }.padding()

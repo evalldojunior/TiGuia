@@ -31,6 +31,8 @@ struct DoubtSentUI: View {
                         .font(.custom("Raleway-Regular", size: 15.0))
                         .multilineTextAlignment(.center)
                         .padding(.vertical, 20.0)
+                        .lineSpacing(2)
+
                     
                     Button(action: {
                         self.completed = false

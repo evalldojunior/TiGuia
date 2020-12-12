@@ -115,6 +115,8 @@ struct StudentMentorUI: View {
                                 .font(.custom("Raleway", size: 14))
                                 .padding([.leading, .bottom, .trailing], 5.0)
                                 .foregroundColor(.lightColor)
+                                .lineSpacing(1)
+
                             
                         }
                         Spacer()

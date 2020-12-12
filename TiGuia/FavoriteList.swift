@@ -31,6 +31,8 @@ struct ImageOverlay: View {
                         .lineLimit(4)
                         .foregroundColor(.lightColor)
                         .padding(9.0)
+                        .lineSpacing(1)
+
                 }
             }
         }
@@ -157,6 +159,7 @@ struct NothingHere: View {
             Text("Navegue pelo conteúdo na aba Trilha e veja se encontra algo legal :)")
                 .foregroundColor(.darkColor)
                 .font(.custom("Raleway", size: 14))
+                .lineSpacing(2)
                 .multilineTextAlignment(.center)
                 .frame(width: 260, alignment: .center)
         }

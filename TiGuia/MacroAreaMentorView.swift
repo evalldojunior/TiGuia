@@ -59,6 +59,8 @@ struct MacroAreaMentorUIView: View {
                                         .lineLimit(3)
                                         .padding([.leading, .bottom, .trailing], 5.0)
                                         .foregroundColor(.lightColor)
+                                        .lineSpacing(1)
+
                                     
                                 }
                                 Spacer()

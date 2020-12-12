@@ -74,6 +74,7 @@ struct SubCardsCategory: View {
                         Text(category.subcategories[count].content)
                             .font(.custom("Raleway-Regular", size: 14))
                             .lineLimit(4)
+                            .lineSpacing(1)
                             .padding([.leading, .bottom, .trailing], 5.0)
                             .foregroundColor(.darkColor)
                     }
