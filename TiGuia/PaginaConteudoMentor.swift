@@ -11,6 +11,8 @@ import SwiftUI
 public struct PaginaConteudoMentor: View {
     @State private var favorito: Bool = false
     @State private var presented: Bool = false
+    @State var isExpanded: Bool = false
+    @State var truncated: Bool = false
     
     //var category = Data().returnCategory()
     
@@ -28,6 +30,27 @@ public struct PaginaConteudoMentor: View {
         GridItem(.flexible(), spacing: 20)
     ]
     
+    var gradient: LinearGradient {
+        LinearGradient(gradient: Gradient(colors: [Color.systemLightDark.opacity(0.8), Color.systemLightDark.opacity(0.2)]), startPoint: .center, endPoint: .top)
+    }
+    
+    private func determineTruncation(_ geometry: GeometryProxy) {
+        // Calculate the bounding box we'd need to render the
+        // text given the width from the GeometryReader.
+        let total = self.category.content.boundingRect(
+            with: CGSize(
+                width: geometry.size.width,
+                height: .greatestFiniteMagnitude
+            ),
+            options: .usesLineFragmentOrigin,
+            attributes: [.font: UIFont.systemFont(ofSize: 16)],
+            context: nil
+        )
+        
+        if total.size.height > geometry.size.height {
+            self.truncated = true
+        }
+    }
     
     public var body: some View {
         GeometryReader { geometry in
@@ -51,15 +74,75 @@ public struct PaginaConteudoMentor: View {
                 //
                 
                 ScrollView{
-                    VStack {
-                        Text(category.content)
-                            .font(.custom("Raleway-Regular", size: 15))
-                            .multilineTextAlignment(.leading)
-                            //.padding()
-                            .foregroundColor(.darkColor)
-                            .lineSpacing(3)
-                            .fixedSize(horizontal: false, vertical: true)
-                    }.padding()
+                    
+                    ZStack(alignment: .bottom) {
+                        
+                        VStack {
+                            Text(category.content)
+                                .font(.custom("Raleway-Regular", size: 15))
+                                .multilineTextAlignment(.leading)
+                                //.padding()
+                                .foregroundColor(.darkColor)
+                                .lineLimit(self.isExpanded ? nil : 10)
+                                .lineSpacing(3)
+                                .fixedSize(horizontal: false, vertical: true)
+                                .background(GeometryReader { geometry in
+                                    Color.clear.onAppear {
+                                        self.determineTruncation(geometry)
+                                    }
+                                })
+                            if self.truncated {
+                                Spacer(minLength: self.isExpanded ? 30 : 20)
+                            }
+                        }.padding([.top, .leading, .trailing])
+                        
+                        if self.truncated {
+                            Button(action: {
+                                if !isExpanded {
+                                    //self.limit = 200
+                                    //self.isExpanded.toggle()
+                                    withAnimation(.easeInOut(duration: 0.5)) {
+                                        self.isExpanded.toggle()
+                                    }
+                                } else {
+                                    withAnimation(.easeInOut(duration: 0.2)) {
+                                        self.isExpanded.toggle()
+                                    }
+                                    //                                    self.limit = 10
+                                    //                                    self.isExpanded.toggle()
+                                }
+                            }, label: {
+                                if !isExpanded {
+                                    ZStack (alignment: .bottom){
+                                        Rectangle().fill(gradient)
+                                            .frame(width: geometry.size.width, height: 50)
+                                        
+                                        HStack {
+                                            Spacer()
+                                            Text("Continuar lendo")
+                                                .font(.custom("Raleway-Regular", size: 15))
+                                                .foregroundColor(.btnColor)
+                                            Spacer()
+                                        }.padding([.leading, .trailing])
+                                        
+                                    }
+                                } else {
+                                    VStack {
+                                        HStack {
+                                            //Spacer()
+                                            Text("Ver menos")
+                                                .font(.custom("Raleway-Regular", size: 15))
+                                                .foregroundColor(.btnColor)
+                                                .padding(.top)
+                                            Spacer()
+                                        }.padding(.horizontal)
+                                    }
+                                    
+                                }
+                            })
+                            
+                        }
+                    }
                     
                     HStack{
                         Text("Links úteis")

@@ -69,11 +69,16 @@ struct StudentMentorUI: View {
                                 .font(.custom("Raleway-Bold", size: 24))
                                 .padding([.leading, .bottom, .trailing], 5.0)
                                 .foregroundColor(.lightColor)
+                                .fixedSize(horizontal: false, vertical: true)
+
                             
                             Text(descrip[0])
                                 .font(.custom("Raleway", size: 14))
                                 .padding([.leading, .bottom, .trailing], 5.0)
                                 .foregroundColor(.lightColor)
+                                .fixedSize(horizontal: false, vertical: true)
+                                .lineSpacing(1)
+
                             
                         }
                         Spacer()
@@ -110,11 +115,13 @@ struct StudentMentorUI: View {
                                 .font(.custom("Raleway-Bold", size: 24))
                                 .padding([.leading, .bottom, .trailing], 5.0)
                                 .foregroundColor(.lightColor)
+                                .fixedSize(horizontal: false, vertical: true)
                             
                             Text(descrip[1])
                                 .font(.custom("Raleway", size: 14))
                                 .padding([.leading, .bottom, .trailing], 5.0)
                                 .foregroundColor(.lightColor)
+                                .fixedSize(horizontal: false, vertical: true)
                                 .lineSpacing(1)
 
                             

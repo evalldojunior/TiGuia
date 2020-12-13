@@ -17,4 +17,5 @@ extension Color {
     static let titleColor = Color(UIColor(named:"titleColor")!)
     static let backgroundColor = Color(UIColor(named:"backgroundColor")!)
     static let bgcardColor = Color(UIColor(named:"bgcardColor")!)
+    static let systemLightDark = Color(UIColor(named: "systemLightDark")!)
 }

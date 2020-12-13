@@ -54,6 +54,7 @@ struct CategoryView: View {
                                 .foregroundColor(.titleColor)
                                 .font(.custom("Raleway-Bold", size: 30))
                                 .multilineTextAlignment(.leading)
+                                //.fixedSize(horizontal: false, vertical: true)
                             Spacer()
                         }.padding()
                         //
