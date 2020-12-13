@@ -13,6 +13,7 @@ struct CategoryView: View {
     @State private var presented: Bool = false
     @State var showModal: Bool = false
     @State var completed: Bool = false
+    @State var limit: Int = 10
     
     var categoryIndex: Int = 0 //tirar o =0 depois 
     //let category = Data.categories[categoryIndex]
@@ -69,6 +70,7 @@ struct CategoryView: View {
                                         //.padding()
                                         .foregroundColor(.darkColor)
                                         .fixedSize(horizontal: false, vertical: true)
+                                        .lineLimit(limit)
                                         .lineSpacing(3)
                                     
                                     
