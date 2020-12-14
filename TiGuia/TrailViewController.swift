@@ -8,7 +8,7 @@
 import UIKit
 
 class TrailViewController: UIViewController {
-    lazy var contentViewSize = CGSize(width: self.view.frame.width + 1450, height: self.view.frame.height + 380)
+    lazy var contentViewSize = CGSize(width: 414 + 1450, height: 896 + 380)
     lazy var scrollView: UIScrollView = {
         let view = UIScrollView(frame: .zero)
         view.backgroundColor = .white
