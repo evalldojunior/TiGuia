@@ -11,5 +11,5 @@ import SwiftUI
 struct Link {
     var titulo:String = ""
     var url:String = ""
-    var image:Image
+    var image:String?
 }
